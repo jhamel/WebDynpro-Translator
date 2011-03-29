@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeDesigner_V6.0_SAP" APIVersion="1.4.4183.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2008-04-02T07:16:43Z" uuid="71e07f7b-08f7-410d-98d8-184230d74109">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.1/">
+   <subform name="DataSourceMatAbr" layout="tb" locale="de_DE">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="6.61mm" y="22.23mm" w="284.3mm" h="168.02mm"/>
+            <medium stock="a4" short="210mm" long="297mm" orientation="landscape"/>
+            <subform name="Subform1" x="6.46mm" y="6.4401mm" w="284.58mm" h="13.3999mm">
+               <bind match="none"/>
+               <draw name="Line1" y="13.3999mm" x="-0.39mm" w="284.1601mm" h="0in">
+                  <value>
+                     <line slope="/">
+                        <edge/>
+                     </line>
+                  </value>
+               </draw>
+               <draw name="headline" y="1.85mm" x="93.5327mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Bestandsübersicht</text>
+                  </value>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <draw name="Unternehmen" y="7.931mm" x="93.6477mm" minW="19.8722mm" minH="3.8144mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4065.0"><p>Unternehmen:</p></body>
+                     </exData>
+                  </value>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <field name="unternehmen" y="6.7899mm" x="113.66mm" minW="50.2698mm" minH="5.1836mm" access="nonInteractive">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+                  <bind match="dataRef" ref="$record.unternehmen"/>
+                  <value>
+                     <text maxChars="40"/>
+                  </value>
+               </field>
+               <field name="CurrentDateTime" y="0mm" x="0mm" w="62mm" h="9mm" access="nonInteractive" presence="hidden" id="floatingField026500">
+                  <ui>
+                     <dateTimeEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </dateTimeEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>{current date/time}</text>
+                  </value>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Date/Time Field</text>
+                     </value>
+                  </caption>
+                  <event activity="ready" ref="$layout">
+                     <script>$.rawValue = Concat(Num2Date(Date(), "YYYY-MM-DD"), "T", Num2GMTime(Time(), "HH:MM:SS"), "Z")</script>
+                  </event>
+                  <calculate override="error"/>
+                  <bind match="none"/>
+                  <format>
+                     <picture>DD.MM.YYYY</picture>
+                  </format>
+               </field>
+               <draw name="date" y="1.8419mm" x="254.6977mm" w="29.08mm" h="5mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4183.0"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField026500"/></p></body>
+                     </exData>
+                  </value>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <field name="CurrentPageNumber" y="0mm" x="0mm" w="62mm" h="9mm" presence="hidden" access="nonInteractive" id="floatingField019169">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>#</text>
+                  </value>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Text Field</text>
+                     </value>
+                  </caption>
+                  <bind match="none"/>
+                  <calculate override="error"/>
+                  <event activity="ready" ref="$layout">
+                     <script contentType="application/x-javascript">this.rawValue = xfa.layout.page(this)</script>
+                  </event>
+               </field>
+               <field name="NumberofPages" y="0mm" x="0mm" w="62mm" h="9mm" access="nonInteractive" presence="hidden" id="floatingField015724">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>Text Field</text>
+                     </value>
+                  </caption>
+                  <event activity="ready" ref="$layout">
+                     <script contentType="application/x-javascript">this.rawValue = xfa.layout.pageCount()</script>
+                  </event>
+                  <calculate override="error"/>
+                  <bind match="none"/>
+                  <value>
+                     <text>##</text>
+                  </value>
+               </field>
+               <draw name="pages" y="1.7788mm" x="244.4377mm" minH="5mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <exData contentType="text/html" maxLength="0">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="1.4.4183.0"><p><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField019169"/> /<span style="xfa-spacerun:yes"> </span><span xfa:embedType="uri" xfa:embedMode="raw" xfa:embed="#floatingField015724"/></p></body>
+                     </exData>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <?templateDesigner expand 1?>
+               <draw name="Dienstleister" y="8.1099mm" x="167.11mm" minW="19.8722mm" minH="3.8144mm">
+                  <ui>
+                     <textEdit>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Dienstleister:</text>
+                  </value>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <field name="dienstleister" y="6.5199mm" x="188.8mm" minW="50.2698mm" minH="5.1836mm" access="nonInteractive">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para vAlign="middle"/>
+                  <border>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <edge presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                     <corner presence="hidden"/>
+                  </border>
+                  <bind match="dataRef" ref="$record.dienstleister"/>
+                  <value>
+                     <text maxChars="40"/>
+                  </value>
+               </field>
+               <field name="logo" y="0.1699mm" w="50mm" h="10mm" access="nonInteractive">
+                  <value>
+                     <image href="$record.logoUrl" contentType="image/logoUrl"/>
+                  </value>
+                  <bind match="none"/>
+                  <event activity="initialize">
+                     <script runAt="server">this.value.image.href = xfa.resolveNode(this.value.image.href);</script>
+                  </event>
+               </field>
+            </subform>
+            <?templateDesigner expand 1?></pageArea>
+         <?templateDesigner expand 1?></pageSet>
+      <subform name="Bestandsübersicht" layout="tb">
+         <subformSet>
+            <subform name="Header" id="Header">
+               <?templateDesigner expand 1?>
+               <border>
+                  <edge presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <edge thickness="0.18mm" presence="hidden"/>
+                  <edge presence="hidden"/>
+                  <corner thickness="0.3mm" presence="hidden"/>
+                  <corner thickness="0.3mm" presence="hidden"/>
+                  <corner thickness="0.18mm" presence="hidden"/>
+                  <corner thickness="0.3mm" presence="hidden"/>
+               </border>
+               <draw name="Werk" minH="5.02mm" w="11.65mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Werk</text>
+                  </value>
+                  <font size="8pt" typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="DL-LO" minH="5.02mm" w="11.9098mm" x="11.6502mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>DL-LO</text>
+                  </value>
+                  <font size="8pt" typeface="Arial" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Materialnummer" w="27.7499mm" h="5.02mm" x="23.5599mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Materialnummer</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Bezeichnung" minH="5.02mm" w="94.2202mm" x="51.3098mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Bezeichnung</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Mengeneinheit" minH="5.02mm" w="8.4701mm" x="145.53mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>ME</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="FreierBestand" h="5.02mm" w="23.7702mm" x="154.0002mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>freier Bestand </text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="ReservierterBestand" minH="5.02mm" w="33.0701mm" x="177.7704mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>reservierter Bestand</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="ChargenNr" minH="5.02mm" w="29.9782mm" x="210.8405mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Chargen-Nr.</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Chargenbezeichnung" minH="5.02mm" w="20.3701mm" x="240.8188mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Chargenbez.</text>
+                  </value>
+                  <font typeface="Arial" size="8pt" baselineShift="0pt"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                  <para spaceAbove="0pt" spaceBelow="0pt" textIndent="0pt" marginLeft="0pt" marginRight="0pt"/>
+               </draw>
+               <draw name="Verfallsdatum" minH="5.02mm" w="22.9811mm" x="261.1889mm">
+                  <ui>
+                     <textEdit>
+                     </textEdit>
+                  </ui>
+                  <value>
+                     <text>Verfallsdatum</text>
+                  </value>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+               </draw>
+               <bind match="none"/>
+               <keep intact="none"/>
+            </subform>
+            <subform name="Bestand" id="Bestand">
+               <occur max="-1"/>
+               <bind match="none"/>
+               <break overflowLeader="#Header"/>
+               <border>
+                  <edge/>
+                  <edge/>
+                  <edge/>
+                  <edge/>
+                  <corner/>
+                  <corner/>
+                  <corner/>
+                  <corner/>
+               </border>
+               <?templateDesigner expand 1?>
+               <field name="werk" w="11.6502mm" h="7.4101mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].werk"/>
+               </field>
+               <field name="dllo" w="11.9098mm" h="7.4101mm" access="readOnly" x="11.6502mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font size="8pt" typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].dllo"/>
+               </field>
+               <field name="materialnummer" w="27.7498mm" h="7.41mm" access="nonInteractive" x="23.5599mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].materialnummer"/>
+               </field>
+               <field name="bezeichnung" w="94.2202mm" h="7.4101mm" access="nonInteractive" x="51.3098mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].bezeichnung"/>
+               </field>
+               <field name="mengeneinheit" w="8.4702mm" h="7.4101mm" access="nonInteractive" x="145.53mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].mengeneinheit"/>
+               </field>
+               <field name="freierBestand" access="nonInteractive" minW="23.7702mm" minH="7.4101mm" x="154.0002mm">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <float/>
+                  </value>
+                  <bind match="dataRef" ref="$record.Bestand[*].freierBestand">
+                     <picture>ZZZ,ZZ9.99</picture>
+                  </bind>
+                  <format>
+                     <picture>ZZZ,ZZ9.99</picture>
+                  </format>
+               </field>
+               <field name="reservierterBestand" w="33.07mm" h="7.4101mm" access="nonInteractive" x="177.7704mm">
+                  <ui>
+                     <numericEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </numericEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <float/>
+                  </value>
+                  <bind match="dataRef" ref="$record.Bestand[*].reservierterBestand"/>
+                  <format>
+                     <picture>ZZZ,ZZ9.99</picture>
+                  </format>
+               </field>
+               <field name="chargenNr" w="29.9784mm" h="7.4101mm" access="nonInteractive" x="210.8405mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].chargenNr"/>
+               </field>
+               <field name="chargenbezeichnung" w="20.3701mm" h="7.4101mm" access="nonInteractive" x="240.8188mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].chargenbezeichnung"/>
+               </field>
+               <field name="verfallsdatum" w="22.9811mm" h="7.4101mm" access="readOnly" x="261.1889mm">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                           <edge presence="hidden"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial" size="8pt"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <bind match="dataRef" ref="$record.Bestand[*].verfallsdatum"/>
+               </field>
+               <keep intact="none"/>
+            </subform>
+         </subformSet>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+      <?templateDesigner expand 1?></subform>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner DefaultRunAt client?>
+   <?templateDesigner XDCFile acrobat6.xdc?>
+   <?templateDesigner Zoom 38?>
+   <?templateDesigner DefaultPreviewType interactive?>
+   <?templateDesigner Grid show:0, snap:0, units:1, color:ff8080, origin:(0,0), interval:(158750,158750)?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/" xmlns:xfa="http://www.xfa.org/schema/xci/1.0/">
+   <agent name="designer">
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base/>
+         </template>
+      </common>
+   </agent>
+   <present>
+      <!--  [0..n]  -->
+      <destination>pdf</destination>
+      <pdf>
+         <!--  [0..n]  -->
+         <fontInfo>
+         </fontInfo>
+      </pdf>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+</config>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="DataSourceMatAbr">
+      <DataSourceMatAbr xmlns="http://xml.sap.com/2003/06/webdynpro/adobe-integration" dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" unternehmen="" dienstleister="" logoUrl="">
+         <Bestand dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" materialnummer="" bezeichnung="" mengeneinheit="" freierBestand="" reservierterBestand="" chargenNr="" chargenbezeichnung="" verfallsdatum="" werk="" dllo=""/>
+      </DataSourceMatAbr>
+   </dd:dataDescription>
+</xfa:datasets>
+<sourceSet xmlns="http://www.xfa.org/schema/xfa-source-set/1.0/"/>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.1/">
+   <xsdConnection name="DataSourceMatAbr" dataDescription="DataSourceMatAbr">
+      <uri/>
+      <rootElement>DataSourceMatAbr</rootElement>
+   </xsdConnection>
+</connectionSet>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="de_DE" desc="Deutsch (Deutschland)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>Januar</month>
+            <month>Februar</month>
+            <month>März</month>
+            <month>April</month>
+            <month>Mai</month>
+            <month>Juni</month>
+            <month>Juli</month>
+            <month>August</month>
+            <month>September</month>
+            <month>Oktober</month>
+            <month>November</month>
+            <month>Dezember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mrz</month>
+            <month>Apr</month>
+            <month>Mai</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Okt</month>
+            <month>Nov</month>
+            <month>Dez</month>
+         </monthNames>
+         <dayNames>
+            <day>Sonntag</day>
+            <day>Montag</day>
+            <day>Dienstag</day>
+            <day>Mittwoch</day>
+            <day>Donnerstag</day>
+            <day>Freitag</day>
+            <day>Samstag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>So</day>
+            <day>Mo</day>
+            <day>Di</day>
+            <day>Mi</day>
+            <day>Do</day>
+            <day>Fr</day>
+            <day>Sa</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>v. Chr.</era>
+            <era>n. Chr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">DD.MM.YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM' Uhr 'Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GjMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">€</currencySymbol>
+         <currencySymbol name="isoname">EUR</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet>
+<PDFSecurity xmlns="http://ns.adobe.com/xtd/" print="1" printHighQuality="1" change="1" modifyAnnots="1" formFieldFilling="1" documentAssembly="1" contentCopy="1" accessibleContent="1" metadata="1"/></xdp:xdp>

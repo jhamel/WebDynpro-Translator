@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="BwMatAnfSearchView" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="FromResultView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="EventHandler:onPlugFromResultView"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+		<InboundPlug name="fromBwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="EventHandler:onPlugfromBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.OutboundPlugs>
+		<OutboundPlug name="ToBwMenu">
+		</OutboundPlug>
+		<OutboundPlug name="ToResultView">
+		</OutboundPlug>
+	</AbstractView.OutboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<UIElementContainer.Children>
+				<TransparentContainer name="CrumbPathTCont">
+					<UIElement.LayoutData>
+						<FlowData name="CrumbPathTCont_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter1">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<LinkToAction name="MainMenuLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Action:BackToMainMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr1Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="BerichtswesenLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Action:BackToBerichtswesenMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr2Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<TextView name="SearchBeauftragungTextView">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+						<UIElement name="HorizontalGutter2">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<Group height="100%" name="SearchBeauftragungGrp" width="100%">
+					<UIElement.LayoutData>
+						<FlowData name="LayoutData">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<TransparentContainer name="SearchBeauftragungTCont" width="">
+							<UIElement.LayoutData>
+								<GridData name="SearchBeauftragungTCont_layoutdata">
+								</GridData>
+							</UIElement.LayoutData>
+							<UIElementContainer.Children>
+								<Group name="SelectionSearchGrp">
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+									<UIElementContainer.Children>
+										<Table name="Table" selectionMode="multi" width="40%">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="dataSource">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:dataSource"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.Properties>
+												<ViewElementProperty name="selectionMode" value="none">
+													<ViewElementProperty.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:selectionMode"/>
+													</ViewElementProperty.Definition>
+												</ViewElementProperty>
+											</ViewElement.Properties>
+											<UIElement.LayoutData>
+												<GridData colSpan="4" name="Table_layoutdata">
+												</GridData>
+											</UIElement.LayoutData>
+											<Table.Columns>
+												<TableColumn name="SelectionCheckBox">
+													<TableColumn.Header>
+														<Caption name="SelectioncheckBoxHeader" text_isDependent="false">
+														</Caption>
+													</TableColumn.Header>
+													<TableColumn.TableCellEditor>
+														<CheckBox name="CheckBox">
+															<ViewElement.ContextBindings>
+																<UIElementContextBinding name="checked">
+																	<UIElementContextBinding.BoundContextElement>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:selected"/>
+																	</UIElementContextBinding.BoundContextElement>
+																	<UIElementContextBinding.UIElementProperty>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+																	</UIElementContextBinding.UIElementProperty>
+																</UIElementContextBinding>
+															</ViewElement.ContextBindings>
+															<ViewElement.EventBindings>
+																<UIElementEventBinding name="onToggle">
+																	<UIElementEventBinding.BoundAction>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="Controller" path="Action:CheckOvsVisibility"/>
+																	</UIElementEventBinding.BoundAction>
+																	<UIElementEventBinding.UIElementEvent>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Event:onToggle"/>
+																	</UIElementEventBinding.UIElementEvent>
+																</UIElementEventBinding>
+															</ViewElement.EventBindings>
+														</CheckBox>
+													</TableColumn.TableCellEditor>
+												</TableColumn>
+												<TableColumn name="werk">
+													<TableColumn.Header>
+														<Caption name="werkText_header" text_isDependent="false">
+														</Caption>
+													</TableColumn.Header>
+													<TableColumn.TableCellEditor>
+														<TextView name="werkText_editor">
+															<ViewElement.ContextBindings>
+																<UIElementContextBinding name="text">
+																	<UIElementContextBinding.BoundContextElement>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:werk"/>
+																	</UIElementContextBinding.BoundContextElement>
+																	<UIElementContextBinding.UIElementProperty>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+																	</UIElementContextBinding.UIElementProperty>
+																</UIElementContextBinding>
+															</ViewElement.ContextBindings>
+														</TextView>
+													</TableColumn.TableCellEditor>
+												</TableColumn>
+												<TableColumn name="lagerortNr">
+													<TableColumn.Header>
+														<Caption name="lagerortNr_header" text_isDependent="false">
+														</Caption>
+													</TableColumn.Header>
+													<TableColumn.TableCellEditor>
+														<TextView name="lagerortNr_editor">
+															<ViewElement.ContextBindings>
+																<UIElementContextBinding name="text">
+																	<UIElementContextBinding.BoundContextElement>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerort"/>
+																	</UIElementContextBinding.BoundContextElement>
+																	<UIElementContextBinding.UIElementProperty>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+																	</UIElementContextBinding.UIElementProperty>
+																</UIElementContextBinding>
+															</ViewElement.ContextBindings>
+														</TextView>
+													</TableColumn.TableCellEditor>
+												</TableColumn>
+												<TableColumn name="lagerortText">
+													<TableColumn.Header>
+														<Caption name="lagerortText_header" text_isDependent="false">
+														</Caption>
+													</TableColumn.Header>
+													<TableColumn.TableCellEditor>
+														<TextView name="lagerortText_editor">
+															<ViewElement.ContextBindings>
+																<UIElementContextBinding name="text">
+																	<UIElementContextBinding.BoundContextElement>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerortText"/>
+																	</UIElementContextBinding.BoundContextElement>
+																	<UIElementContextBinding.UIElementProperty>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+																	</UIElementContextBinding.UIElementProperty>
+																</UIElementContextBinding>
+															</ViewElement.ContextBindings>
+														</TextView>
+													</TableColumn.TableCellEditor>
+												</TableColumn>
+											</Table.Columns>
+										</Table>
+										<TransparentContainer name="TransparentContainer">
+											<UIElement.LayoutData>
+												<GridData name="LayoutData">
+												</GridData>
+											</UIElement.LayoutData>
+											<UIElementContainer.Children>
+												<Label name="StatusLbl" text_isDependent="false">
+													<UIElement.LayoutData>
+														<LayoutData name="StatusLbl_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</Label>
+												<CheckBox name="cbStatusSaved">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="checked">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:inputMaterialAnforderungDLLOReportGetList/Attribute:statusSaved"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<UIElement.LayoutData>
+														<LayoutData name="cbStatusSaved_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</CheckBox>
+												<CheckBox name="cbStatusReleased">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="checked">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:inputMaterialAnforderungDLLOReportGetList/Attribute:statusReleased"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<UIElement.LayoutData>
+														<LayoutData name="cbStatusReleased_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</CheckBox>
+												<CheckBox name="cbStatusDone">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="checked">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:inputMaterialAnforderungDLLOReportGetList/Attribute:statusDone"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<UIElement.LayoutData>
+														<LayoutData name="cbStatusDone_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</CheckBox>
+											</UIElementContainer.Children>
+											<UIElementContainer.Layout>
+												<Layout name="TransparentContainer_layout">
+													<ViewElement.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition"/>
+													</ViewElement.Definition>
+												</Layout>
+											</UIElementContainer.Layout>
+										</TransparentContainer>
+										<TransparentContainer name="TransparentContainer1">
+											<UIElement.LayoutData>
+												<GridData name="LayoutData">
+												</GridData>
+											</UIElement.LayoutData>
+											<UIElementContainer.Children>
+												<Label name="BelegnrLbl" text_isDependent="false">
+													<UIElement.LayoutData>
+														<LayoutData name="BelegnrLbl_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</Label>
+												<InputField length="10" length_isDependent="false" name="BelegNrVonInp">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="value">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:inputMaterialAnforderungDLLOReportGetList/Attribute:bestellNrVon"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:value"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<ViewElement.Properties>
+														<ViewElementProperty name="width" value="">
+															<ViewElementProperty.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:width"/>
+															</ViewElementProperty.Definition>
+														</ViewElementProperty>
+													</ViewElement.Properties>
+													<UIElement.LayoutData>
+														<LayoutData name="BelegNrVonInp_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</InputField>
+												<TextView name="TextView_4_6" visible="none">
+													<UIElement.LayoutData>
+														<LayoutData name="TextView_4_6_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</TextView>
+												<InputField length="10" length_isDependent="false" name="BelegNrBisInp" visible="none">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="value">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:inputMaterialAnforderungDLLOReportGetList/Attribute:bestellNrBis"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:value"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<ViewElement.Properties>
+														<ViewElementProperty name="width" value="">
+															<ViewElementProperty.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:width"/>
+															</ViewElementProperty.Definition>
+														</ViewElementProperty>
+													</ViewElement.Properties>
+													<UIElement.LayoutData>
+														<LayoutData name="BelegNrBisInp_layoutdata">
+															<ViewElement.Definition>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+															</ViewElement.Definition>
+														</LayoutData>
+													</UIElement.LayoutData>
+												</InputField>
+											</UIElementContainer.Children>
+											<UIElementContainer.Layout>
+												<Layout name="TransparentContainer1_layout">
+													<ViewElement.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition"/>
+													</ViewElement.Definition>
+												</Layout>
+											</UIElementContainer.Layout>
+										</TransparentContainer>
+										<Button imageSource="" imageSource_isDependent="false" name="SearchBtn_0" text_isDependent="true">
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Action:searchBySelection"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+											<ViewElement.Properties>
+												<ViewElementProperty name="design" value="next">
+													<ViewElementProperty.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition" path="Property:design"/>
+													</ViewElementProperty.Definition>
+												</ViewElementProperty>
+											</ViewElement.Properties>
+											<UIElement.LayoutData>
+												<GridData name="SearchBtn_0_layoutdata">
+												</GridData>
+											</UIElement.LayoutData>
+										</Button>
+									</UIElementContainer.Children>
+									<UIElementContainer.Layout>
+										<GridLayout cellPadding="0" cellSpacing="0" colCount="1" name="SelectionSearchGrp_layout">
+										</GridLayout>
+									</UIElementContainer.Layout>
+									<Group.Header>
+										<Caption name="SelectionSearchGrp_Header" text_isDependent="false">
+										</Caption>
+									</Group.Header>
+								</Group>
+								<Group name="DirectSearchGrp" visible="none">
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+									<UIElementContainer.Children>
+										<Label name="BestellnummerLbl" text_isDependent="false">
+											<UIElement.LayoutData>
+												<GridData name="BestellnummerLbl_layoutdata">
+												</GridData>
+											</UIElement.LayoutData>
+										</Label>
+										<InputField length_isDependent="true" name="BestellnummerInputField">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="value">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller" path="Context/ChildNode:dummy/Attribute:dummyString"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:value"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<UIElement.LayoutData>
+												<GridData name="BestellnummerInputField_layoutdata">
+												</GridData>
+											</UIElement.LayoutData>
+										</InputField>
+										<Button imageSource="" imageSource_isDependent="false" name="SearchBtn" text_isDependent="false">
+											<ViewElement.Properties>
+												<ViewElementProperty name="design" value="next">
+													<ViewElementProperty.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition" path="Property:design"/>
+													</ViewElementProperty.Definition>
+												</ViewElementProperty>
+											</ViewElement.Properties>
+											<UIElement.LayoutData>
+												<GridData name="SearchBtn_layoutdata">
+												</GridData>
+											</UIElement.LayoutData>
+										</Button>
+									</UIElementContainer.Children>
+									<UIElementContainer.Layout>
+										<GridLayout colCount="2" name="DirectSearchGrp_layout">
+										</GridLayout>
+									</UIElementContainer.Layout>
+									<Group.Header>
+										<Caption name="DirectSearchGrp_Header" text_isDependent="false">
+										</Caption>
+									</Group.Header>
+								</Group>
+							</UIElementContainer.Children>
+							<UIElementContainer.Layout>
+								<GridLayout colCount="1" name="TransparentContainer10_layout_50">
+								</GridLayout>
+							</UIElementContainer.Layout>
+						</TransparentContainer>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<GridLayout colCount="2" name="SearchBeauftragungGrp_layout">
+						</GridLayout>
+					</UIElementContainer.Layout>
+					<Group.Header>
+						<Caption name="SearchBeauftragungHeader" text_isDependent="false">
+						</Caption>
+					</Group.Header>
+				</Group>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

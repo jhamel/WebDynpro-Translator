@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwOffenLieferungenPrintView" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AbstractView.ViewController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffenLieferungenPrintView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<UIElementContainer.Children>
+				<UIElement name="InteractiveForm">
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="dataSource">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffenLieferungenPrintView" type="Controller" path="Context/ChildNode:DataSourceOffeneLieferungen"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.adobe" name="InteractiveForm" type="UIElementDefinition" path="Property:dataSource"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+						<UIElementContextBinding name="pdfSource">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffenLieferungenPrintView" type="Controller" path="Context/ChildNode:PDFSource/Attribute:PdfSource"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.adobe" name="InteractiveForm" type="UIElementDefinition" path="Property:pdfSource"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+					<ViewElement.Properties>
+						<ViewElementProperty name="templateSource" value="BwOffenLieferungenPrintView_InteractiveForm.xdp">
+							<ViewElementProperty.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.adobe" name="InteractiveForm" type="UIElementDefinition" path="Property:templateSource"/>
+							</ViewElementProperty.Definition>
+						</ViewElementProperty>
+					</ViewElement.Properties>
+					<ViewElement.Definition>
+						<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.adobe" name="InteractiveForm" type="UIElementDefinition"/>
+					</ViewElement.Definition>
+					<UIElement.LayoutData>
+						<FlowData name="LayoutData">
+						</FlowData>
+					</UIElement.LayoutData>
+				</UIElement>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

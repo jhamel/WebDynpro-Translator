@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwBestBestSearchView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwBestBestSearchView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestSearchView;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwBestBestSearchView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwBestBestSearchView.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestSearchView for more details
+   */
+  private final IPrivateBwBestBestSearchView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestSearchView.IContextNode for more details.
+   */
+  private final IPrivateBwBestBestSearchView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwBestBestSearchView(IPrivateBwBestBestSearchView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    // Selektionskriterien initialisieren
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setDokartBestellung( true );
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setStatusAccepted( true );
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setStatusRejected( true );
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setDokartKontrakt( false );
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setBelegNrVon("");
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setBelegNrBis("");
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setDateVon( null );
+    wdContext.currentInputBestellBestaetigungReportGetListElement().setDateBis( null );
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwBestBestSearchView wdThis, IPrivateBwBestBestSearchView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromBwMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugFromBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromBwMenu(ServerEvent)
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToBwMenu(ServerEvent)
+  /** Action-Handler zum Zurückspringen in das Berichtswesen-Menue */
+  //@@end
+  public void onActionToBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToBwMenu(ServerEvent)
+    wdThis.wdFirePlugToBwMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToMainMenu(ServerEvent)
+  /** Action-Handler zum Zurückspringen in das Haupt-Menue */
+  //@@end
+  public void onActionToMainMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToMainMenu(ServerEvent)
+    wdThis.wdGetBerichteController().actionBackToMainMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromResultView(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugFromResultView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromResultView(ServerEvent)
+    //@@end
+  }
+
+  //@@begin javadoc:onActionstartSearch(ServerEvent)
+  /** Starten der Suche */
+  //@@end
+  public void onActionstartSearch(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionstartSearch(ServerEvent)
+    wdThis.wdGetBerichteController().getBestellBestReportList();
+    if( !wdContext.currentGlobalModelDataElement().getCancelBusinessProcess() ) {
+      wdThis.wdFirePlugToResultView();
+    }
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="ToBwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToMainMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToMainMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="startSearch">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionstartSearch"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextValueNode cardinality="_1_1" name="dummy">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="dummyDate">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="dummyString">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="dummyBoolean">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextModelNode name="BestellBestaetigungReportGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="inputBestellBestaetigungReportGetList">
+							<ContextNode.Attributes>
+								<ContextValueAttribute name="belegNrVon">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="belegNrBis">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="statusAccepted">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="statusRejected">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dokartKontrakt">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dokartBestellung">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dateVon">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dateBis">
+								</ContextValueAttribute>
+							</ContextNode.Attributes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextValueNode name="GlobalModelData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="cancelBusinessProcess">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onPlugFromBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToMainMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugFromResultView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionstartSearch">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="3">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:belegNrVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:belegNrVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="4">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:belegNrBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:belegNrBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="5">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:statusAccepted"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:statusAccepted"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="6">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:statusRejected"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:statusRejected"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="7">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dokartKontrakt"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dokartKontrakt"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="8">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dokartBestellung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dokartBestellung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="9">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dateVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dateVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="10">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dateBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:inputBestellBestaetigungReportGetList/Attribute:dateBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="11">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:GlobalModelData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:GlobalModelData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="12">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:GlobalModelData/Attribute:cancelBusinessProcess"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:GlobalModelData/Attribute:cancelBusinessProcess"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View"/>
+	</Controller.View>
+</Controller>

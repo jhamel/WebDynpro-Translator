@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwOffeneLieferungenSearchView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwOffeneLieferungenSearchView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import java.util.Collection;
+import java.util.List;
+
+import com.eonis.eea.bpexd.model.Lagerort;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwOffeneLieferungenSearchView;
+import com.sap.tc.webdynpro.progmodel.api.IWDNode;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwOffeneLieferungenSearchView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwOffeneLieferungenSearchView.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwOffeneLieferungenSearchView for more details
+   */
+  private final IPrivateBwOffeneLieferungenSearchView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwOffeneLieferungenSearchView.IContextNode for more details.
+   */
+  private final IPrivateBwOffeneLieferungenSearchView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwOffeneLieferungenSearchView(IPrivateBwOffeneLieferungenSearchView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    wdContext.currentInputBwOffeneLieferungenGetListElement().setStatusAbgenommen(true);
+	wdContext.currentInputBwOffeneLieferungenGetListElement().setStatusFreigegeben(true);
+	wdContext.currentInputBwOffeneLieferungenGetListElement().setBelegartMF(true);
+	wdContext.currentInputBwOffeneLieferungenGetListElement().setBelegartRF(true);
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwOffeneLieferungenSearchView wdThis, IPrivateBwOffeneLieferungenSearchView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:onActionsearchBySelection(ServerEvent)
+  /** Suche der Materialanforderungen starten. */
+  //@@end
+  public void onActionsearchBySelection(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionsearchBySelection(ServerEvent)
+    wdThis.wdGetBerichteController().createMatAnfComponent();
+    wdThis.wdGetBerichteController().getMaterialAnforderungDLLOReportList();
+    if( !wdContext.currentGlobalModelDataElement().getCancelBusinessProcess() ) {
+      wdThis.wdFirePlugToResultView();
+    }
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugfromBwMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugfromBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugfromBwMenu(ServerEvent)
+	wdContext.currentInputMatabrechnungGetStorageLocationElement().setWerk("");
+	wdContext.nodeMatabrechnungGetStorageLocation().clearSelection();
+	wdThis.wdGetBerichteController().matabrechnungGetStorageLocation();
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromResultView(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugFromResultView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromResultView(ServerEvent)
+    //@@end
+  }
+
+  //@@begin javadoc:onActionBackToMainMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionBackToMainMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionBackToMainMenu(ServerEvent)
+    wdThis.wdGetBerichteController().actionBackToMainMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionBackToBerichtswesenMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionBackToBerichtswesenMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionBackToBerichtswesenMenu(ServerEvent)
+    wdThis.wdFirePlugToBwMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionSuchen(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionSuchen(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionSuchen(ServerEvent)
+	List inputLagerorte = wdContext.currentInputBwOffeneLieferungenGetListElement().modelObject().getLagerorte();
+	inputLagerorte.clear();
+	for (int i = 0; i < wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().size(); i++) {
+		if(wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().getLagerOrteMatabrechnungGetStorageLocationElementAt(i).getIsSelected()){
+			Lagerort lo = new Lagerort();
+		
+			lo.setWerk(wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().getLagerOrteMatabrechnungGetStorageLocationElementAt(i).getWerk());
+			lo.setLagerort(wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().getLagerOrteMatabrechnungGetStorageLocationElementAt(i).getLagerort());			
+			inputLagerorte.add( lo );
+		}
+
+	}
+
+	wdThis.wdGetBerichteController().bwOffeneLieferungenGetList();
+	
+	if(    !wdComponentAPI.getMessageManager().hasExceptions()
+	  && !wdContext.currentGlobalModelDataElement().getCancelBusinessProcess() )
+	{	
+		wdThis.wdFirePlugToResultView();
+	}
+
+    //@@end
+  }
+
+  //@@begin javadoc:onActionCheckOvsVisibility(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionCheckOvsVisibility(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionCheckOvsVisibility(ServerEvent)
+	// prüfe, ob nur ein lagerort ausgewählt ist
+	int countSelections = 0;
+	for (int i = 0; i < wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().size(); i++) {
+		if(wdContext.nodeLagerOrteMatabrechnungGetStorageLocation().getLagerOrteMatabrechnungGetStorageLocationElementAt(i).getIsSelected()){
+			countSelections++;
+		}
+		if(countSelections>1){
+			break;
+		}
+	}
+	if(countSelections==0){
+		wdContext.currentInputBwOffeneLieferungenGetListElement().setMaterialnummerVon("");
+		wdContext.currentInputBwOffeneLieferungenGetListElement().setMaterialnummerBis("");
+	
+	}
+	boolean isLagerortSingleSelected = countSelections==1;
+	wdThis.wdGetBerichteController().checkOvsVisibilityBwOffLief(isLagerortSingleSelected);
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="searchBySelection">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionsearchBySelection"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="BackToMainMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionBackToMainMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="BackToBerichtswesenMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionBackToBerichtswesenMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="Suchen">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionSuchen"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="CheckOvsVisibility">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionCheckOvsVisibility"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextValueNode cardinality="_1_1" name="GlobalModelData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="cancelBusinessProcess">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextModelNode name="BwOffeneLieferungenGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="inputBwOffeneLieferungenGetList">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="dienstleisternummer">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerDesEinkaufsbelegsVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerMaterialaufmassbelegBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerDesEinkaufsbelegsBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialnummerBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="erfassungsdatumBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="freigabedatumBelegBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerMaterialaufmassbelegVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialnummerVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="unternehmensnummer">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="erfassungsdatumVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="freigabedatumBelegVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="statusGesichert">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="statusFreigegeben">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="statusAbgenommen">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegartMF">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegartRF">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="lagerorteBw">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="serviceProviderId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werkText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="companyId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrg">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="zentralLagerortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="zentralLagerort">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrgText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werk">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerort">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextModelNode name="MatabrechnungGetStorageLocation">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="outputMatabrechnungGetStorageLocation">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="lagerOrteMatabrechnungGetStorageLocation">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="serviceProviderId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werkText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="companyId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrg">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="zentralLagerort">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrgText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werk">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerort">
+										</ContextModelAttribute>
+										<ContextValueAttribute name="isSelected">
+											<ContextValueAttribute.Type>
+												<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+											</ContextValueAttribute.Type>
+										</ContextValueAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+						<ContextModelNode name="inputMatabrechnungGetStorageLocation">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="werk">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onActionsearchBySelection">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugfromBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugFromResultView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionBackToMainMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionBackToBerichtswesenMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionSuchen">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionCheckOvsVisibility">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="28">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:GlobalModelData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:GlobalModelData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="29">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:GlobalModelData/Attribute:cancelBusinessProcess"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:GlobalModelData/Attribute:cancelBusinessProcess"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="30">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="59">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="60">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="61">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="62">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:serviceProviderId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:serviceProviderId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="63">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:werkText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:werkText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="64">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:companyId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:companyId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="65">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="66">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:ekOrg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:ekOrg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="67">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:zentralLagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:zentralLagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="68">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:ekOrgText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:ekOrgText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="69">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="70">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:outputMatabrechnungGetStorageLocation/ChildNode:lagerOrteMatabrechnungGetStorageLocation/Attribute:lagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="71">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:inputMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:inputMatabrechnungGetStorageLocation"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="72">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:inputMatabrechnungGetStorageLocation/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:MatabrechnungGetStorageLocation/ChildNode:inputMatabrechnungGetStorageLocation/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="102">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="103">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:dienstleisternummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:dienstleisternummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="104">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerDesEinkaufsbelegsVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerDesEinkaufsbelegsVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="105">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerMaterialaufmassbelegBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerMaterialaufmassbelegBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="106">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerDesEinkaufsbelegsBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerDesEinkaufsbelegsBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="107">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:materialnummerBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:materialnummerBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="108">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:erfassungsdatumBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:erfassungsdatumBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="109">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:freigabedatumBelegBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:freigabedatumBelegBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="110">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerMaterialaufmassbelegVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegnummerMaterialaufmassbelegVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="111">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:materialnummerVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:materialnummerVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="112">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:unternehmensnummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:unternehmensnummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="113">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:erfassungsdatumVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:erfassungsdatumVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="114">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:freigabedatumBelegVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:freigabedatumBelegVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="115">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusGesichert"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusGesichert"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="116">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusFreigegeben"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusFreigegeben"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="117">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusAbgenommen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:statusAbgenommen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="118">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="119">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:serviceProviderId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:serviceProviderId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="120">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:werkText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:werkText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="121">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:companyId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:companyId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="122">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:lagerortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:lagerortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="123">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:ekOrg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:ekOrg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="124">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:zentralLagerortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:zentralLagerortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="125">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:zentralLagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:zentralLagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="126">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:ekOrgText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:ekOrgText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="127">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="128">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:lagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/ChildNode:lagerorteBw/Attribute:lagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="129">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegartMF"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegartMF"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="130">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegartRF"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BwOffeneLieferungenGetList/ChildNode:inputBwOffeneLieferungenGetList/Attribute:belegartRF"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View"/>
+	</Controller.View>
+</Controller>

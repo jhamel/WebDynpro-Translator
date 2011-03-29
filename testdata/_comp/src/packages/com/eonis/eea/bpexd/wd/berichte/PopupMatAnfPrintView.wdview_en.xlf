@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+<file source-language="en" product-name="View:PopupMatAnfPrintView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc />
+</dtr>
+<giltDirectives>
+<develContact>H15430</develContact><domain />
+<originalLocale xml:lang="de" />
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="informationMessage">
+<trans-unit id="b7747373e6f343a4263b8a933492557f" resname="RootUIElementContainer/Child:DefaultTextView@text" maxwidth="16384" translate="yes"><source>Technical print view</source></trans-unit></group>
+<group restype="button">
+<trans-unit id="2d98ced741c94bd42bc5b6a487646f12" resname="RootUIElementContainer/Child:ToDocumentBtn@text" maxwidth="255" translate="yes"><source>To the document</source></trans-unit><trans-unit id="26012ae4b28d48a81bd9b38074d9fbd5" resname="RootUIElementContainer/Child:CancelBtn@text" maxwidth="255" translate="yes"><source>Back</source></trans-unit></group>
+<group restype="label">
+<trans-unit id="318094bb1940444616b282e42faa47c7" resname="RootUIElementContainer/Child:PDFImage@alt" maxwidth="255" translate="yes"><source>PDF</source></trans-unit></group>
+</body>
+</file>
+</xliff>

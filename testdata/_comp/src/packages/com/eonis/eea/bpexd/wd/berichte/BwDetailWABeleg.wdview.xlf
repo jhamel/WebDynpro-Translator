@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="de" product-name="View:BwDetailWABeleg[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>J19727</develContact><domain></domain>
+<originalLocale xml:lang="de"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="caption">
+<trans-unit id="c20a2dcbf1114a423f6391e28598620a" resname="RootUIElementContainer/Child:Table/Column:belegdatum/Header@text" maxwidth="255" translate="yes"><source>Belegdatum</source></trans-unit><trans-unit id="0961ae146d144f661f1d8702e1704ead" resname="RootUIElementContainer/Child:Table/Column:erfassungsdatumMitZeit/Header@text" maxwidth="255" translate="yes"><source>Erfassungsdatum</source></trans-unit><trans-unit id="1371b1212c424cc2299d8e99cf61a018" resname="RootUIElementContainer/Child:Table/Column:materialbezeichnung/Header@text" maxwidth="255" translate="yes"><source>Mat.-bezeichnung</source></trans-unit><trans-unit id="0a503fde32ed4b510be5a27c7fd09603" resname="RootUIElementContainer/Child:Table/Column:WAMenge/Header@text" maxwidth="255" translate="yes"><source>WA-Menge</source></trans-unit><trans-unit id="25b860f8dab34ce124e39b6b94a6c0f7" resname="RootUIElementContainer/Child:Table/Column:charge/Header@text" maxwidth="255" translate="yes"><source>Charge</source></trans-unit><trans-unit id="ed0a7e04e4794e0e0989af72f7f6ed20" resname="RootUIElementContainer/Child:Table/Column:lagerortText/Header@text" maxwidth="255" translate="yes"><source>Lagerorttext</source></trans-unit><trans-unit id="d09a9a043f9a443d048a91f1f04db01c" resname="RootUIElementContainer/Child:Table/Column:me/Header@text" maxwidth="255" translate="yes"><source>ME</source></trans-unit><trans-unit id="b2448e432859452a2c52d2ca62cd47e6" resname="RootUIElementContainer/Child:Table/Column:materialnummer/Header@text" maxwidth="255" translate="yes"><source>Mat.-nr</source></trans-unit><trans-unit id="315da109b46642c22516af0ad71deff2" resname="RootUIElementContainer/Child:Table/Column:belegkopftext/Header@text" maxwidth="255" translate="yes"><source>Belegkopftext</source></trans-unit><trans-unit id="213e7ce11e494cfb319fc4e4b7980d5d" resname="RootUIElementContainer/Child:Table/OutgoingAggregation:MasterColumn/AggregatedObject:MasterColumn/OutgoingAggregation:Header/AggregatedObject:Header@text" maxwidth="255" translate="yes"><source>Belegnummer</source></trans-unit><trans-unit id="b45d0e59786547c23fc9aacc8f485870" resname="RootUIElementContainer/Child:Table/Column:lagerort/Header@text" maxwidth="255" translate="yes"><source>Lagerort</source></trans-unit><trans-unit id="c2b7e7d462b24a9e378af4414b29cdd1" resname="RootUIElementContainer/Child:Table/Column:werk/Header@text" maxwidth="255" translate="yes"><source>Werk</source></trans-unit><trans-unit id="7e867ffb110f4aa31030e4018484d48a" resname="RootUIElementContainer/Child:Table/Column:positionsnummer/Header@text" maxwidth="255" translate="yes"><source>Pos</source></trans-unit></group>
+<group restype="label">
+<trans-unit id="db9bcfc7528a4f2010bfd1b12a9b9acd" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:Arr3Img_14@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="1079329d648d43060dc8aac651be9ca3" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:Arr2Img_10@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="e8992fdb9d0d49b7177ed9e49b11d174" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:Arr1Img_6@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit></group>
+<group restype="informationMessage">
+<trans-unit id="a88959a3daac4539396decd3bcc37b33" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:SearchBeauftragungTextView_16@text" maxwidth="16384" translate="yes"><source>Warenausgangdetails</source></trans-unit></group>
+<group restype="button">
+<trans-unit id="9f68e199bdc24f0d031081d69d187151" resname="RootUIElementContainer/Child:CancelBtn@text" maxwidth="255" translate="yes"><source>Zurück</source></trans-unit></group>
+<group restype="hyperlink">
+<trans-unit id="863a6c6e830040f937ebb17ad0e766f5" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:SearchBeauftragungLinkToAction_12@text" maxwidth="255" translate="yes"><source>Materialaufmaß zur Bestellung anzeigen</source></trans-unit><trans-unit id="7dbc631a25bf449c1f0dff9634486549" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:BerichtswesenLinkToAction_8@text" maxwidth="255" translate="yes"><source>Berichtswesen</source></trans-unit><trans-unit id="c89dcd34c08f466820d7e1a8274bd7f4" resname="RootUIElementContainer/Child:CrumbPathTCont_0/Child:MainMenuLinkToAction_4@text" maxwidth="255" translate="yes"><source>Haupt-Menu</source></trans-unit></group>
+</body>
+</file>
+</xliff>

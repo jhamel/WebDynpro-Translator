@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<NavigationLinks xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.NavigationLinks:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="PopupOffeneLieferungenPrint" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<NavigationLinks.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupOffeneLieferungenPrint" type="Window"/>
+	</NavigationLinks.Parent>
+</NavigationLinks>

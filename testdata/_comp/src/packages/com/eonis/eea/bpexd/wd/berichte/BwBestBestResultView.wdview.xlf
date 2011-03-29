@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="de" product-name="View:BwBestBestResultView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>H15430</develContact><domain></domain>
+<originalLocale xml:lang="de"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="caption">
+<trans-unit id="5071f04284204c7b2479c51043184a8a" resname="RootUIElementContainer/Child:tablePos/Column:bedarfsNr/Header@text" maxwidth="255" translate="yes"><source>Bedarfsnummer</source></trans-unit><trans-unit id="9f948cdce66e4d27182f95297e8748d5" resname="RootUIElementContainer/Child:tablePos/Column:menge/Header@text" maxwidth="255" translate="yes"><source>Bestellmenge</source></trans-unit><trans-unit id="249f88964b19493c3543b2e9d6a251e5" resname="RootUIElementContainer/Child:tablePos/Column:musterLVNr/Header@text" maxwidth="255" translate="yes"><source>MusterLV</source></trans-unit><trans-unit id="fc09cc52f60f4f0d04749b9f6136f112" resname="RootUIElementContainer/Child:tablePos/Column:auftragsbestaetigungsStatus/Header@text" maxwidth="255" translate="yes"><source>Status</source></trans-unit><trans-unit id="0858f1d2f3c5485c24c0fc914e4a46dc" resname="RootUIElementContainer/Child:Table/Column:waehrung/Header@text" maxwidth="255" translate="yes"><source>Währung</source></trans-unit><trans-unit id="3682cc1781e344b602a980faa435d7c2" resname="RootUIElementContainer/Child:tablePos/Column:bestellWert_0/Header@text" maxwidth="255" translate="yes"><source>Bestellwert</source></trans-unit><trans-unit id="990101fc1bd840d63323d9429e52295e" resname="RootUIElementContainer/Child:Table/Column:kurztext/Header@text" maxwidth="255" translate="yes"><source>Kurztext</source></trans-unit><trans-unit id="28fb956406954f8a0386ace13cd8e1a5" resname="RootUIElementContainer/Child:Table/Column:ekGrpTelefon/Header@text" maxwidth="255" translate="yes"><source>Telefonnummer</source></trans-unit><trans-unit id="b04b87e6438a4e1b2ddf912290c551d1" resname="RootUIElementContainer/Child:Table/Column:bestellNr/Header@text" maxwidth="255" translate="yes"><source>Bestellnummer</source></trans-unit><trans-unit id="b8ff17ba47994e8b339b91048e94461c" resname="RootUIElementContainer/Child:tablePos/Column:vertragsNr/Header@text" maxwidth="255" translate="yes"><source>Kontrakt</source></trans-unit><trans-unit id="0df4ab4d537e444a1c28b3a00782e042" resname="RootUIElementContainer/Child:tablePos/Column:mengenEh/Header@text" maxwidth="255" translate="yes"><source>ME</source></trans-unit><trans-unit id="6650d972ecb640d43de9d9d7402b2cdb" resname="RootUIElementContainer/Child:Table/Column:bestellWert/Header@text" maxwidth="255" translate="yes"><source>Bestellwert</source></trans-unit><trans-unit id="c9860872c9a446701daadcdf00859f40" resname="RootUIElementContainer/Child:Table/Column:bestdatum/Header@text" maxwidth="255" translate="yes"><source>Bestelldatum</source></trans-unit><trans-unit id="260e84ccf8d14a8136d7bbbc292786c7" resname="RootUIElementContainer/Child:Table/Column:ekGrpText/Header@text" maxwidth="255" translate="yes"><source>Einkäufergruppe</source></trans-unit><trans-unit id="8f44e0896dd74ba026948abe0afa8786" resname="RootUIElementContainer/Child:Table/Column:ekOrgText/Header@text" maxwidth="255" translate="yes"><source>Einkaufsorganisation</source></trans-unit><trans-unit id="1cc61ddfb262481c2ad1ec4ff2200758" resname="RootUIElementContainer/Child:tablePos/Column:pos/Header@text" maxwidth="255" translate="yes"><source>Pos.</source></trans-unit><trans-unit id="8a415df65695438308e9abfc40268c98" resname="RootUIElementContainer/Child:tablePos/Column:lieferDatum/Header@text" maxwidth="255" translate="yes"><source>Lieferdatum</source></trans-unit><trans-unit id="99bdf189ebeb49a01c58bd7a7ed87a76" resname="RootUIElementContainer/Child:tablePos/Column:kurzText/Header@text" maxwidth="255" translate="yes"><source>Kurztext</source></trans-unit></group>
+<group restype="hyperlink">
+<trans-unit id="74ff7b557f694b0d136bff65e9e52e0e" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:MainMenuLinkToAction@text" maxwidth="255" translate="yes"><source>Haupt-Menu</source></trans-unit><trans-unit id="552333e82c214e87008ba7d603619ed8" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:BerichtswesenLinkToAction@text" maxwidth="255" translate="yes"><source>Berichtswesen</source></trans-unit><trans-unit id="20e6cbed9c264ab21410d32d8cd9598e" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:SearchBeauftragungLinkToAction@text" maxwidth="255" translate="yes"><source>Auftragsbestätigungen suchen</source></trans-unit></group>
+<group restype="label">
+<trans-unit id="41ca6fc9bc554ece3197c672744d3983" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr2Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="c0cd284997c740373b7ea27147775cd9" resname="RootUIElementContainer/Child:Table/ToolBar/OutgoingAggregation:ToolBarRightItems/AggregatedObject:ToolBarInputField@labelText" maxwidth="255" translate="yes"><source>Anz. sichtbarer Zeilen</source></trans-unit><trans-unit id="950389183a7647431a83ded6e205f87f" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr3Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="6eb388c0bc524c02355d8224653867dc" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr1Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit></group>
+<group restype="informationMessage">
+<trans-unit id="aa98bc4e9a004bbe31e2e8413f0de230" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:SearchBeauftragungTextView@text" maxwidth="16384" translate="yes"><source>Auftragsbestätigungen anzeigen</source></trans-unit></group>
+</body>
+</file>
+</xliff>

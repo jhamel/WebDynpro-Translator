@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="PopupMatZurBestellungPrintView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivatePopupMatZurBestellungPrintView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivatePopupMatZurBestellungPrintView;
+import com.sap.tc.webdynpro.services.sal.url.api.IWDCachedWebResource;
+import com.sap.tc.webdynpro.services.sal.url.api.WDURLException;
+import com.sap.tc.webdynpro.services.sal.url.api.WDWebResource;
+import com.sap.tc.webdynpro.services.sal.url.api.WDWebResourceType;
+import com.sap.tc.webdynpro.services.session.api.IWDWindow;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IMessageBerichte;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class PopupMatZurBestellungPrintView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(PopupMatZurBestellungPrintView.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivatePopupMatZurBestellungPrintView for more details
+   */
+  private final IPrivatePopupMatZurBestellungPrintView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivatePopupMatZurBestellungPrintView.IContextNode for more details.
+   */
+  private final IPrivatePopupMatZurBestellungPrintView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public PopupMatZurBestellungPrintView(IPrivatePopupMatZurBestellungPrintView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivatePopupMatZurBestellungPrintView wdThis, IPrivatePopupMatZurBestellungPrintView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:onActionopenPDFDocument(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionopenPDFDocument(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionopenPDFDocument(ServerEvent)
+    // In dieser Methode nicht die Mehode closePopup() aufrufen, den dann kommt es zu einer Exception
+    // Immer erst das Popupfenster schließen, das externe Fenster öffnen und dann, ganz unten, 
+    // das Popupfenster zerstören.
+    IWDWindow window = wdContext.currentComponentDataElement().getPopupMatZurBestellungPrintView();
+  	try{
+      window.close();
+  
+  		byte[] pdfContent=  wdContext.nodePDFSource().currentPDFSourceElement().getPdfSource();
+  		IWDCachedWebResource pdfResource = WDWebResource.getWebResource (pdfContent,WDWebResourceType.PDF);
+  		wdComponentAPI.getWindowManager().createExternalWindow(pdfResource.getURL(),"Berichtswesen Drucken",false).open();
+  	}
+  	catch(WDURLException ex){
+  		wdComponentAPI.getMessageManager().reportMessage( IMessageBerichte.PDF_DATEI_NICHT_ANZEIGBAR, null, false );
+  	}
+    // Die Reihenfolge der folgenden beiden Zeilen ist seit SP16 wichtig. Wenn diese vertauscht werden,
+    // was unter SP11 möglich war, gibt es eine Exception.
+    wdContext.currentComponentDataElement().setPopupMatZurBestellungPrintView(null);
+    window.destroy();
+    //@@end
+  }
+
+  //@@begin javadoc:onActioncancel(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActioncancel(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActioncancel(ServerEvent)
+	closePopup();
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  private void closePopup(){
+		IWDWindow window = wdContext.currentComponentDataElement().getPopupMatZurBestellungPrintView();
+		window.close();
+		// Die Reihenfolge der folgenden beiden Zeilen ist seit SP16 wichtig. Wenn diese vertauscht werden,
+		// was unter SP11 möglich war, gibt es eine Exception.
+		wdContext.currentComponentDataElement().setPopupMatZurBestellungPrintView(null);
+		window.destroy();
+  }
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="openPDFDocument">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionopenPDFDocument"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="cancel">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActioncancel"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextValueNode cardinality="_1_1" name="PDFSource">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="PdfSource">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextValueNode cardinality="_1_1" name="componentData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="popupMatZurBestellungPrintView">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onActionopenPDFDocument">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActioncancel">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:PDFSource"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:PDFSource"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:PDFSource/Attribute:PdfSource"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:PDFSource/Attribute:PdfSource"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="5">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="6">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData/Attribute:popupMatZurBestellungPrintView"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData/Attribute:popupMatZurBestellungPrintView"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatZurBestellungPrintView" type="View"/>
+	</Controller.View>
+</Controller>

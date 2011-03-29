@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+<file source-language="en" product-name="View:BwAusplattformSearchView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc />
+</dtr>
+<giltDirectives>
+<develContact>A6215</develContact><domain />
+<originalLocale xml:lang="de" />
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="checkbox">
+<trans-unit id="43bcc4b7b80340a00f8d85ecfdb00a53" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusOffen@text" maxwidth="255" translate="yes"><source>Open</source></trans-unit><trans-unit id="5284b78ba7c244ea11efca40b3adcfb5" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusZurueckgezogen@text" maxwidth="255" translate="yes"><source>Withdrawn</source></trans-unit><trans-unit id="96099578e5bf4d1f12dbc068dc525643" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbAbgebot@text" maxwidth="255" translate="yes"><source>Offer</source></trans-unit><trans-unit id="379ca53a78414b5b3a52e7a52414117e" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusAbgesagt@text" maxwidth="255" translate="yes"><source>Rejected</source></trans-unit><trans-unit id="37f9d709cc114e0b2388912f8a3c65d3" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusErstellt@text" maxwidth="255" translate="yes"><source>Ordered</source></trans-unit><trans-unit id="3d17ae706f72456a384d817b96b45812" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusFreigegeben@text" maxwidth="255" translate="yes"><source>Released</source></trans-unit><trans-unit id="655d6f70347b46512a74c47d97c2c481" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbAnfrage@text" maxwidth="255" translate="yes"><source>Inquiry</source></trans-unit><trans-unit id="f6d64a96862a45f62020f6d949a866f8" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:cbStatusGesichert@text" maxwidth="255" translate="yes"><source>Secured</source></trans-unit></group>
+<group restype="caption">
+<trans-unit id="6c1bcd4b7f6f4b7d39a09bf52124fc32" resname="RootUIElementContainer/Child:SearchGrp/Header@text" maxwidth="255" translate="yes"><source>Search for bid invitation</source></trans-unit><trans-unit id="90c386ce79e14f880ba9efcc2197966b" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Header@text" maxwidth="255" translate="yes"><source>Selection search</source></trans-unit><trans-unit id="e46645f24e34481b0fcfd84ee8962727" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:DirectSearchGrp/Header@text" maxwidth="255" translate="yes"><source>Direct search</source></trans-unit></group>
+<group restype="label">
+<trans-unit id="2c7089a010fd458112dfc7a8ffb303b9" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:StatusLbl@text" maxwidth="255" translate="yes"><source>Status</source></trans-unit><trans-unit id="f54bd0c48c804f5013be8f33a73964fa" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr1Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="1b50ec00529f41ef0aa2858eaaf1737d" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:EkGrpLbl@text" maxwidth="255" translate="yes"><source>Purchasing group</source></trans-unit><trans-unit id="55b5054af07943ab19da8febd8b9a205" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:AngebotsartLbl@text" maxwidth="255" translate="yes"><source>Offer type</source></trans-unit><trans-unit id="b7b18971b6c441fb05b7a4d2202ed1ee" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr2Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="71459ba8be0e4d2e0be09b4bf01d4560" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:DirectSearchGrp/Child:BestellnummerLbl@text" maxwidth="255" translate="yes"><source>Request number</source></trans-unit><trans-unit id="6c8e55e2dd144bff21c7a87bd38d5f49" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:DateLbl@text" maxwidth="255" translate="yes"><source>Deadline for submission of quotations</source></trans-unit></group>
+<group restype="informationMessage">
+<trans-unit id="a9c334fb83d34c0c3b61bc0130cf9ce1" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:TextView_4@text" maxwidth="16384" translate="yes"><source>to</source></trans-unit><trans-unit id="6c7682150c0a45181a38d26dd8a3bad1" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:SearchBestBestView@text" maxwidth="16384" translate="yes"><source>Search for bid invitation</source></trans-unit></group>
+<group restype="hyperlink">
+<trans-unit id="8625de08f83344143990df9733e9f9f4" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:MainMenuLinkToAction@text" maxwidth="255" translate="yes"><source>Main menu</source></trans-unit><trans-unit id="8d27bd9da2ea40fe0e1da673695c2a2a" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:BerichtswesenLinkToAction@text" maxwidth="255" translate="yes"><source>Reporting</source></trans-unit></group>
+<group restype="button">
+<trans-unit id="c4a08d870db1412a09d9a82fe68fa32c" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:DirectSearchGrp/Child:SearchBtn@text" maxwidth="255" translate="yes"><source>Find</source></trans-unit><trans-unit id="260f1c87ec894d3608069854eb0435e6" resname="RootUIElementContainer/Child:SearchGrp/Child:SearchBeauftragungTCont/Child:SelectionSearchGrp/Child:SearchBtn_0@text" maxwidth="255" translate="yes"><source>Find</source></trans-unit></group>
+</body>
+</file>
+</xliff>

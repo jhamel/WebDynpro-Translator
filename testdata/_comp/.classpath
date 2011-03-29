@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="gen_wdp/packages"/>
+    <classpathentry kind="src" path="gen_ddic/datatypes"/>
+    <classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wdp/metamodel/content/_comp/gen/default/public/default/lib/java/SapMetamodelWebdynproContent.zip"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_admin.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_basesrvc.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_clientserver.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_modelimpl.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_model_dynamicrfc.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_pdfobject.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_progmodel.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_designtime_coupling.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_designtime_coupling_api.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_repository.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_runtime_repository_pmr.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/wd/webdynpro/_comp/gen/default/public/default/lib/java/_webdynpro_services.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/ddic/metamodel/content/_comp/gen/default/public/default/lib/java/SapMetamodelDictionaryContent.zip"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java/logging.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/logging/_comp/gen/default/public/default/lib/java/logging.perf.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/cmi/_comp/gen/default/public/default/lib/java/_cmi_api.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java/SapDictionaryTypeServices.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/tc/ddic/ddicruntime/_comp/gen/default/public/default/lib/java/SapDictionaryTypesRuntime.jar"/>
+    <classpathentry kind="lib" path="C:/Dokumente und Einstellungen/J19727/.dtc/4/DCs/sap.com/com.sap.exception/_comp/gen/default/public/default/lib/java/exception.jar"/>
+    <classpathentry kind="src" path="src/packages"/>
+    <classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwMatZurBestellungPrintView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwMatZurBestellungPrintView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatZurBestellungPrintView;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwMatZurBestellungPrintView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwMatZurBestellungPrintView.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end 
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatZurBestellungPrintView for more details
+   */
+  private final IPrivateBwMatZurBestellungPrintView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatZurBestellungPrintView.IContextNode for more details.
+   */
+  private final IPrivateBwMatZurBestellungPrintView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwMatZurBestellungPrintView(IPrivateBwMatZurBestellungPrintView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwMatZurBestellungPrintView wdThis, IPrivateBwMatZurBestellungPrintView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  //@@end
+}
+
+// ---- content of obsolete user coding area(s) ----
+//@@begin obsolete:onActionClose(ServerEvent)
+//	wdContext.currentComponentDataElement().getPopupBeauftragungPrintView().close();
+//	wdContext.currentComponentDataElement().setPopupBeauftragungPrintView(null);
+//	wdContext.currentComponentDataElement().getPopupBeauftragungPrintView().destroy();
+//@@end
+//@@begin obsolete:javadoc:onActionClose(ServerEvent)
+//  /** Declared validating event handler. */
+//@@end
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextValueNode cardinality="_1_1" name="PDFSource">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="PdfSource">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextValueNode cardinality="_1_1" name="componentData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="popupBeauftragungPrintView">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextValueNode name="DataSourceMatZurBestellung">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="dienstleister">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="logoUrl">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="unternehmen">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextValueNode name="Bestellungen" singleton="false">
+							<ContextNode.Attributes>
+								<ContextValueAttribute name="Bestellung">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="TM">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="EinkaeuferBez">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="BDatum">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="ErfMEAKZ">
+								</ContextValueAttribute>
+							</ContextNode.Attributes>
+							<ContextNode.ChildNodes>
+								<ContextValueNode name="Position" singleton="false">
+									<ContextNode.Attributes>
+										<ContextValueAttribute name="Pos">
+										</ContextValueAttribute>
+										<ContextValueAttribute name="MEAKZ">
+										</ContextValueAttribute>
+										<ContextValueAttribute name="StatusPos">
+										</ContextValueAttribute>
+										<ContextValueAttribute name="KurztextBestellposition">
+										</ContextValueAttribute>
+										<ContextValueAttribute name="Kontrakt">
+										</ContextValueAttribute>
+										<ContextValueAttribute name="Lieferdatum">
+										</ContextValueAttribute>
+									</ContextNode.Attributes>
+									<ContextNode.ChildNodes>
+										<ContextValueNode name="Aufmass" singleton="false">
+											<ContextNode.Attributes>
+												<ContextValueAttribute name="MaNr">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Status">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="KurztextMaterialaufmass">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Aufmassart">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="erstellt">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="freigegeben">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Werk">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="DLLO">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="ZLO">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="WABeleg">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Empfaenger">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Reservierung">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Wunschtermin">
+												</ContextValueAttribute>
+												<ContextValueAttribute name="Lieferanschrift">
+												</ContextValueAttribute>
+											</ContextNode.Attributes>
+										</ContextValueNode>
+									</ContextNode.ChildNodes>
+								</ContextValueNode>
+							</ContextNode.ChildNodes>
+						</ContextValueNode>
+					</ContextNode.ChildNodes>
+				</ContextValueNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="33">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:PDFSource"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:PDFSource"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="34">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:PDFSource/Attribute:PdfSource"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:PDFSource/Attribute:PdfSource"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="35">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="36">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData/Attribute:popupBeauftragungPrintView"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData/Attribute:popupBeauftragungPrintView"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="97">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="98">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="99">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:Bestellung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:Bestellung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="100">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:TM"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:TM"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="101">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:EinkaeuferBez"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:EinkaeuferBez"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="102">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:BDatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:BDatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="103">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:ErfMEAKZ"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/Attribute:ErfMEAKZ"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="104">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="105">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Pos"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Pos"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="106">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:MEAKZ"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:MEAKZ"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="107">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:StatusPos"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:StatusPos"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="108">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:KurztextBestellposition"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:KurztextBestellposition"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="109">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Kontrakt"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Kontrakt"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="110">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Lieferdatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/Attribute:Lieferdatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="111">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="112">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:MaNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:MaNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="113">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Status"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Status"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="114">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:KurztextMaterialaufmass"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:KurztextMaterialaufmass"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="115">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Aufmassart"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Aufmassart"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="116">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:erstellt"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:erstellt"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="117">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:freigegeben"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:freigegeben"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="118">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="119">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:DLLO"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:DLLO"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="120">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:ZLO"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:ZLO"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="121">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:WABeleg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:WABeleg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="122">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Empfaenger"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Empfaenger"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="123">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Reservierung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Reservierung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="124">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Wunschtermin"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Wunschtermin"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="125">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Lieferanschrift"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/ChildNode:Bestellungen/ChildNode:Position/ChildNode:Aufmass/Attribute:Lieferanschrift"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="126">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:dienstleister"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:dienstleister"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="127">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:logoUrl"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:logoUrl"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="128">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:unternehmen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatZurBestellung/Attribute:unternehmen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungPrintView" type="View"/>
+	</Controller.View>
+</Controller>

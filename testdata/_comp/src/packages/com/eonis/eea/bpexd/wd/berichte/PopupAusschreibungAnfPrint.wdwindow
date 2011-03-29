@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Window xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Window:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="PopupAusschreibungAnfPrint" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<Window.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Window.Parent>
+	<Window.NavigationLinks>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupAusschreibungAnfPrint" type="NavigationLinks"/>
+	</Window.NavigationLinks>
+	<Window.ViewsetHierarchyRootNodes>
+		<ViewUsage name="com.eonis.eea.bpexd.wd.ausplatt.PopupAusschreibungAnfPrintInterfaceViewAusplattCompUsage1">
+			<ViewsetHierarchyNode.View>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.ausplatt" name="PopupAusschreibungAnfPrintInterfaceView" type="InterfaceView"/>
+			</ViewsetHierarchyNode.View>
+			<ViewUsage.ComponentUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:AusplattComp"/>
+			</ViewUsage.ComponentUsage>
+		</ViewUsage>
+	</Window.ViewsetHierarchyRootNodes>
+	<Window.InterfaceView>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupAusschreibungAnfPrintInterfaceView" type="InterfaceView"/>
+	</Window.InterfaceView>
+	<Window.DefaultViewsetHierarchyRootNode>
+		<Core.Reference path="ViewsetHierarchyRootNode:com.eonis.eea.bpexd.wd.ausplatt.PopupAusschreibungAnfPrintInterfaceViewAusplattCompUsage1"/>
+	</Window.DefaultViewsetHierarchyRootNode>
+</Window>

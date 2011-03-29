@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="BwDetailReservierungen" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwDetailReservierungen).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import java.util.Iterator;
+
+import com.eonis.eea.bpexd.businessprocess.output.ExportBerichtswesenMaterialaufmassReservierungsNrGetList;
+import com.eonis.eea.bpexd.model.BerichtswesenMaterialaufmassMaBeleg;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwDetailReservierungen;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwDetailReservierungen.IEntryElement;
+import com.sap.tc.webdynpro.progmodel.api.WDVisibility;
+import com.sap.tc.webdynpro.services.session.api.IWDWindow;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwDetailReservierungen
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwDetailReservierungen.class);
+
+  static 
+  {
+    //@@begin id
+		String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwDetailReservierungen for more details
+   */
+  private final IPrivateBwDetailReservierungen wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwDetailReservierungen.IContextNode for more details.
+   */
+  private final IPrivateBwDetailReservierungen.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwDetailReservierungen(IPrivateBwDetailReservierungen wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+	/** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+	/** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+	/**
+	 * Hook method called to modify a view just before rendering.
+	 * This method conceptually belongs to the view itself, not to the
+	 * controller (cf. MVC pattern).
+	 * It is made static to discourage a way of programming that
+	 * routinely stores references to UI elements in instance fields
+	 * for access by the view controller's event handlers, and so on.
+	 * The Web Dynpro programming model recommends that UI elements can
+	 * only be accessed by code executed within the call to this hook method.
+	 *
+	 * @param wdThis Generated private interface of the view's controller, as
+	 *        provided by Web Dynpro. Provides access to the view controller's
+	 *        outgoing controller usages, etc.
+	 * @param wdContext Generated interface of the view's context, as provided
+	 *        by Web Dynpro. Provides access to the view's data.
+	 * @param view The view's generic API, as provided by Web Dynpro.
+	 *        Provides access to UI elements.
+	 * @param firstTime Indicates whether the hook is called for the first time
+	 *        during the lifetime of the view.
+	 */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwDetailReservierungen wdThis, IPrivateBwDetailReservierungen.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:closePopup()
+	/** Declared method. */
+  //@@end
+  public void closePopup( )
+  {
+    //@@begin closePopup()
+		IWDWindow window = wdContext.currentComponentDataElement().getPopoupReservierungen();
+		window.close();
+		// Die Reihenfolge der folgenden beiden Zeilen ist seit SP16 wichtig. Wenn diese vertauscht werden,
+		// was unter SP11 möglich war, gibt es eine Exception.
+		wdContext.currentComponentDataElement().setPopoupReservierungen(null);
+		window.destroy();
+    //@@end
+  }
+
+  //@@begin javadoc:fillEnrtry()
+	/** Declared method. */
+  //@@end
+  public void fillEnrtry( )
+  {
+    //@@begin fillEnrtry()
+		IEntryElement newEntryElement, newPosEntryElement;
+		ExportBerichtswesenMaterialaufmassReservierungsNrGetList export = wdContext.currentOutputBerichtswesenMaterialaufmassReservierungsNrGetListElement().modelObject();
+
+		BerichtswesenMaterialaufmassMaBeleg kopf = (BerichtswesenMaterialaufmassMaBeleg) export.getMaterialBelege().get(0);
+		wdContext.nodeEntry().invalidate();
+		newEntryElement = wdContext.nodeEntry().createEntryElement();
+		wdContext.nodeEntry().addElement(newEntryElement);
+		// Kopf
+		wdContext.currentEntryElement().setReservierungsnummer(kopf.getNummerDerReservierung());
+
+		newEntryElement.setIsLeaf(false);
+
+		for (Iterator iter = export.getMaterialBelege().iterator(); iter.hasNext();) {
+			newPosEntryElement = newEntryElement.nodeChildEntries_1().createEntryElement();
+			newEntryElement.nodeChildEntries_1().addElement(newPosEntryElement);
+			BerichtswesenMaterialaufmassMaBeleg pos = (BerichtswesenMaterialaufmassMaBeleg) iter.next();
+			newPosEntryElement.setReservierungsposition(pos.getPositionsnummerDerReservierung());
+			newPosEntryElement.setWerk(pos.getWerk());
+			newPosEntryElement.setLagerort(pos.getLagerort());
+			newPosEntryElement.setLagerortText(pos.getLagerortbezeichnung());
+			newPosEntryElement.setMaterialnummer(pos.getMaterialnummer());
+			newPosEntryElement.setMaterialbezeichnung(pos.getMaterialkurztext());
+			newPosEntryElement.setCharge(pos.getChargennummer());
+			newPosEntryElement.setMengeInBearbeitung( pos.getMengeInBearbeitungsmengeneinheit() );
+			newPosEntryElement.setBearbeitungsME(pos.getBearbeitungsmengeneinheit());
+			newPosEntryElement.setBedarfstermin(pos.getBedarfsterminDerKomponente());
+			newPosEntryElement.setKzBewegungErlaubt(pos.getWarenbewegungZurReservierungErlaubt());
+			newPosEntryElement.setEntnahmemenge(pos.getEntnahmemengenInBearbeitungsmengeneinheit());
+			newPosEntryElement.setIsLeaf(true);
+		}
+
+    //@@end
+  }
+
+  //@@begin javadoc:getLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement)
+	/**
+	 *  Declared getter method for attribute visibilityOffeneLieferungen of node localData
+	 *  @param element the element requested for the value
+	 *  @return the calculated value for attribute visibilityOffeneLieferungen
+	 */
+  //@@end
+  public com.sap.tc.webdynpro.progmodel.api.WDVisibility getLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement element)
+  {
+    //@@begin getLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement)
+		return wdContext.currentLocalDataElement().getFromOffeneLieferungen() ? WDVisibility.VISIBLE : WDVisibility.NONE;
+    //@@end
+  }
+
+  //@@begin javadoc:setLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement, com.sap.tc.webdynpro.progmodel.api.WDVisibility)
+	/**
+	 *  Declared setter method for attribute visibilityOffeneLieferungen of node localData
+	 *  @param element the element to change the value
+	 *  @param value the new value for attribute visibilityOffeneLieferungen
+	 */
+  //@@end
+  public void setLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement element, com.sap.tc.webdynpro.progmodel.api.WDVisibility value)
+  {
+    //@@begin setLocalDataVisibilityOffeneLieferungen(IPrivateBwDetailReservierungen.ILocalDataElement, com.sap.tc.webdynpro.progmodel.api.WDVisibility)
+
+    //@@end
+  }
+
+  //@@begin javadoc:getLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement)
+	/**
+	 *  Declared getter method for attribute visibilityMaZurBestellung of node localData
+	 *  @param element the element requested for the value
+	 *  @return the calculated value for attribute visibilityMaZurBestellung
+	 */
+  //@@end
+  public com.sap.tc.webdynpro.progmodel.api.WDVisibility getLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement element)
+  {
+    //@@begin getLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement)
+		return wdContext.currentLocalDataElement().getFromMaZurBestellung() ? WDVisibility.VISIBLE : WDVisibility.NONE;
+    //@@end
+  }
+
+  //@@begin javadoc:setLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement, com.sap.tc.webdynpro.progmodel.api.WDVisibility)
+	/**
+	 *  Declared setter method for attribute visibilityMaZurBestellung of node localData
+	 *  @param element the element to change the value
+	 *  @param value the new value for attribute visibilityMaZurBestellung
+	 */
+  //@@end
+  public void setLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement element, com.sap.tc.webdynpro.progmodel.api.WDVisibility value)
+  {
+    //@@begin setLocalDataVisibilityMaZurBestellung(IPrivateBwDetailReservierungen.ILocalDataElement, com.sap.tc.webdynpro.progmodel.api.WDVisibility)
+    //@@end
+  }
+
+  //@@begin javadoc:onActioncancel(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActioncancel(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActioncancel(ServerEvent)
+		if (wdContext.currentLocalDataElement().getFromMaZurBestellung()) {
+			wdThis.wdFirePlugToMaZurBestellung();
+		} else if (wdContext.currentLocalDataElement().getFromOffeneLieferungen()) {
+			wdThis.wdFirePlugToOffeneLieferungen();
+		}
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromBwMaZurBestellung(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onPlugFromBwMaZurBestellung(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromBwMaZurBestellung(ServerEvent)
+		fillEnrtry();
+		wdContext.currentLocalDataElement().setFromMaZurBestellung(true);
+		wdContext.currentLocalDataElement().setFromOffeneLieferungen(false);
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromOffeneLieferungen(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onPlugFromOffeneLieferungen(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromOffeneLieferungen(ServerEvent)
+		fillEnrtry();
+		wdContext.currentLocalDataElement().setFromMaZurBestellung(false);
+		wdContext.currentLocalDataElement().setFromOffeneLieferungen(true);
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToMainMenu(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToMainMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToMainMenu(ServerEvent)
+		wdThis.wdGetBerichteController().actionBackToMainMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToBwMenu(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToBwMenu(ServerEvent)
+		wdThis.wdFirePlugToBwMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToMazurBestellungResult(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToMazurBestellungResult(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToMazurBestellungResult(ServerEvent)
+		wdThis.wdFirePlugToMaZurBestellung();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToOffeneLieferungen(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToOffeneLieferungen(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToOffeneLieferungen(ServerEvent)
+		wdThis.wdFirePlugToOffeneLieferungen();
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+
+  //@@end
+}
+
+// ---- content of obsolete user coding area(s) ----
+//@@begin obsolete:onActionopenPDFDocument(ServerEvent)
+//    // In dieser Methode nicht die Mehode closePopup() aufrufen, den dann kommt es zu einer Exception
+//    // Immer erst das Popupfenster schließen, das externe Fenster öffnen und dann, ganz unten, 
+//    // das Popupfenster zerstören.
+//    IWDWindow window = wdContext.currentComponentDataElement().getPopupBeauftragungPrintView();
+//  	try{
+//      window.close();
+//  
+//  		byte[] pdfContent=  wdContext.nodePDFSource().currentPDFSourceElement().getPdfSource();
+//  		IWDCachedWebResource pdfResource = WDWebResource.getWebResource (pdfContent,WDWebResourceType.PDF);
+//  		wdComponentAPI.getWindowManager().createExternalWindow(pdfResource.getURL(),"Berichtswesen Drucken",false).open();
+//  	}
+//  	catch(WDURLException ex){
+//  		wdComponentAPI.getMessageManager().reportMessage( IMessageBerichte.PDF_DATEI_NICHT_ANZEIGBAR, null, false );
+//  	}
+//    // Die Reihenfolge der folgenden beiden Zeilen ist seit SP16 wichtig. Wenn diese vertauscht werden,
+//    // was unter SP11 möglich war, gibt es eine Exception.
+//    wdContext.currentComponentDataElement().setPopupBeauftragungPrintView(null);
+//    window.destroy();
+//@@end
+//@@begin obsolete:javadoc:onActionopenPDFDocument(ServerEvent)
+//  /** Declared validating event handler. */
+//@@end
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="cancel">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActioncancel"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToMainMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToMainMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToBwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToMazurBestellungResult">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToMazurBestellungResult"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToOffeneLieferungen">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToOffeneLieferungen"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.CalculatedAttributeProviders>
+		<CalculatedAttributeProvider name="localDataVisibilityOffeneLieferungen">
+			<CalculatedAttributeProvider.Accessor>
+				<CalculatedAttributeMethod name="getLocalDataVisibilityOffeneLieferungen">
+				</CalculatedAttributeMethod>
+			</CalculatedAttributeProvider.Accessor>
+			<CalculatedAttributeProvider.Mutator>
+				<CalculatedAttributeMethod name="setLocalDataVisibilityOffeneLieferungen">
+				</CalculatedAttributeMethod>
+			</CalculatedAttributeProvider.Mutator>
+			<CalculatedAttributeProvider.Attribute>
+				<Core.Reference path="Context/ChildNode:localData/Attribute:visibilityOffeneLieferungen"/>
+			</CalculatedAttributeProvider.Attribute>
+		</CalculatedAttributeProvider>
+		<CalculatedAttributeProvider name="localDataVisibilityMaZurBestellung">
+			<CalculatedAttributeProvider.Accessor>
+				<CalculatedAttributeMethod name="getLocalDataVisibilityMaZurBestellung">
+				</CalculatedAttributeMethod>
+			</CalculatedAttributeProvider.Accessor>
+			<CalculatedAttributeProvider.Mutator>
+				<CalculatedAttributeMethod name="setLocalDataVisibilityMaZurBestellung">
+				</CalculatedAttributeMethod>
+			</CalculatedAttributeProvider.Mutator>
+			<CalculatedAttributeProvider.Attribute>
+				<Core.Reference path="Context/ChildNode:localData/Attribute:visibilityMaZurBestellung"/>
+			</CalculatedAttributeProvider.Attribute>
+		</CalculatedAttributeProvider>
+	</Controller.CalculatedAttributeProviders>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextModelNode name="BerichtswesenMaterialaufmassReservierungsNrGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="outputBerichtswesenMaterialaufmassReservierungsNrGetList">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="materialBelege">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="positionsnummerDerReservierung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="chargennummer">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="nummerDerReservierung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="materialkurztext">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bedarfsterminDerKomponente">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerortbezeichnung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="materialnummer">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="mengeInBearbeitungsmengeneinheit">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="satzart">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werk">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bearbeitungsmengeneinheit">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="warenbewegungZurReservierungErlaubt">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerort">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="entnahmemengenInBearbeitungsmengeneinheit">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+						<ContextModelNode name="inputBerichtswesenMaterialaufmassReservierungsNrGetList">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="positionsnummerDerReservierung">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="nummerDerReservierung">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="positionsnummerDesEinkaufsbelegs">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerDesEinkaufsbelegs">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="positionImMaterialbeleg">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="nummerDesMaterialbelegs">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="satzart">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialbelegjahr">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialbelegzeile">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="belegnummerMaterialaufmassbeleg">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextValueNode name="Entry" selection="_0_n">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="IsChildrenLoaded">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="IsExpanded">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="IsLeaf">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="ID">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="reservierungsnummer">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="reservierungsposition">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="charge">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="lagerort">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="lagerortText">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="werk">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="materialnummer">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="materialbezeichnung">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="mengeInBearbeitung">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.eonis.eea.bpexd.wd.model.simpletypes" name="Menge_3NK" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="bearbeitungsME">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="bedarfstermin">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="kzBewegungErlaubt">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="entnahmemenge">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.eonis.eea.bpexd.wd.model.simpletypes" name="Menge_3NK" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextRecursionNode name="ChildEntries_1">
+							<ContextRecursionNode.RepeatedNode>
+								<Core.Reference path="Context/ChildNode:Entry"/>
+							</ContextRecursionNode.RepeatedNode>
+						</ContextRecursionNode>
+					</ContextNode.ChildNodes>
+				</ContextValueNode>
+				<ContextValueNode name="componentData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="popoupReservierungen">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="popoupWABelege">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextValueNode cardinality="_1_1" name="localData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="fromOffeneLieferungen">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="fromMaZurBestellung">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="visibilityMaZurBestellung">
+							<ContextValueAttribute.CalculatedAttributeProvider>
+								<Core.Reference path="CalculatedAttributeProvider:localDataVisibilityMaZurBestellung"/>
+							</ContextValueAttribute.CalculatedAttributeProvider>
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.ide.webdynpro.uielementdefinitions" name="Visibility" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="visibilityOffeneLieferungen">
+							<ContextValueAttribute.CalculatedAttributeProvider>
+								<Core.Reference path="CalculatedAttributeProvider:localDataVisibilityOffeneLieferungen"/>
+							</ContextValueAttribute.CalculatedAttributeProvider>
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.ide.webdynpro.uielementdefinitions" name="Visibility" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onActioncancel">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugFromBwMaZurBestellung">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugFromOffeneLieferungen">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToMainMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToMazurBestellungResult">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToOffeneLieferungen">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.Methods>
+		<ControllerMethod name="closePopup" visibility="none">
+		</ControllerMethod>
+		<ControllerMethod name="fillEnrtry" visibility="none">
+		</ControllerMethod>
+	</Controller.Methods>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="17">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="18">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionsnummerDerReservierung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionsnummerDerReservierung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="19">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:nummerDerReservierung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:nummerDerReservierung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="20">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionsnummerDesEinkaufsbelegs"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionsnummerDesEinkaufsbelegs"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="21">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:belegnummerDesEinkaufsbelegs"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:belegnummerDesEinkaufsbelegs"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="22">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionImMaterialbeleg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:positionImMaterialbeleg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="23">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:nummerDesMaterialbelegs"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:nummerDesMaterialbelegs"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="24">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:satzart"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:satzart"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="25">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:materialbelegjahr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:materialbelegjahr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="26">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:materialbelegzeile"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:materialbelegzeile"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="27">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:belegnummerMaterialaufmassbeleg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:inputBerichtswesenMaterialaufmassReservierungsNrGetList/Attribute:belegnummerMaterialaufmassbeleg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="28">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="29">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData/Attribute:popoupReservierungen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData/Attribute:popoupReservierungen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="30">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData/Attribute:popoupWABelege"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData/Attribute:popoupWABelege"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="31">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="32">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:positionsnummerDerReservierung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:positionsnummerDerReservierung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="33">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:chargennummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:chargennummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="34">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:nummerDerReservierung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:nummerDerReservierung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="35">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:materialkurztext"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:materialkurztext"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="36">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:bedarfsterminDerKomponente"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:bedarfsterminDerKomponente"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="37">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:lagerortbezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:lagerortbezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="38">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:materialnummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:materialnummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="39">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:mengeInBearbeitungsmengeneinheit"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:mengeInBearbeitungsmengeneinheit"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="40">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:satzart"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:satzart"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="41">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="42">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:bearbeitungsmengeneinheit"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:bearbeitungsmengeneinheit"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="43">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:warenbewegungZurReservierungErlaubt"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:warenbewegungZurReservierungErlaubt"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="44">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:lagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:lagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="45">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:entnahmemengenInBearbeitungsmengeneinheit"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:outputBerichtswesenMaterialaufmassReservierungsNrGetList/ChildNode:materialBelege/Attribute:entnahmemengenInBearbeitungsmengeneinheit"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View"/>
+	</Controller.View>
+</Controller>

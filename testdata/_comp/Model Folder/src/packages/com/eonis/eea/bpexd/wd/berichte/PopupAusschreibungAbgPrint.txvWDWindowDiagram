@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="Vz8va46f6rn45le4fvx1a">
+		<property name="$parentUin" value="WebDynpro:Window:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupAusschreibungAbgPrint"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDWindowDiagram"/>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupAusschreibungAbgPrint/ViewsetHierarchyRootNode#com.eonis.eea.bpexd.wd.ausplatt.PopupAusschreibungAbgPrintInterfaceViewAusplattCompUsage1">
+			<property name="bounds" value="10,10,470,50"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:InboundPlugUsage://WebDynpro/InterfaceView#com.eonis.eea.bpexd.wd.ausplatt.PopupAusschreibungAbgPrintInterfaceView/InboundPlug#Default://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupAusschreibungAbgPrint/ViewsetHierarchyRootNode#com.eonis.eea.bpexd.wd.ausplatt.PopupAusschreibungAbgPrintInterfaceViewAusplattCompUsage1">
+				<property name="Position" value="WEST"/>
+				<property name="bounds" value="0,0,50,50"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

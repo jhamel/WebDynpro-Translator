@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<MessagePool xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.MessagePool:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BerichteMessagePool" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<MessagePool.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</MessagePool.Parent>
+	<MessagePool.Messages>
+		<Message messageType="text" name="Abrufe">
+		</Message>
+		<Message messageType="text" name="Bestellungen">
+		</Message>
+		<Message messageType="warning" name="keineBeauftragung">
+		</Message>
+		<Message messageType="warning" name="keinStatus">
+		</Message>
+		<Message messageType="warning" name="keineBeauftragungMarkiert">
+		</Message>
+		<Message messageType="error" name="pdfDateiNichtAnzeigbar">
+		</Message>
+		<Message name="AnfragetypAbgebot">
+		</Message>
+		<Message name="AnfragetypAnfrage">
+		</Message>
+		<Message messageType="error" name="ComponentDeactivated">
+		</Message>
+		<Message name="AusplattStatusNeu">
+		</Message>
+		<Message name="AusplattStatusGesichert">
+		</Message>
+		<Message name="AusplattStatusFreigegeben">
+		</Message>
+		<Message name="AusplattStatusZurueckgezogen">
+		</Message>
+		<Message name="AusplattStatusAbgesagt">
+		</Message>
+		<Message name="AusplattStatusBestellt">
+		</Message>
+		<Message messageType="text" name="aufmassartMF">
+		</Message>
+		<Message messageType="text" name="aufmassartMP">
+		</Message>
+		<Message messageType="text" name="aufmassartRA">
+		</Message>
+		<Message messageType="text" name="bearbeitungsStatusSAVE">
+		</Message>
+		<Message messageType="text" name="bearbeitungsStatusRELD">
+		</Message>
+		<Message messageType="text" name="bearbeitungsStatusACPT">
+		</Message>
+		<Message messageType="text" name="aufmassartMA">
+		</Message>
+		<Message messageType="text" name="aufmassartML">
+		</Message>
+		<Message messageType="text" name="aufmassartT">
+		</Message>
+		<Message messageType="text" name="aufmassartG">
+		</Message>
+		<Message messageType="text" name="aufmassartRF">
+		</Message>
+	</MessagePool.Messages>
+</MessagePool>

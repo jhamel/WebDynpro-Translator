@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="AdobeDesigner_V6.0_SAP" APIVersion="1.4.4183.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2006-07-18T14:41:01Z" uuid="0dca0519-594e-44b5-871b-3c0b4b022e36">
+<template xmlns="http://www.xfa.org/schema/xfa-template/2.1/">
+   <subform name="DataSource" layout="tb" locale="de_DE">
+      <pageSet>
+         <pageArea name="Page1" id="Page1">
+            <contentArea x="6.35mm" y="30.69mm" w="203.2mm" h="242.36mm"/>
+            <medium stock="letter" short="8.5in" long="11in"/>
+         </pageArea>
+      </pageSet>
+      <subform w="196.59mm" layout="tb">
+         <subform name="Bestellung">
+            <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+            <field name="bestellnummer" x="2.204724in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>bestellnummer</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="bestellnummer"/>
+            </field>
+            <field name="bestelldatum" x="4.645669in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>bestelldatum</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="bestelldatum"/>
+            </field>
+            <field name="einkaeufer" y="0.354331in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>einkaeufer</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="einkaeufer"/>
+            </field>
+            <field name="gesBestellwert" y="0.354331in" x="2.440945in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>gesBestellwert</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="gesBestellwert"/>
+            </field>
+            <field name="waehrung" y="0.354331in" x="4.88189in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>waehrung</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="waehrung"/>
+            </field>
+            <field name="aufmassart" y="0.708662in" w="62mm" h="9mm">
+               <ui>
+                  <textEdit>
+                     <border>
+                        <edge stroke="lowered"/>
+                     </border>
+                     <margin/>
+                  </textEdit>
+               </ui>
+               <font typeface="Arial"/>
+               <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+               <para vAlign="middle"/>
+               <caption reserve="25mm">
+                  <font typeface="Arial"/>
+                  <para vAlign="middle"/>
+                  <value>
+                     <text>aufmassart</text>
+                  </value>
+               </caption>
+               <bind match="dataRef" ref="aufmassart"/>
+            </field>
+            <subform x="0.0001mm" y="31.8099mm" w="198.2299mm" layout="tb">
+               <subform name="Pos">
+                  <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                  <field name="posNr" x="2.204724in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>posNr</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="posNr"/>
+                  </field>
+                  <subform x="-1.0002mm" y="-57.15mm" w="203.46mm" h="21.96mm">
+                     <draw name="StaticText1" y="1.59mm" x="34.0856mm">
+                        <ui>
+                           <textEdit>
+                           </textEdit>
+                        </ui>
+                        <value>
+                           <text>Bestellliste mit Bestellungen, Bestellpos. und Pos.details</text>
+                        </value>
+                        <font size="14pt" typeface="Arial" weight="bold"/>
+                        <margin topInset="0.5mm" bottomInset="0.5mm" leftInset="0.5mm" rightInset="0.5mm"/>
+                     </draw>
+                     <field name="companyName" y="10.32mm" x="70.6mm" w="62mm" h="9mm">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                                 <edge stroke="lowered"/>
+                                 <edge stroke="lowered"/>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="25mm">
+                           <font typeface="Arial"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>Firma:</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="$record.companyName"/>
+                     </field>
+                     <?templateDesigner expand 1?></subform>
+                  <field name="posKurztext" x="4.645669in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>posKurztext</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="posKurztext"/>
+                  </field>
+                  <field name="kontrakt" y="0.354331in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>kontrakt</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="kontrakt"/>
+                  </field>
+                  <field name="aufmassart" y="0.354331in" x="2.440945in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>aufmassart</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="aufmassart"/>
+                  </field>
+                  <field name="lieferdatum" y="0.354331in" x="4.88189in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>lieferdatum</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="lieferdatum"/>
+                  </field>
+                  <field name="bedarfsnummer" y="0.708662in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>bedarfsnummer</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="bedarfsnummer"/>
+                  </field>
+                  <field name="aufmassKz" y="0.708662in" x="2.440945in" w="62mm" h="9mm">
+                     <ui>
+                        <textEdit>
+                           <border>
+                              <edge stroke="lowered"/>
+                           </border>
+                           <margin/>
+                        </textEdit>
+                     </ui>
+                     <font typeface="Arial"/>
+                     <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                     <para vAlign="middle"/>
+                     <caption reserve="25mm">
+                        <font typeface="Arial"/>
+                        <para vAlign="middle"/>
+                        <value>
+                           <text>aufmassKz</text>
+                        </value>
+                     </caption>
+                     <bind match="dataRef" ref="aufmassKz"/>
+                  </field>
+                  <subform x="0.0002mm" y="35.5504mm" w="198.5496mm" layout="tb">
+                     <subform name="LEBlatt">
+                        <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                        <field name="leBlattNr" x="2.204724in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>leBlattNr</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="LEBlatt[*].leBlattNr"/>
+                        </field>
+                        <field name="aufmassNr" x="4.645669in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>aufmassNr</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="LEBlatt[*].aufmassNr"/>
+                        </field>
+                        <field name="preisbezDatum" y="0.354331in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>preisbezDatum</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="preisbezDatum"/>
+                        </field>
+                        <field name="extNr" y="0.354331in" x="2.440945in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>extNr</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="extNr"/>
+                        </field>
+                        <field name="extBearbeiter" y="0.354331in" x="4.88189in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>extBearbeiter</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="extBearbeiter"/>
+                        </field>
+                        <field name="leistOrt" y="0.708662in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>leistOrt</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="leistOrt"/>
+                        </field>
+                        <field name="enderfKz" y="0.708662in" x="2.440945in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>enderfKz</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="enderfKz"/>
+                        </field>
+                        <field name="wertLEBlatt" y="0.708662in" x="4.88189in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>wertLEBlatt</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="wertLEBlatt"/>
+                        </field>
+                        <field name="waehrung" y="1.062993in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>waehrung</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="waehrung"/>
+                        </field>
+                        <field name="abwWertZuLA" y="1.062993in" x="2.440945in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>abwWertZuLA</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="abwWertZuLA"/>
+                        </field>
+                        <field name="abnahmeDatum" y="1.062993in" x="4.88189in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>abnahmeDatum</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="abnahmeDatum"/>
+                        </field>
+                        <field name="nrGutschrift" y="1.417324in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>nrGutschrift</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="nrGutschrift"/>
+                        </field>
+                        <field name="buchungsdatumGutschrift" y="1.417324in" x="2.440945in" w="62mm" h="9mm">
+                           <ui>
+                              <textEdit>
+                                 <border>
+                                    <edge stroke="lowered"/>
+                                 </border>
+                                 <margin/>
+                              </textEdit>
+                           </ui>
+                           <font typeface="Arial"/>
+                           <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                           <para vAlign="middle"/>
+                           <caption reserve="25mm">
+                              <font typeface="Arial"/>
+                              <para vAlign="middle"/>
+                              <value>
+                                 <text>buchungsdatumGutschrift</text>
+                              </value>
+                           </caption>
+                           <bind match="dataRef" ref="buchungsdatumGutschrift"/>
+                        </field>
+                        <occur min="0" max="-1"/>
+                        <bind match="none"/>
+                     </subform>
+                  </subform>
+                  <occur min="0" max="-1"/>
+                  <bind match="dataRef" ref="Pos[*]"/>
+               </subform>
+            </subform>
+            <occur min="0" max="-1"/>
+            <bind match="dataRef" ref="$record.Bestellung[*]"/>
+         </subform>
+         <?templateDesigner expand 1?></subform>
+      <subform w="8in" h="46.2106mm" presence="hidden">
+         <subform name="OrderFlow" layout="table" x="6.09mm" y="10.0499mm">
+            <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+            <subform w="186.41mm" name="Order" h="32.1602mm">
+               <occur min="0" max="-1"/>
+               <field name="bestellnummer" w="62mm" h="9mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>number</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="number"/>
+               </field>
+               <field name="bestelldatum" x="62.2298mm" w="62mm" h="9mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>text</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="text"/>
+               </field>
+               <field name="einkaeufer" y="0.0001mm" x="124.41mm" w="58.74mm" h="9mm" access="readOnly">
+                  <ui>
+                     <textEdit>
+                        <border>
+                           <edge stroke="lowered"/>
+                        </border>
+                        <margin/>
+                     </textEdit>
+                  </ui>
+                  <font typeface="Arial"/>
+                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                  <para vAlign="middle"/>
+                  <caption reserve="25mm">
+                     <font typeface="Arial"/>
+                     <para vAlign="middle"/>
+                     <value>
+                        <text>customer</text>
+                     </value>
+                  </caption>
+                  <bind match="dataRef" ref="customer"/>
+               </field>
+               <subform y="10.159mm" w="186.3199mm" layout="table" name="OrderItemFlow">
+                  <subform name="OrderItem" w="188.18mm" h="22.0012mm">
+                     <occur max="-1"/>
+                     <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                     <bind match="dataRef" ref="$record.Bestellung[*].Pos[*]"/>
+                     <field name="posKurztext" x="54.4592mm" w="63.3293mm" h="9mm" y="0.0002mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="17.78mm">
+                           <font typeface="Arial"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>shortText</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="shortText"/>
+                     </field>
+                     <field name="posNr" x="17.3098mm" w="37.1497mm" h="9mm" y="0.0002mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="12.7mm">
+                           <font typeface="Arial"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>itemNo</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="itemNo"/>
+                     </field>
+                     <field name="kontrakt" y="0.0004mm" x="117.9598mm" w="28.3098mm" h="9mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="15.24mm">
+                           <font typeface="Arial"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>quantity</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="quantity"/>
+                     </field>
+                     <field name="aufmassart" y="0.0004mm" x="147.0696mm" w="28.04mm" h="9mm" access="readOnly">
+                        <ui>
+                           <textEdit>
+                              <border>
+                                 <edge stroke="lowered"/>
+                              </border>
+                              <margin/>
+                           </textEdit>
+                        </ui>
+                        <font typeface="Arial"/>
+                        <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                        <para vAlign="middle"/>
+                        <caption reserve="10.16mm">
+                           <font typeface="Arial"/>
+                           <para vAlign="middle"/>
+                           <value>
+                              <text>price</text>
+                           </value>
+                        </caption>
+                        <bind match="dataRef" ref="price"/>
+                     </field>
+                     <subform w="185.3198mm" name="ItemDetailFlow" layout="tb" y="11.0007mm">
+                        <occur min="0" max="-1"/>
+                        <subform name="ItemDetail" h="10.0003mm">
+                           <occur max="-1"/>
+                           <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
+                           <field name="property" x="31.9097mm" w="62mm" h="9mm" y="0.0001mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="25mm">
+                                 <font typeface="Arial"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>property</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="leBlattNr"/>
+                           </field>
+                           <field name="value" x="94.1798mm" w="62mm" h="9mm" access="readOnly">
+                              <ui>
+                                 <textEdit>
+                                    <border>
+                                       <edge stroke="lowered"/>
+                                    </border>
+                                    <margin/>
+                                 </textEdit>
+                              </ui>
+                              <font typeface="Arial"/>
+                              <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
+                              <para vAlign="middle"/>
+                              <caption reserve="25mm">
+                                 <font typeface="Arial"/>
+                                 <para vAlign="middle"/>
+                                 <value>
+                                    <text>value</text>
+                                 </value>
+                              </caption>
+                              <bind match="dataRef" ref="aufmassNr"/>
+                           </field>
+                           <bind match="dataRef" ref="$record.Bestellung[*].Pos[*].LEBlatt[*]"/>
+                        </subform>
+                     </subform>
+                     <keep intact="none"/>
+                  </subform>
+               </subform>
+               <bind match="dataRef" ref="$record.Bestellung[*]"/>
+               <keep intact="none"/>
+            </subform>
+         </subform>
+         <keep intact="none"/>
+         <?templateDesigner expand 1?></subform>
+      <proto/>
+   </subform>
+   <?templateDesigner DefaultLanguage FormCalc?>
+   <?templateDesigner XDCFile acrobat6.xdc?>
+   <?templateDesigner Zoom 74?>
+   <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:0?></template>
+<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+   <xfa:data xfa:dataNode="dataGroup"/>
+   <dd:dataDescription xmlns:dd="http://ns.adobe.com/data-description/" dd:name="DataSource">
+      <DataSource dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" company="" companyText="" xmlns="http://xml.sap.com/2003/06/webdynpro/adobe-integration">
+         <Bestellung dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" bestellnummer="" bestelldatum="" einkaeufer="" gesBestellwert="" waehrung="" aufmassart="">
+            <Pos dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" posNr="" posKurztext="" kontrakt="" aufmassart="" lieferdatum="" bedarfsnummer="" aufmassKz="">
+               <LEBlatt dd:minOccur="0" dd:maxOccur="-1" __selected="" __leadSelected="" leBlattNr="" aufmassNr="" preisbezDatum="" extNr="" extBearbeiter="" leistOrt="" enderfKz="" wertLEBlatt="" waehrung="" abwWertZuLA="" abnahmeDatum="" nrGutschrift="" buchungsdatumGutschrift=""/>
+            </Pos>
+         </Bestellung>
+      </DataSource>
+   </dd:dataDescription>
+</xfa:datasets>
+<config xmlns="http://www.xfa.org/schema/xci/1.0/">
+   <present>
+      <common>
+         <data>
+            <xsl>
+               <uri/>
+            </xsl>
+            <outputXSL>
+               <uri/>
+            </outputXSL>
+         </data>
+      </common>
+      <pdf>
+         <fontInfo/>
+      </pdf>
+      <xdp>
+         <packets>*</packets>
+      </xdp>
+   </present>
+   <agent name="designer">
+      <destination>pdf</destination>
+      <pdf>
+         <fontInfo/>
+      </pdf>
+      <common>
+         <template>
+            <base/>
+         </template>
+      </common>
+   </agent>
+</config>
+<sourceSet xmlns="http://www.xfa.org/schema/xfa-source-set/1.0/"/>
+<connectionSet xmlns="http://www.xfa.org/schema/xfa-connection-set/2.1/">
+   <xsdConnection name="DataSource" dataDescription="DataSource">
+      <uri/>
+      <rootElement>DataSource</rootElement>
+   </xsdConnection>
+</connectionSet>
+<localeSet xmlns="http://www.xfa.org/schema/xfa-locale-set/2.1/">
+   <locale name="de_DE" desc="Deutsch (Deutschland)">
+      <calendarSymbols name="gregorian">
+         <monthNames>
+            <month>Januar</month>
+            <month>Februar</month>
+            <month>März</month>
+            <month>April</month>
+            <month>Mai</month>
+            <month>Juni</month>
+            <month>Juli</month>
+            <month>August</month>
+            <month>September</month>
+            <month>Oktober</month>
+            <month>November</month>
+            <month>Dezember</month>
+         </monthNames>
+         <monthNames abbr="1">
+            <month>Jan</month>
+            <month>Feb</month>
+            <month>Mrz</month>
+            <month>Apr</month>
+            <month>Mai</month>
+            <month>Jun</month>
+            <month>Jul</month>
+            <month>Aug</month>
+            <month>Sep</month>
+            <month>Okt</month>
+            <month>Nov</month>
+            <month>Dez</month>
+         </monthNames>
+         <dayNames>
+            <day>Sonntag</day>
+            <day>Montag</day>
+            <day>Dienstag</day>
+            <day>Mittwoch</day>
+            <day>Donnerstag</day>
+            <day>Freitag</day>
+            <day>Samstag</day>
+         </dayNames>
+         <dayNames abbr="1">
+            <day>So</day>
+            <day>Mo</day>
+            <day>Di</day>
+            <day>Mi</day>
+            <day>Do</day>
+            <day>Fr</day>
+            <day>Sa</day>
+         </dayNames>
+         <meridiemNames>
+            <meridiem>AM</meridiem>
+            <meridiem>PM</meridiem>
+         </meridiemNames>
+         <eraNames>
+            <era>v. Chr.</era>
+            <era>n. Chr.</era>
+         </eraNames>
+      </calendarSymbols>
+      <datePatterns>
+         <datePattern name="full">EEEE, D. MMMM YYYY</datePattern>
+         <datePattern name="long">D. MMMM YYYY</datePattern>
+         <datePattern name="med">DD.MM.YYYY</datePattern>
+         <datePattern name="short">DD.MM.YY</datePattern>
+      </datePatterns>
+      <timePatterns>
+         <timePattern name="full">H.MM' Uhr 'Z</timePattern>
+         <timePattern name="long">HH:MM:SS Z</timePattern>
+         <timePattern name="med">HH:MM:SS</timePattern>
+         <timePattern name="short">HH:MM</timePattern>
+      </timePatterns>
+      <dateTimeSymbols>GjMtkHmsSEDFwWahKzZ</dateTimeSymbols>
+      <numberPatterns>
+         <numberPattern name="numeric">z,zz9.zzz</numberPattern>
+         <numberPattern name="currency">z,zz9.99 $</numberPattern>
+         <numberPattern name="percent">z,zz9%</numberPattern>
+      </numberPatterns>
+      <numberSymbols>
+         <numberSymbol name="decimal">,</numberSymbol>
+         <numberSymbol name="grouping">.</numberSymbol>
+         <numberSymbol name="percent">%</numberSymbol>
+         <numberSymbol name="minus">-</numberSymbol>
+      </numberSymbols>
+      <currencySymbols>
+         <currencySymbol name="symbol">€</currencySymbol>
+         <currencySymbol name="isoname">EUR</currencySymbol>
+         <currencySymbol name="decimal">,</currencySymbol>
+      </currencySymbols>
+   </locale>
+</localeSet></xdp:xdp>

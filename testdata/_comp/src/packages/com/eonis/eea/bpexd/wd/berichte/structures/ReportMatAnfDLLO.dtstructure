@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 4, 2004 10:35:31 AM CEST -->
+<DtGeneralStructure xmlns="http://xml.sap.com/2002/10/metamodel/dictionary" xmlns:IDX="urn:sap.com:DtDictionary.DtGeneralStructure:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1083659731299" name="ReportMatAnfDLLO" package="com.eonis.eea.bpexd.wd.berichte.structures" masterLanguage="de">
+	<DtStructure.StructureElements>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="10" name="MATAUFMASSNR" notNull="true" position="0">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="10" name="RESERVIERUNGSNR" notNull="true" position="1">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="30" name="KURZTEXT" notNull="true" position="2">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="16" name="LAGERORT" notNull="true" position="3">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="date" jdbcTypeName="DATE" name="WUNSCHTERMIN" notNull="true" position="5">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="4" name="WERK" notNull="true" position="6">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="12" name="WARENEMPFAENGERNR" notNull="true" position="7">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="date" jdbcTypeName="DATE" name="RESERVIERUNGSDATUM" notNull="true" position="8">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="date" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="16" name="LAGERORT_DESC" notNull="true" position="4">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+	</DtStructure.StructureElements>
+</DtGeneralStructure>

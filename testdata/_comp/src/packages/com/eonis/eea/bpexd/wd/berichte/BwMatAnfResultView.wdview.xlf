@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="de" product-name="View:BwMatAnfResultView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>H15430</develContact><domain></domain>
+<originalLocale xml:lang="de"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="caption">
+<trans-unit id="c7698f93523248d510b3dd20ae705b84" resname="RootUIElementContainer/Child:Group/Child:Table/Column:Print/Header@text" maxwidth="255" translate="yes"><source>Drucken</source></trans-unit><trans-unit id="406bfd4114514fe3063cb0a9f155b786" resname="RootUIElementContainer/Child:Group/Child:Table/Column:lagerOrtText/Header@text" maxwidth="255" translate="yes"><source>Lagerort</source></trans-unit><trans-unit id="f4707883549b4d2429dac53a60fe46eb" resname="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsDatum/Header@text" maxwidth="255" translate="yes"><source>Basistermin</source></trans-unit><trans-unit id="853bd6a28a824c370ae1f9fa10576b5b" resname="RootUIElementContainer/Child:Group/Child:Table/Column:matAufmassNr/Header@text" maxwidth="255" translate="yes"><source>MA-Nr.</source></trans-unit><trans-unit id="62052df0d8c141ef2fa9f619e1096a14" resname="RootUIElementContainer/Child:Group/Child:Table/Column:werkText/Header@text" maxwidth="255" translate="yes"><source>Werk</source></trans-unit><trans-unit id="f13eaeb8d156471f23f1e7edca63ea65" resname="RootUIElementContainer/Child:Group/Child:Table/Column:warenEmpfaengerNr/Header@text" maxwidth="255" translate="yes"><source>Warenempfänger</source></trans-unit><trans-unit id="537dce49a3f247dc1e059b7f24c1057e" resname="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsNr/Header@text" maxwidth="255" translate="yes"><source>Reservierung</source></trans-unit><trans-unit id="0abfc52954654cfc340bca395c92e2e6" resname="RootUIElementContainer/Child:Group/Child:Table/Column:kurzText/Header@text" maxwidth="255" translate="yes"><source>Kurztext</source></trans-unit><trans-unit id="de6eb0f5d77342c133daca387d50cbf7" resname="RootUIElementContainer/Child:Group/Header@text" maxwidth="255" translate="yes"><source>Materialanforderungen auf DL-LO anzeigen</source></trans-unit><trans-unit id="5ca9c515ff804d94029f8f054c121702" resname="RootUIElementContainer/Child:Group/Child:Table/Column:wunschTermin/Header@text" maxwidth="255" translate="yes"><source>Wunschtermin</source></trans-unit></group>
+<group restype="checkbox">
+<trans-unit id="ee3c026f1a81479c0991cfe70cd410fc" resname="RootUIElementContainer/Child:Group/Child:CheckBox@text" maxwidth="255" translate="yes"><source>Alle Materialanforderungen für den Druck aktivieren</source></trans-unit></group>
+<group restype="informationMessage">
+<trans-unit id="c01212292390433718e888b3f66bb484" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:SearchBeauftragungTextView@text" maxwidth="16384" translate="yes"><source>Materialanforderungen anzeigen</source></trans-unit></group>
+<group restype="hyperlink">
+<trans-unit id="1141f172f90946be3abfc09ca3914862" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:MainMenuLinkToAction@text" maxwidth="255" translate="yes"><source>Haupt-Menu</source></trans-unit><trans-unit id="a996baef4d024c0c1562ee8bdb376c82" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:SearchBeauftragungLinkToAction@text" maxwidth="255" translate="yes"><source>Materialanforderung suchen</source></trans-unit><trans-unit id="b707f91123d14e32071cb9c2002184c8" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:BerichtswesenLinkToAction@text" maxwidth="255" translate="yes"><source>Berichtswesen</source></trans-unit></group>
+<group restype="label">
+<trans-unit id="6a7189256e3d47920a5ed5228d099876" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr3Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="b8082fd797f245781134e78f3fabb85c" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr1Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit><trans-unit id="ce472b922edc4c002d559e479b11f36d" resname="RootUIElementContainer/Child:Group/Child:Table/ToolBar/OutgoingAggregation:ToolBarRightItems/AggregatedObject:tbInputAnzSichtbarerZeilen@labelText" maxwidth="255" translate="yes"><source>Anz. sichtbarer Zeilen</source></trans-unit><trans-unit id="2400c5fb4a8c4a30394ee1a96ad1a9e0" resname="RootUIElementContainer/Child:CrumbPathTCont/Child:Arr2Img@alt" maxwidth="255" translate="yes"><source>--&gt;</source></trans-unit></group>
+</body>
+</file>
+</xliff>

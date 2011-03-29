@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwMatAbrResultView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwMatAbrResultView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+
+import java.text.SimpleDateFormat;
+
+import com.eonis.eea.bpexd.model.Lagerbestand;
+import com.eonis.eea.bpexd.model.UnEKOrg;
+import com.eonis.eea.bpexd.model.UnEKOrgDL;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IMessageBerichte;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.IBestandElement;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.ICompaniesElement;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.ILagerbestandListElement;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.ILagerbestandListNode;
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.ILagerbestandShadowElement;
+import com.eonis.eea.bpexd.wd.util.ApplicationConstants;
+import com.eonis.eea.bpexd.wd.util.TableSorter;
+import com.sap.tc.logging.Category;
+import com.sap.tc.webdynpro.clientserver.uielib.standard.api.IWDTable;
+import com.sap.tc.webdynpro.progmodel.repository.IWDWindowInfo;
+import com.sap.tc.webdynpro.services.session.api.IWDWindow;
+import com.sap.tc.webdynpro.services.session.api.WDWindowPos;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwMatAbrResultView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwMatAbrResultView.class);
+
+  static 
+  {
+    //@@begin id
+		String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView for more details
+   */
+  private final IPrivateBwMatAbrResultView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwMatAbrResultView.IContextNode for more details.
+   */
+  private final IPrivateBwMatAbrResultView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwMatAbrResultView(IPrivateBwMatAbrResultView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+	/** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+		wdContext.currentLocalDataElement().setVisibleRowCount(20);
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+	/** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+	/**
+	 * Hook method called to modify a view just before rendering.
+	 * This method conceptually belongs to the view itself, not to the
+	 * controller (cf. MVC pattern).
+	 * It is made static to discourage a way of programming that
+	 * routinely stores references to UI elements in instance fields
+	 * for access by the view controller's event handlers, and so on.
+	 * The Web Dynpro programming model recommends that UI elements can
+	 * only be accessed by code executed within the call to this hook method.
+	 *
+	 * @param wdThis Generated private interface of the view's controller, as
+	 *        provided by Web Dynpro. Provides access to the view controller's
+	 *        outgoing controller usages, etc.
+	 * @param wdContext Generated interface of the view's context, as provided
+	 *        by Web Dynpro. Provides access to the view's data.
+	 * @param view The view's generic API, as provided by Web Dynpro.
+	 *        Provides access to UI elements.
+	 * @param firstTime Indicates whether the hook is called for the first time
+	 *        during the lifetime of the view.
+	 */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwMatAbrResultView wdThis, IPrivateBwMatAbrResultView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+	if( firstTime ) {
+		IWDTable table = (IWDTable) view.getElement("Table");
+			wdContext.currentLocalDataElement().setTableSorter(
+				new TableSorter(table, wdThis.wdGetSortTableAction(),
+				null));
+	}   
+    //@@end
+  }
+
+  //@@begin javadoc:printActivated2DataSource()
+	/** Declared method. */
+  //@@end
+  public boolean printActivated2DataSource( )
+  {
+    //@@begin printActivated2DataSource()
+
+		for (int i = 0; i < wdContext.nodeLagerbestandList().size(); i++) {
+			ILagerbestandListElement element = wdContext.nodeLagerbestandList().getLagerbestandListElementAt(i);
+
+			// falls für den Druck markiert
+			if (element.getIsPrintActive()) {
+
+				IBestandElement newPrintElement = wdContext.nodeBestand().createBestandElement();
+				newPrintElement.setWerk(element.getWerk());
+				newPrintElement.setDllo(element.getDlLo());
+				newPrintElement.setBezeichnung(element.getBezeichnung());
+				newPrintElement.setBezeichnung(element.getBezeichnung());
+				newPrintElement.setChargenbezeichnung(element.getChargenbezeichnung());
+				newPrintElement.setChargenNr(element.getChargennummer());
+				newPrintElement.setFreierBestand(element.getFreiVerwendbarerBestand());
+				newPrintElement.setMaterialnummer(element.getMaterialnummer());
+				newPrintElement.setMengeneinheit(element.getMengeneinheit());
+				newPrintElement.setReservierterBestand(element.getReservierterBestand());
+
+				if (element.getVerfallsdatum() != null) {
+					SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+					newPrintElement.setVerfallsdatum(sdf.format(element.getVerfallsdatum()));
+				}
+
+				// Data Source hinzufügen
+				wdContext.nodeBestand().addElement(newPrintElement);
+			}
+		}
+		return wdContext.nodeBestand().size() > 0;
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToMainMenu(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToMainMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToMainMenu(ServerEvent)
+		wdThis.wdGetBerichteController().actionBackToMainMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToBwMenu(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToBwMenu(ServerEvent)
+		wdThis.wdFirePlugToBwMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionToSearchView(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionToSearchView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionToSearchView(ServerEvent)
+		wdThis.wdFirePlugToMatAbrSearchView();
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromMatAbrSearchView(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onPlugFromMatAbrSearchView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromMatAbrSearchView(ServerEvent)
+		wdContext.currentLocalDataElement().setActivateAll(false);
+    //@@end
+  }
+
+  //@@begin javadoc:onActionEnterVisibleRowCount(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionEnterVisibleRowCount(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionEnterVisibleRowCount(ServerEvent)
+    //@@end
+  }
+
+  //@@begin javadoc:onActionPrintReport(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionPrintReport(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionPrintReport(ServerEvent)
+		String methodName = "onActionPrintReport";
+		logger.entering(cat, methodName);
+		try {
+			wdContext.nodeDataSourceMatAbr().invalidate();
+			// Sind Bestellungen zum Drucken markiert dann extra Fenster öffnen
+			if (printActivated2DataSource()) {
+
+				wdThis.wdGetBerichteController().generateServletURL();
+				// Company-Daten setzen
+				ICompaniesElement modelCompany = wdContext.nodeCompanies().currentCompaniesElement();
+				if (modelCompany.getShortText() != null) {
+					wdContext.currentDataSourceMatAbrElement().setUnternehmen(modelCompany.getShortText());
+				}
+				if (modelCompany.getLogoUrl() != null) {
+					wdContext.currentDataSourceMatAbrElement().setLogoUrl(modelCompany.getLogoUrl());
+				}
+				String serviceProvider = "";
+				try {
+					serviceProvider = ((UnEKOrgDL) ((UnEKOrg) modelCompany.modelObject().getUnEKOrgList().get(0)).getUnEKOrgDLList().get(0)).getDienstleister().getShorttext();
+				} catch (NullPointerException nEx) {
+					// NullpointerException wird hier abgefangen. Ist nicht so kritisch, wenn der Dienstleistername
+					// nicht im Bericht steht.
+					logger.infoT(cat, new StringBuffer("Error while determining the ServiceProvider in report ").append("'Materialanforderung auf DL-LO' ").append(nEx.getMessage()).toString());
+				}
+				wdContext.currentDataSourceMatAbrElement().setDienstleister(serviceProvider);
+
+				// Popup-Fenster erzeugen und anzeigen
+				IWDWindowInfo popupPrintViewInfo = wdComponentAPI.getComponentInfo().findInWindows("PopupMatAbrPrint");
+				if (popupPrintViewInfo != null) {
+					IWDWindow popupPrintView = wdComponentAPI.getWindowManager().createWindow(popupPrintViewInfo, true);
+					popupPrintView.setWindowPosition(WDWindowPos.CENTER);
+					popupPrintView.open();
+					wdContext.currentComponentDataElement().setPopupMatAbrPrintView(popupPrintView);
+				}
+			} else {
+				wdComponentAPI.getMessageManager().reportMessage(IMessageBerichte.KEINE_BEAUFTRAGUNG_MARKIERT, null, false);
+			}
+		} finally {
+			logger.exiting(methodName);
+		}
+    //@@end
+  }
+
+  //@@begin javadoc:onActionActivateAllPrintBox(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionActivateAllPrintBox(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionActivateAllPrintBox(ServerEvent)
+		ILagerbestandListNode node = wdContext.nodeLagerbestandList();
+		int size = node.size();
+		for (int i = 0; i < size; i++) {
+			ILagerbestandListElement elem = node.getLagerbestandListElementAt(i);
+			boolean activated = wdContext.currentLocalDataElement().getActivateAll();
+			elem.setIsPrintActive(activated);
+		}
+    //@@end
+  }
+
+  //@@begin javadoc:onActionTogglePrintBox(ServerEvent)
+	/** Declared validating event handler. */
+  //@@end
+  public void onActionTogglePrintBox(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionTogglePrintBox(ServerEvent)
+
+    //@@end
+  }
+
+  //@@begin javadoc:onActionSortTable(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionSortTable(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionSortTable(ServerEvent)
+    	
+    	//nur sortieren wenn NICH Drucken aungeklickt wurde
+    	if(!wdEvent.getString("col").equals("Drucken"))
+    	{
+			wdContext.currentLocalDataElement().getTableSorter().sort(wdEvent, wdContext.nodeLagerbestandList());
+			if(wdContext.nodeLagerbestandList().size()>0)
+			{
+				wdContext.nodeLagerbestandList().setLeadSelection(0);
+			}
+    		
+    	}
+    //@@end
+  }
+
+  //@@begin javadoc:onActionFilterTable(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionFilterTable(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionFilterTable(ServerEvent)
+		Lagerbestand lagerbestand;
+    
+    	// -- 1. Alle Objekte aus der "Schattentabelle" in die Originaltabelle kopieren
+		for( int i = wdContext.nodeLagerbestandShadow().size()-1; i > -1; i-- ) {
+			ILagerbestandListElement elem = wdContext.nodeLagerbestandList().createLagerbestandListElement(
+				wdContext.nodeLagerbestandShadow().getLagerbestandShadowElementAt(i).getObject() );
+			wdContext.nodeLagerbestandList().addElement( elem );
+			// Element aus der Schattentabelle löschen      
+			wdContext.nodeLagerbestandShadow().removeElement( wdContext.nodeLagerbestandShadow().getLagerbestandShadowElementAt(i) );   
+		}
+		
+
+
+	// -- 2. Die Originaltabelle nach Werk filtern
+	if( wdContext.currentFilterValuesElement().getWerk() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getWerk() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getWerk().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 3. Die Originaltabelle nach DLLO filtern
+	if( wdContext.currentFilterValuesElement().getDllo() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getDllo() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getDlLo().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 4. Die Originaltabelle nach Bezeichnung filtern
+	if( wdContext.currentFilterValuesElement().getBezeichnung() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getBezeichnung() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getBezeichnung().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 5. Die Originaltabelle nach Materialnummer filtern
+	if( wdContext.currentFilterValuesElement().getMaterialnummer() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getMaterialnummer() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getMaterialnummer().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 6. Die Originaltabelle nach Mengeneinheit filtern
+	if( wdContext.currentFilterValuesElement().getMengeneinheit() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getMengeneinheit() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getMengeneinheit().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 7. Die Originaltabelle nach frei verwendbarer Bestand filtern
+	if( wdContext.currentFilterValuesElement().getFreiVerwendbarerBestand() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getFreiVerwendbarerBestand() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getFreiVerwendbarerBestand().toString().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 8. Die Originaltabelle nach reserviertem Bestand filtern
+	if( wdContext.currentFilterValuesElement().getReserviert() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getReserviert() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getReservierterBestand().toString().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 9. Die Originaltabelle Chargennummer filtern
+	if( wdContext.currentFilterValuesElement().getChargennummer() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getChargennummer() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getChargennummer().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	// -- 10. Die Originaltabelle Chargenbezeichnung filtern
+	if( wdContext.currentFilterValuesElement().getChargenbezeichnung() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getChargenbezeichnung() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if( !lagerbestand.getChargenbezeichnung().matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+	//SimpleDateformatter für Umwandlung in String bei der Filterung
+	SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+	// -- 11. Die Originaltabelle Verfallsdatum Charge filtern
+	if( wdContext.currentFilterValuesElement().getVerfallsdatumCharge() != null ) {
+		String filterValue = prepareStringFilterValue( wdContext.currentFilterValuesElement().getVerfallsdatumCharge() );
+		for( int i = (wdContext.nodeLagerbestandList().size()-1); i > -1; i-- ) {
+			lagerbestand = wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ).modelObject();
+			if(lagerbestand.getVerfallsdatum() == null
+				|| !sdf.format(lagerbestand.getVerfallsdatum()).matches( filterValue )) {
+				// Objekt in die Schattentabelle kopieren
+				ILagerbestandShadowElement shadowElem = wdContext.nodeLagerbestandShadow().createLagerbestandShadowElement();
+				shadowElem.setObject( lagerbestand );
+				wdContext.nodeLagerbestandShadow().addElement( shadowElem );
+      
+				wdContext.nodeLagerbestandList().removeElement( wdContext.nodeLagerbestandList().getLagerbestandListElementAt( i ) );
+			}
+		}
+	}
+    
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+	Category cat = Category.getCategory(Category.APPLICATIONS, ApplicationConstants.LOGGING_CATEGORY_WDMAIN);
+	
+	/**
+	 * Aufbereiten des Filterwertes für StringFelder.
+	 * * wird durch .* ersetzt. Ansonsten sind alle regulären Ausdrücke erlaubt.
+	 */
+	private String prepareStringFilterValue( String originalValue ) {
+		//String value = wdContext.currentFilterValuesElement().getBeauftragungsNr();
+    	String retVal = originalValue.replaceAll( "\\*", ".*" );
+    	retVal = retVal.replace(',', '.');
+    	 
+		return retVal; 
+	}
+	
+	/**
+	 * Aufbereiten des Filterwertes für Datumsfelder.</br>
+	 * "06" wird in "2006" (vorangestelltes 20) umgewandelt</br>
+	 * Fehlt die Jahreszahl wird das aktuelle Jahr angehängt</br> 
+	 */
+	private String prepareDateFilterValue( String originalValue ) {
+		StringBuffer strBuf = new StringBuffer( originalValue );
+    
+		// Ist mind. 1 Punkt im String enthalten
+    
+		return strBuf.toString();
+	}
+	
+  //@@end
+}
+
+// ---- content of obsolete user coding area(s) ----
+//@@begin obsolete:activatePrintChildren()
+////
+// 
+//@@end
+//@@begin obsolete:javadoc:activatePrintChildren()
+//  /** Declared method. */
+//@@end
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="ToMainMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToMainMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToBwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ToSearchView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionToSearchView"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="EnterVisibleRowCount">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionEnterVisibleRowCount"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="PrintReport">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionPrintReport"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="ActivateAllPrintBox">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionActivateAllPrintBox"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="TogglePrintBox">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionTogglePrintBox"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="SortTable">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionSortTable"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="FilterTable">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionFilterTable"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextValueNode cardinality="_1_1" name="localData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="visibleRowCount">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="activateAll">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+						<ContextValueAttribute name="tableSorter">
+							<ContextValueAttribute.NativeType>
+								<JavaNativeType javaPackage="com.eonis.eea.bpexd.wd.util" name="TableSorter">
+								</JavaNativeType>
+							</ContextValueAttribute.NativeType>
+							<ContextValueAttribute.Type>
+								<Core.Reference path="Context/ChildNode:localData/Attribute:tableSorter/NativeType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextValueNode name="LagerbestandShadow">
+							<ContextNode.Attributes>
+								<ContextValueAttribute name="object">
+									<ContextValueAttribute.NativeType>
+										<JavaNativeType javaPackage="com.eonis.eea.bpexd.model" name="Lagerbestand">
+										</JavaNativeType>
+									</ContextValueAttribute.NativeType>
+									<ContextValueAttribute.Type>
+										<Core.Reference path="Context/ChildNode:localData/ChildNode:LagerbestandShadow/Attribute:object/NativeType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+							</ContextNode.Attributes>
+						</ContextValueNode>
+						<ContextValueNode cardinality="_1_1" name="FilterValues">
+							<ContextNode.Attributes>
+								<ContextValueAttribute name="werk">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dllo">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="bezeichnung">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="materialnummer">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="mengeneinheit">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="freiVerwendbarerBestand">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="reserviert">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="chargennummer">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="chargenbezeichnung">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+								<ContextValueAttribute name="verfallsdatumCharge">
+									<ContextValueAttribute.Type>
+										<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+									</ContextValueAttribute.Type>
+								</ContextValueAttribute>
+							</ContextNode.Attributes>
+						</ContextValueNode>
+					</ContextNode.ChildNodes>
+				</ContextValueNode>
+				<ContextModelNode name="LagerbestandGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="inputLagerbestandGetList">
+							<ContextNode.Attributes>
+								<ContextModelAttribute name="purchaseOrganisation">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="chargeBis">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="spId">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="konsiFlag">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="chargeVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialVon">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="keinNullBestand">
+								</ContextModelAttribute>
+								<ContextModelAttribute name="materialBis">
+								</ContextModelAttribute>
+							</ContextNode.Attributes>
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="lagerorteLagerbestandGetList">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="serviceProviderId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werkText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="companyId">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrg">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="zentralLagerortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="zentralLagerort">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrgText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werk">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="lagerort">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+						<ContextModelNode name="outputLagerbestandGetList">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="lagerbestandList">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="chargennummer">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="materialnummer">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="verfallsdatum">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="werk">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bezeichnung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="chargenbezeichnung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="dlLo">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="reservierterBestand">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="freiVerwendbarerBestand">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="mengeneinheit">
+										</ContextModelAttribute>
+										<ContextValueAttribute name="IsPrintEnabled">
+											<ContextValueAttribute.Type>
+												<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+											</ContextValueAttribute.Type>
+										</ContextValueAttribute>
+										<ContextValueAttribute name="IsPrintActive">
+											<ContextValueAttribute.Type>
+												<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+											</ContextValueAttribute.Type>
+										</ContextValueAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextValueNode name="componentData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="popupMatAbrPrintView">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+				<ContextValueNode name="DataSourceMatAbr">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="unternehmen">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="dienstleister">
+						</ContextValueAttribute>
+						<ContextValueAttribute name="logoUrl">
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+					<ContextNode.ChildNodes>
+						<ContextValueNode name="Bestand">
+							<ContextNode.Attributes>
+								<ContextValueAttribute name="materialnummer">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="bezeichnung">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="mengeneinheit">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="freierBestand">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="reservierterBestand">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="chargenNr">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="chargenbezeichnung">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="verfallsdatum">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="werk">
+								</ContextValueAttribute>
+								<ContextValueAttribute name="dllo">
+								</ContextValueAttribute>
+							</ContextNode.Attributes>
+						</ContextValueNode>
+					</ContextNode.ChildNodes>
+				</ContextValueNode>
+				<ContextModelNode name="CompGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="output">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="companies">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="shortText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="logo">
+										</ContextModelAttribute>
+										<ContextValueAttribute name="logoUrl">
+										</ContextValueAttribute>
+										<ContextModelAttribute name="id">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onActionToMainMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionToSearchView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onPlugFromMatAbrSearchView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionEnterVisibleRowCount">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionPrintReport">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionActivateAllPrintBox">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionTogglePrintBox">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionSortTable">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionFilterTable">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.Methods>
+		<ControllerMethod name="printActivated2DataSource" visibility="none">
+			<Procedure.ReturnType>
+				<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="boolean" type="DtSimpleType"/>
+			</Procedure.ReturnType>
+		</ControllerMethod>
+	</Controller.Methods>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="3">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:purchaseOrganisation"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:purchaseOrganisation"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="4">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:chargeBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:chargeBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="5">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:spId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:spId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="6">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:konsiFlag"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:konsiFlag"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="7">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:chargeVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:chargeVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="8">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:materialVon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:materialVon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="9">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:keinNullBestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:keinNullBestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="10">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:materialBis"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/Attribute:materialBis"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="11">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="12">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:serviceProviderId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:serviceProviderId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="13">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:werkText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:werkText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="14">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:companyId"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:companyId"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="15">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:lagerortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:lagerortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="16">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:ekOrg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:ekOrg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="17">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:zentralLagerortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:zentralLagerortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="18">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:zentralLagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:zentralLagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="19">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:ekOrgText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:ekOrgText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="20">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="21">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:lagerort"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:inputLagerbestandGetList/ChildNode:lagerorteLagerbestandGetList/Attribute:lagerort"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="22">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="34">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="35">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:chargennummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:chargennummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="36">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:materialnummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:materialnummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="37">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:verfallsdatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:verfallsdatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="38">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="39">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:bezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:bezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="40">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:chargenbezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:chargenbezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="41">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:dlLo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:dlLo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="42">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:reservierterBestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:reservierterBestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="43">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:freiVerwendbarerBestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:freiVerwendbarerBestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="44">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:mengeneinheit"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:LagerbestandGetList/ChildNode:outputLagerbestandGetList/ChildNode:lagerbestandList/Attribute:mengeneinheit"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="45">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="46">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:componentData/Attribute:popupMatAbrPrintView"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:componentData/Attribute:popupMatAbrPrintView"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="54">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="55">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="56">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="57">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:shortText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:shortText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="58">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:logo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:logo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="59">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:logoUrl"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:logoUrl"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="60">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:id"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:CompGetList/ChildNode:output/ChildNode:companies/Attribute:id"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="90">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="91">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/Attribute:unternehmen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/Attribute:unternehmen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="92">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/Attribute:dienstleister"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/Attribute:dienstleister"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="93">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/Attribute:logoUrl"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/Attribute:logoUrl"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="94">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="95">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:materialnummer"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:materialnummer"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="96">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:bezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:bezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="97">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:mengeneinheit"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:mengeneinheit"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="98">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:freierBestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:freierBestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="99">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:reservierterBestand"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:reservierterBestand"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="100">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:chargenNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:chargenNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="101">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:chargenbezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:chargenbezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="102">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:verfallsdatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:verfallsdatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="103">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:werk"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:werk"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="104">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:dllo"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:DataSourceMatAbr/ChildNode:Bestand/Attribute:dllo"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View"/>
+	</Controller.View>
+</Controller>

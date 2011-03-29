@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log-configuration SYSTEM "log-configuration.dtd">
+<log-configuration>
+	<log-formatters>
+		<log-formatter 
+			name="exd_jco_service_Formatter" 
+			type="ListFormatter"/>
+	</log-formatters>
+	<log-destinations>
+		<log-destination 
+			count="5" 
+			effective-severity="DEBUG" 
+			limit="1000000" 
+			name="exd_wd_berichte_log" 
+			pattern="./log/applications/com.eonis.eea.bpexd/wd_berichte.log" 
+			type="FileLog">
+			<formatter-ref 
+				name="exd_jco_service_Formatter"/>
+		</log-destination>
+		<log-destination 
+			count="5" 
+			effective-severity="DEBUG" 
+			limit="1000000" 
+			name="exd_wd_berichte_trc" 
+			pattern="./log/applications/com.eonis.eea.bpexd/wd_berichte.trc" 
+			type="FileLog">
+			<formatter-ref 
+				name="exd_jco_service_Formatter"/>
+		</log-destination>
+	</log-destinations>
+	<log-controllers>
+		<log-controller 
+			effective-severity="DEBUG" 
+			name="com.eonis.eea.bpexd">
+			<associated-destinations>
+				<destination-ref 
+					association-type="LOG" 
+					name="exd_wd_berichte_trc"/>
+			</associated-destinations>
+		</log-controller>
+		<log-controller 
+			effective-severity="DEBUG" 
+			name="/Applications/BPEXD/WD_Berichte">
+			<associated-destinations>
+				<destination-ref 
+					association-type="LOG" 
+					name="exd_wd_berichte_log"/>
+			</associated-destinations>
+		</log-controller>
+	</log-controllers>
+</log-configuration>

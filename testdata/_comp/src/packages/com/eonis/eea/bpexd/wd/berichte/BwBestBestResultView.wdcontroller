@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<Controller xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Controller:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwBestBestResultView" type="view" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AppClass.CodeBody>
+		<Core.Text><![CDATA[// ---------------------------------------------------------------------------
+// This file has been generated partially by the Web Dynpro Code Generator.
+// MODIFY CODE ONLY IN SECTIONS ENCLOSED BY @@begin AND @@end.
+// ALL OTHER CHANGES WILL BE LOST IF THE FILE IS REGENERATED.
+// ---------------------------------------------------------------------------
+package com.eonis.eea.bpexd.wd.berichte;
+
+// 
+// IMPORTANT NOTE: 
+// _ALL_ IMPORT STATEMENTS MUST BE PLACED IN THE FOLLOWING SECTION ENCLOSED
+// BY @@begin imports AND @@end. FURTHERMORE, THIS SECTION MUST ALWAYS CONTAIN
+// AT LEAST ONE IMPORT STATEMENT (E.G. THAT FOR IPrivateBwBestBestResultView).
+// OTHERWISE, USING THE ECLIPSE FUNCTION "Organize Imports" FOLLOWED BY
+// A WEB DYNPRO CODE GENERATION (E.G. PROJECT BUILD) WILL RESULT IN THE LOSS
+// OF IMPORT STATEMENTS.
+//
+//@@begin imports
+import com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestResultView;
+//@@end
+
+//@@begin documentation
+//@@end
+
+public class BwBestBestResultView
+{
+  /**
+   * Logging location.
+   */
+  private static final com.sap.tc.logging.Location logger = 
+    com.sap.tc.logging.Location.getLocation(BwBestBestResultView.class);
+
+  static 
+  {
+    //@@begin id
+    String id = "$Id$";
+    //@@end
+    com.sap.tc.logging.Location.getLocation("ID.com.sap.tc.webdynpro").infoT(id);
+  }
+
+  /**
+   * Private access to the generated Web Dynpro counterpart 
+   * for this controller class.  </p>
+   *
+   * Use <code>wdThis</code> to gain typed access to the context,
+   * to trigger navigation via outbound plugs, to get and enable/disable
+   * actions, fire declared events, and access used controllers and/or 
+   * component usages.
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestResultView for more details
+   */
+  private final IPrivateBwBestBestResultView wdThis;
+
+  /**
+   * Root node of this controller's context. </p>
+   *
+   * Provides typed access not only to the elements of the root node 
+   * but also to all nodes in the context (methods node<i>XYZ</i>()) 
+   * and their currently selected element (methods current<i>XYZ</i>Element()). 
+   * It also facilitates the creation of new elements for all nodes 
+   * (methods create<i>XYZ</i>Element()). </p>
+   *
+   * @see com.eonis.eea.bpexd.wd.berichte.wdp.IPrivateBwBestBestResultView.IContextNode for more details.
+   */
+  private final IPrivateBwBestBestResultView.IContextNode wdContext;
+
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI()</code>. </p>
+   * 
+   * Represents the generic API of the generic Web Dynpro counterpart 
+   * for this controller. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDViewController wdControllerAPI;
+  
+  /**
+   * A shortcut for <code>wdThis.wdGetAPI().getComponent()</code>. </p>
+   * 
+   * Represents the generic API of the Web Dynpro component this controller 
+   * belongs to. Can be used to access the message manager, the window manager,
+   * to add/remove event handlers and so on. </p>
+   */
+  private final com.sap.tc.webdynpro.progmodel.api.IWDComponent wdComponentAPI;
+  
+  public BwBestBestResultView(IPrivateBwBestBestResultView wdThis)
+  {
+    this.wdThis = wdThis;
+    this.wdContext = wdThis.wdGetContext();
+    this.wdControllerAPI = wdThis.wdGetAPI();
+    this.wdComponentAPI = wdThis.wdGetAPI().getComponent();
+  }
+
+  //@@begin javadoc:wdDoInit()
+  /** Hook method called to initialize controller. */
+  //@@end
+  public void wdDoInit()
+  {
+    //@@begin wdDoInit()
+    wdContext.currentLocalDataElement().setVisibleRowCountBestellBest( 10 );
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoExit()
+  /** Hook method called to clean up controller. */
+  //@@end
+  public void wdDoExit()
+  {
+    //@@begin wdDoExit()
+    //@@end
+  }
+
+  //@@begin javadoc:wdDoModifyView
+  /**
+   * Hook method called to modify a view just before rendering.
+   * This method conceptually belongs to the view itself, not to the
+   * controller (cf. MVC pattern).
+   * It is made static to discourage a way of programming that
+   * routinely stores references to UI elements in instance fields
+   * for access by the view controller's event handlers, and so on.
+   * The Web Dynpro programming model recommends that UI elements can
+   * only be accessed by code executed within the call to this hook method.
+   *
+   * @param wdThis Generated private interface of the view's controller, as
+   *        provided by Web Dynpro. Provides access to the view controller's
+   *        outgoing controller usages, etc.
+   * @param wdContext Generated interface of the view's context, as provided
+   *        by Web Dynpro. Provides access to the view's data.
+   * @param view The view's generic API, as provided by Web Dynpro.
+   *        Provides access to UI elements.
+   * @param firstTime Indicates whether the hook is called for the first time
+   *        during the lifetime of the view.
+   */
+  //@@end
+  public static void wdDoModifyView(IPrivateBwBestBestResultView wdThis, IPrivateBwBestBestResultView.IContextNode wdContext, com.sap.tc.webdynpro.progmodel.api.IWDView view, boolean firstTime)
+  {
+    //@@begin wdDoModifyView
+    //@@end
+  }
+
+  //@@begin javadoc:onPlugFromSearchView(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onPlugFromSearchView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onPlugFromSearchView(ServerEvent)
+    // Details zur ersten Bestellbestaetigung anzeigen
+    wdThis.wdGetBerichteController().getBestellBestDetailsByBestNr();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionBackToSearchView(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionBackToSearchView(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionBackToSearchView(ServerEvent)
+    wdThis.wdFirePlugToSearchView();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionBackToBwMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionBackToBwMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionBackToBwMenu(ServerEvent)
+    wdThis.wdFirePlugToBwMenu();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionshowDetails(ServerEvent)
+  /** Anzeigen der Details einer Bestellbestätigung */
+  //@@end
+  public void onActionshowDetails(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionshowDetails(ServerEvent)
+    wdThis.wdGetBerichteController().getBestellBestDetailsByBestNr();
+    //@@end
+  }
+
+  //@@begin javadoc:onActionEnterVisibleRowCount(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionEnterVisibleRowCount(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionEnterVisibleRowCount(ServerEvent)
+    //@@end
+  }
+
+  //@@begin javadoc:onActionBackToMainMenu(ServerEvent)
+  /** Declared validating event handler. */
+  //@@end
+  public void onActionBackToMainMenu(com.sap.tc.webdynpro.progmodel.api.IWDCustomEvent wdEvent )
+  {
+    //@@begin onActionBackToMainMenu(ServerEvent)
+    wdThis.wdGetBerichteController().actionBackToMainMenu();
+    //@@end
+  }
+
+  /*
+   * The following code section can be used for any Java code that is 
+   * not to be visible to other controllers/views or that contains constructs
+   * currently not supported directly by Web Dynpro (such as inner classes or
+   * member variables etc.). </p>
+   *
+   * Note: The content of this section is in no way managed/controlled
+   * by the Web Dynpro Designtime or the Web Dynpro Runtime. 
+   */
+  //@@begin others
+  //@@end
+}
+]]></Core.Text>
+	</AppClass.CodeBody>
+	<Controller.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Controller.Parent>
+	<Controller.Actions>
+		<Action name="BackToSearchView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionBackToSearchView"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="BackToBwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionBackToBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="showDetails">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionshowDetails"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="EnterVisibleRowCount">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionEnterVisibleRowCount"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+		<Action name="BackToMainMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference path="EventHandler:onActionBackToMainMenu"/>
+			</IncomingEvent.EventHandler>
+		</Action>
+	</Controller.Actions>
+	<Controller.Context>
+		<ContextValueNode cardinality="_1_1" name="Context" selection="_1_1">
+			<ContextNode.ChildNodes>
+				<ContextModelNode name="BestellBestaetigungReportGetList">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="outputBestellBestaetigungReportGetList">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="reportBestBestaetigungen">
+									<ContextNode.Attributes>
+										<ContextModelAttribute name="ekGrpText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="belegTyp">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrg">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bestellWert">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bestellDatum">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="waehrung">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="bestellNr">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="waehrungIso">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekGrpTelefon">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekOrgText">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="einkaufsBelegart">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="r3BelegTyp">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="ekGrp">
+										</ContextModelAttribute>
+										<ContextModelAttribute name="kurztext">
+										</ContextModelAttribute>
+									</ContextNode.Attributes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextModelNode name="BestellBestaetigungGetDetail">
+					<ContextNode.ChildNodes>
+						<ContextModelNode name="outputBestellBestaetigungGetDetail">
+							<ContextNode.ChildNodes>
+								<ContextModelNode name="bestBestaetigung">
+									<ContextNode.ChildNodes>
+										<ContextModelNode name="positionen">
+											<ContextNode.Attributes>
+												<ContextModelAttribute name="vertragsPosNr">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="bestaetigungsSteuerSchluessel">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="bestaetigungsTypBezeichnung">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="bestellWert">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="kurzText">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="mengenEh">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="bedarfsNr">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="auftragsBestaetigungsPflicht">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="pos">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="auftragsbestaetigungsStatus">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="menge">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="vertragsNr">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="auftragsBestaetigungsNr">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="mengenEhIso">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="lieferDatum">
+												</ContextModelAttribute>
+												<ContextModelAttribute name="musterLVNr">
+												</ContextModelAttribute>
+											</ContextNode.Attributes>
+										</ContextModelNode>
+									</ContextNode.ChildNodes>
+								</ContextModelNode>
+							</ContextNode.ChildNodes>
+						</ContextModelNode>
+					</ContextNode.ChildNodes>
+				</ContextModelNode>
+				<ContextValueNode cardinality="_1_1" name="localData">
+					<ContextNode.Attributes>
+						<ContextValueAttribute name="visibleRowCountBestellBest">
+							<ContextValueAttribute.Type>
+								<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="integer" type="DtSimpleType"/>
+							</ContextValueAttribute.Type>
+						</ContextValueAttribute>
+					</ContextNode.Attributes>
+				</ContextValueNode>
+			</ContextNode.ChildNodes>
+		</ContextValueNode>
+	</Controller.Context>
+	<Controller.EventHandlers>
+		<ControllerEventHandler name="onPlugFromSearchView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionBackToSearchView">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionBackToBwMenu">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionshowDetails">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionEnterVisibleRowCount">
+		</ControllerEventHandler>
+		<ControllerEventHandler name="onActionBackToMainMenu">
+		</ControllerEventHandler>
+	</Controller.EventHandlers>
+	<Controller.OutgoingControllerUsages>
+		<ControllerUsage name="com.eonis.eea.bpexd.wd.berichte.BerichteUsage">
+			<ControllerUsage.ContextMappings>
+				<ContextElementMapping mappingType="collection_and_selection" name="1">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="2">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="17">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="18">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="19">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="20">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="21">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:vertragsPosNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:vertragsPosNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="22">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestaetigungsSteuerSchluessel"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestaetigungsSteuerSchluessel"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="23">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestaetigungsTypBezeichnung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestaetigungsTypBezeichnung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="24">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestellWert"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bestellWert"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="25">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:kurzText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:kurzText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="26">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:mengenEh"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:mengenEh"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="27">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bedarfsNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:bedarfsNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="28">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsBestaetigungsPflicht"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsBestaetigungsPflicht"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="29">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:pos"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:pos"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="30">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsbestaetigungsStatus"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsbestaetigungsStatus"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="31">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:menge"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:menge"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="32">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:vertragsNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:vertragsNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="33">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsBestaetigungsNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:auftragsBestaetigungsNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="34">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:mengenEhIso"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:mengenEhIso"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="35">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:lieferDatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:lieferDatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="36">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:musterLVNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungGetDetail/ChildNode:outputBestellBestaetigungGetDetail/ChildNode:bestBestaetigung/ChildNode:positionen/Attribute:musterLVNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping mappingType="collection_and_selection" name="37">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="38">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrpText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrpText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="39">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:belegTyp"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:belegTyp"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="40">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekOrg"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekOrg"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="41">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellWert"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellWert"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="42">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellDatum"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellDatum"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="43">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:waehrung"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:waehrung"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="44">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellNr"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:bestellNr"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="45">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:waehrungIso"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:waehrungIso"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="46">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrpTelefon"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrpTelefon"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="47">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekOrgText"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekOrgText"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="48">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:einkaufsBelegart"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:einkaufsBelegart"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="49">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:r3BelegTyp"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:r3BelegTyp"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="50">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrp"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:ekGrp"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+				<ContextElementMapping name="51">
+					<ContextElementMapping.MappedElement>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller" path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:kurztext"/>
+					</ContextElementMapping.MappedElement>
+					<ContextElementMapping.OwnElement>
+						<Core.Reference path="Context/ChildNode:BestellBestaetigungReportGetList/ChildNode:outputBestellBestaetigungReportGetList/ChildNode:reportBestBestaetigungen/Attribute:kurztext"/>
+					</ContextElementMapping.OwnElement>
+				</ContextElementMapping>
+			</ControllerUsage.ContextMappings>
+			<ControllerUsage.UsedController>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+			</ControllerUsage.UsedController>
+		</ControllerUsage>
+	</Controller.OutgoingControllerUsages>
+	<Controller.View>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View"/>
+	</Controller.View>
+</Controller>

@@ -1,0 +1,29 @@
+<Berichtswesen>
+  <Bestellung>
+    <bestellnummer>Bestellnummer</bestellnummer>
+    <einkaeufer>Einkäufer</einkaeufer>
+    <bestelldatum>Bestelldatum</bestelldatum>
+    <gesBestellwert>gesBestellwert</gesBestellwert>
+    <waehrung>Währung</waehrung>
+     
+    <Pos>
+      <posNr>PosNr 01</posNr>
+      <posKurztext>Pos Kurztext 01</posKurztext>
+      <lieferdatum>Lieferdatum 01</lieferdatum>
+      <kontrakt>Kontrakt 01</kontrakt>
+
+      <LEBlatt>
+        <leBlattNr>LEBlattNr 01</leBlattNr>
+      </LEBlatt>
+      <LEBlatt>
+        <leBlattNr>LEBlattNr 02</leBlattNr>
+      </LEBlatt>
+    </Pos>
+    <Pos>
+      <posNr>PosNr 02</posNr>
+      <posKurztext>Pos Kurztext 02</posKurztext>
+      <lieferdatum>Lieferdatum 02</lieferdatum>
+      <kontrakt>Kontrakt 02</kontrakt>
+    </Pos>
+  </Bestellung>
+</Berichtswesen>

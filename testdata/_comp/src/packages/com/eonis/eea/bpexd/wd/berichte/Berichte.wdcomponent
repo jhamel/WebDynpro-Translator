@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<Component xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Component:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="Berichte" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<Component.ComponentInterface>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichteInterface" type="ComponentInterfaceImplementation"/>
+	</Component.ComponentInterface>
+	<Component.ComponentUsages>
+		<ComponentUsage lifecycleControl="createOnDemand" name="AbrechnungComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="manual" name="MatAnfComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung" name="MaterialAnforderungDLLOInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung" name="MaterialAnforderungDLLOInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung" name="MaterialAnforderungDLLOInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="createOnDemand" name="AufmasseComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="AufmasseInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="AufmasseInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="AufmasseInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="createOnDemand" name="MatRuecklieferungComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="createOnDemand" name="MatRueckbuchungComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="createOnDemand" name="MatAnfZlComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage name="ModelComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.model" name="ModelInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.model" name="ModelInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.model" name="ModelInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage name="ReservierungsController">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.reservierung" name="ReservierungInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.reservierung" name="ReservierungInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.reservierung" name="ReservierungInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+		<ComponentUsage lifecycleControl="manual" name="AusplattComp">
+			<ComponentUsage.ComponentControllerUsages>
+				<ComponentControllerUsage name="Interface">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.ausplatt" name="AusschreibungsplattformInterface" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+				<ComponentControllerUsage name="Configuration">
+					<ComponentControllerUsage.UsedComponentController>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.ausplatt" name="AusschreibungsplattformInterfaceCfg" type="Controller"/>
+					</ComponentControllerUsage.UsedComponentController>
+				</ComponentControllerUsage>
+			</ComponentUsage.ComponentControllerUsages>
+			<ComponentUsage.UsedComponent>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.ausplatt" name="AusschreibungsplattformInterface" type="ComponentInterfaceImplementation"/>
+			</ComponentUsage.UsedComponent>
+		</ComponentUsage>
+	</Component.ComponentUsages>
+	<Component.Controllers>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatZurBestellungPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffenLieferungenPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupOffeneLieferungenPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAnfPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrPrintView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="Controller"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAbrPrintView" type="Controller"/>
+	</Component.Controllers>
+	<Component.EmptyView>
+		<EmptyView name="EmptyView">
+			<AbstractView.InboundPlugs>
+				<InboundPlug name="ShowEmptyView">
+				</InboundPlug>
+			</AbstractView.InboundPlugs>
+		</EmptyView>
+	</Component.EmptyView>
+	<Component.MessagePool>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichteMessagePool" type="MessagePool"/>
+	</Component.MessagePool>
+	<Component.Views>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatZurBestellungPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffenLieferungenPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupOffeneLieferungenPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAnfPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrPrintView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAbrPrintView" type="View"/>
+	</Component.Views>
+	<Component.Windows>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupAusschreibungAnfPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAnfPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatZurBestellungPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupMatAbrPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupAusschreibungAbgPrint" type="Window"/>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupOffeneLieferungenPrint" type="Window"/>
+	</Component.Windows>
+	<Component.ComponentController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Controller"/>
+	</Component.ComponentController>
+	<Component.UsedUIELibraries>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="BusinessGraphics" type="UIElementLibrary"/>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementlibraries.adobe" name="Adobe" type="UIElementLibrary"/>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Standard" type="UIElementLibrary"/>
+	</Component.UsedUIELibraries>
+</Component>

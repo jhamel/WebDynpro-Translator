@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<Window xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Window:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="Berichtswesen" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<Window.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Window.Parent>
+	<Window.NavigationLinks>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="NavigationLinks"/>
+	</Window.NavigationLinks>
+	<Window.ViewsetHierarchyRootNodes>
+		<Viewset name="Berichtswesen">
+			<Viewset.ViewAreas>
+				<DimensionedViewArea name="cell[1,1]" x="1" y="1">
+					<Placeholder.EmbeddedNodes>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="LeistungsAufmassDetailsInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:AufmasseComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.BeauftragungShowDetailsInterfaceViewAufmasseCompUsage2">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="BeauftragungShowDetailsInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:AufmasseComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.BeauftragungShowDetailsInterfaceViewAufmasseCompUsage2"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung.MatAnfDLLOShowDetailInterfaceViewMatAnfCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung" name="MatAnfDLLOShowDetailInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:MatAnfComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderung.MatAnfDLLOShowDetailInterfaceViewMatAnfCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.reservierung.ReservierungShowDetailsInterfaceViewReservierungsControllerUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.reservierung" name="ReservierungShowDetailsInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:ReservierungsController"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.reservierung.ReservierungShowDetailsInterfaceViewReservierungsControllerUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.ausplatt.AusschreibungenShowDetailsInterfaceViewAusplattCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.ausplatt" name="AusschreibungenShowDetailsInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:AusplattComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.ausplatt.AusschreibungenShowDetailsInterfaceViewAusplattCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:MatAnfZlComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+								<ViewContainerAssignment name="2">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:AbrechnungComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:2/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="ViewContainer:2"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+								<ViewContainerAssignment name="3">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:MatRueckbuchungComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:3/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="ViewContainer:3"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+								<ViewContainerAssignment name="4">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:MatRuecklieferungComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:4/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="ViewContainer:4"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View"/>
+							</ViewsetHierarchyNode.View>
+							<ViewUsage.ViewAreas>
+								<ViewContainerAssignment name="1">
+									<Placeholder.EmbeddedNodes>
+										<ViewUsage name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2">
+											<ViewsetHierarchyNode.View>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView"/>
+											</ViewsetHierarchyNode.View>
+											<ViewUsage.ComponentUsage>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component" path="ComponentUsage:MatAnfZlComp"/>
+											</ViewUsage.ComponentUsage>
+										</ViewUsage>
+									</Placeholder.EmbeddedNodes>
+									<Placeholder.DefaultNode>
+										<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2"/>
+									</Placeholder.DefaultNode>
+									<Placeholder.ViewContainer>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="ViewContainer:1"/>
+									</Placeholder.ViewContainer>
+								</ViewContainerAssignment>
+							</ViewUsage.ViewAreas>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+					</Placeholder.EmbeddedNodes>
+					<Placeholder.DefaultNode>
+						<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</Placeholder.DefaultNode>
+					<ViewArea.ViewAreaDefinition>
+						<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition" path="ViewAreaDefinition:cell"/>
+					</ViewArea.ViewAreaDefinition>
+				</DimensionedViewArea>
+			</Viewset.ViewAreas>
+			<Viewset.ViewsetProperties>
+				<ViewsetProperty name="rows" value="1">
+					<ViewsetProperty.ViewsetPropertyDefinition>
+						<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition" path="DimensionDefinition:rows"/>
+					</ViewsetProperty.ViewsetPropertyDefinition>
+				</ViewsetProperty>
+				<DimensionedViewsetProperty name="cellWidth[1,1]" value="" x="1" y="1">
+					<ViewsetProperty.ViewsetPropertyDefinition>
+						<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition" path="SimplePropertyDefinition:cellWidth"/>
+					</ViewsetProperty.ViewsetPropertyDefinition>
+				</DimensionedViewsetProperty>
+				<ViewsetProperty name="columns" value="1">
+					<ViewsetProperty.ViewsetPropertyDefinition>
+						<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition" path="DimensionDefinition:columns"/>
+					</ViewsetProperty.ViewsetPropertyDefinition>
+				</ViewsetProperty>
+				<DimensionedViewsetProperty name="cellHeight[1,1]" value="" x="1" y="1">
+					<ViewsetProperty.ViewsetPropertyDefinition>
+						<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition" path="SimplePropertyDefinition:cellHeight"/>
+					</ViewsetProperty.ViewsetPropertyDefinition>
+				</DimensionedViewsetProperty>
+			</Viewset.ViewsetProperties>
+			<Viewset.ViewsetDefinition>
+				<Core.Reference package="com.sap.ide.webdynpro.viewsetdefinitions" name="GridLayout" type="ViewsetDefinition"/>
+			</Viewset.ViewsetDefinition>
+		</Viewset>
+	</Window.ViewsetHierarchyRootNodes>
+	<Window.InterfaceView>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenInterfaceView" type="InterfaceView"/>
+	</Window.InterfaceView>
+	<Window.DefaultViewsetHierarchyRootNode>
+		<Core.Reference path="ViewsetHierarchyRootNode:Berichtswesen"/>
+	</Window.DefaultViewsetHierarchyRootNode>
+</Window>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="de" product-name="Controller:BwMatAnfResultView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>H15430</develContact><domain></domain>
+<originalLocale xml:lang="de"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="4ab777864f3a4b1839c49e32161c9d7c" resname="Action:PrintReport@text" maxwidth="255" translate="yes"><source>Drucken</source></trans-unit></group>
+</body>
+</file>
+</xliff>

@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<NavigationLinks xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.NavigationLinks:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="Berichtswesen" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<NavigationLinks.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window"/>
+	</NavigationLinks.Parent>
+	<NavigationLinks.NavigationLinks>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMatAnfSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMatAnfSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View" path="InboundPlug:fromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToMatAnfSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToBestBestSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToBestBestSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View" path="InboundPlug:FromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToBestBestSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View" path="InboundPlug:FromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_toSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_toSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View" path="InboundPlug:FromResultView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="OutboundPlug:toSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1_ToSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1_ToSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View" path="InboundPlug:FromResultView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View" path="OutboundPlug:ToSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailRA">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailRA_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:3/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:toAufmassDetailRA"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toAufmassDetail">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toAufmassDetail_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="OutboundPlug:toAufmassDetail"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToWaBelegDetail">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToWaBelegDetail_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="View" path="InboundPlug:FromMaZurBestellung"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:ToWaBelegDetail"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_ToSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_ToSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View" path="InboundPlug:FromShowView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="OutboundPlug:ToSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="InboundPlug:fromAufmassDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage2"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="InboundPlug:FromResultView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="OutboundPlug:ToSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1_ToBeauftragungsList">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1_ToBeauftragungsList_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View" path="OutboundPlug:ToBeauftragungsList"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMatAbrSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMatAbrSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View" path="InboundPlug:FromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToMatAbrSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenBeauftragungViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMaZurBestellungSearch">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToMaZurBestellungSearch_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View" path="InboundPlug:FromMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToMaZurBestellungSearch"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="InboundPlug:FromResultView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View" path="OutboundPlug:ToSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_ToReservationDetails">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_ToReservationDetails_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.reservierung" name="ReservierungShowDetailsInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.reservierung.ReservierungShowDetailsInterfaceViewReservierungsControllerUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="OutboundPlug:ToReservationDetails"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToLstAufmNrSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToLstAufmNrSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View" path="InboundPlug:FromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToLstAufmNrSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToOffeneLieferungenSearch">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToOffeneLieferungenSearch_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View" path="InboundPlug:fromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToOffeneLieferungenSearch"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1_toBWMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1_toBWMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="View" path="OutboundPlug:toBWMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="InboundPlug:FromDetailView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="MatAnfShowDetails" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailMA">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailMA_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:2/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:toAufmassDetailMA"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromAufmassDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung" name="MaterialAbrechnungInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:2/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialabrechnung.MaterialAbrechnungInterfaceViewAbrechnungCompUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_toBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_toBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="OutboundPlug:toBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1_toBeauftragungsDetails">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1_toBeauftragungsDetails_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View" path="InboundPlug:fromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View" path="OutboundPlug:toBeauftragungsDetails"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailRL">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetailRL_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:4/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:toAufmassDetailRL"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toBWMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toBWMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View" path="OutboundPlug:toBWMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="OutboundPlug:toBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1_ToMatAbrSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1_ToMatAbrSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View" path="InboundPlug:FromMatAbrResult"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View" path="OutboundPlug:ToMatAbrSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_toSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View" path="InboundPlug:FromResultView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="OutboundPlug:toSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1_ToResult">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1_ToResult_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromSearch"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View" path="OutboundPlug:ToResult"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromAufmassDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe" name="MaterialRueckgabeInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:3/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialrueckgabe.MaterialRueckgabeInterfaceViewMatRueckbuchungCompUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestResultView" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromAufmassDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromAufmassDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung" name="MaterialRuecklieferungInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:4/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialruecklieferung.MaterialRuecklieferungInterfaceViewMatRuecklieferungCompUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToMaZurBestellung">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToMaZurBestellung_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromReservierungDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View" path="OutboundPlug:ToMaZurBestellung"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toAufmassShowView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toAufmassShowView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="BeauftragungShowDetailsInterfaceView" type="InterfaceView" path="InboundPlug:FromBerichtswesen"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.BeauftragungShowDetailsInterfaceViewAufmasseCompUsage2"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View" path="OutboundPlug:toAufmassShowView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetail">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_toAufmassDetail_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl" name="MaterialAnforderungZLInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderungzl.MaterialAnforderungZLInterfaceViewMatAnfZlCompUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:toAufmassDetail"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToReservierungDetail">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToReservierungDetail_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View" path="InboundPlug:FromMaZurBestellung"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:ToReservierungDetail"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2_toBerichtswesen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2_toBerichtswesen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="InboundPlug:fromLeistungsAufmass"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="LeistungsAufmassDetailsInterfaceView" type="InterfaceView" path="OutboundPlug:toBerichtswesen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_ToMatAnfDetails">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1_ToMatAnfDetails_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse.materialanforderung" name="MatAnfDLLOShowDetailInterfaceView" type="InterfaceView" path="InboundPlug:FromBerichtswesen"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.MatAnfShowDetailsUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.materialanforderung.MatAnfDLLOShowDetailInterfaceViewMatAnfCompUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="OutboundPlug:ToMatAnfDetails"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1_toSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View" path="InboundPlug:fromBeauftragungsDetails"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowViewLstAufm" type="View" path="OutboundPlug:toSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungShowViewLstAufmUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToAusplattfSearchView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1_ToAusplattfSearchView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="InboundPlug:FromBwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="OutboundPlug:ToAusplattfSearchView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToDetailView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1_ToDetailView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View" path="OutboundPlug:ToDetailView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="InboundPlug:FromDetailView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAnfResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="ReservierungShowDetails" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.ReservierungShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToAusschreibungResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1_ToAusschreibungResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformResultView" type="View" path="InboundPlug:fromDetailView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="OutboundPlug:ToAusschreibungResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_toBwLeistungsAufmass">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1_toBwLeistungsAufmass_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.aufmasse" name="LeistungsAufmassDetailsInterfaceView" type="InterfaceView" path="InboundPlug:Default"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.aufmasse.LeistungsAufmassDetailsInterfaceViewAufmasseCompUsage2"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungShowView" type="View" path="OutboundPlug:toBwLeistungsAufmass"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwUebersichtUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToAusschreibungDetails">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1_ToAusschreibungDetails_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="AusplattformShowDetails" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.AusplattformShowDetailsUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwAusplattformSearchView" type="View" path="OutboundPlug:ToAusschreibungDetails"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwAusplattformSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToOffeneLieferungen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1_ToOffeneLieferungen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="InboundPlug:FromReservierungDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View" path="OutboundPlug:ToOffeneLieferungen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_ToDetailReservierungen">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1_ToDetailReservierungen_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailReservierungen" type="View" path="InboundPlug:FromOffeneLieferungen"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailReservierungenUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="OutboundPlug:ToDetailReservierungen"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToSearch">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1_ToSearch_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungSearchView" type="View" path="InboundPlug:FromResult"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMaZurBestellungSearchViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="OutboundPlug:ToSearch"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwLstAufmNrSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwLstAufmNrSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1_ToBwMenu">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1_ToBwMenu_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="View" path="InboundPlug:BwMenu"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BerichtswesenViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBestBestSearchView" type="View" path="OutboundPlug:ToBwMenu"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBestBestSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1_ToResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1_ToResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="InboundPlug:FromSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenSearchView" type="View" path="OutboundPlug:ToResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwOffeneLieferungenSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1_ToMatAbrResultView">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1_ToMatAbrResultView_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrResultView" type="View" path="InboundPlug:FromMatAbrSearchView"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAbrSearchView" type="View" path="OutboundPlug:ToMatAbrResultView"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatAbrSearchViewUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+		<NavigationLink name="com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1_ToMaZurBestellung">
+			<NavigationLink.TargetReferences>
+				<NavigationTargetReference name="com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1_ToMaZurBestellung_1">
+					<NavigationTargetReference.Target>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatZurBestellungResultView" type="View" path="InboundPlug:FromWaBelegDetail"/>
+					</NavigationTargetReference.Target>
+					<NavigationTargetReference.TargetViewUsage>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwMatZurBestellungResultViewUsage1"/>
+					</NavigationTargetReference.TargetViewUsage>
+				</NavigationTargetReference>
+			</NavigationLink.TargetReferences>
+			<NavigationLink.Source>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwDetailWABeleg" type="View" path="OutboundPlug:ToMaZurBestellung"/>
+			</NavigationLink.Source>
+			<NavigationLink.SourceViewUsage>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichtswesen" type="Window" path="ViewsetHierarchyRootNode:Berichtswesen/ViewArea:cell[1,1]/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwDetailWABelegUsage1"/>
+			</NavigationLink.SourceViewUsage>
+		</NavigationLink>
+	</NavigationLinks.NavigationLinks>
+</NavigationLinks>

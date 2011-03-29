@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 4, 2004 10:35:31 AM CEST -->
+<DtGeneralStructure xmlns="http://xml.sap.com/2002/10/metamodel/dictionary" xmlns:IDX="urn:sap.com:DtDictionary.DtGeneralStructure:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1083659731299" name="ReportMatAnfDLLOPos" package="com.eonis.eea.bpexd.wd.berichte.structures" masterLanguage="de">
+	<DtStructure.StructureElements>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="18" name="MATERIALNR" notNull="true" position="0">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="40" name="KURZTEXT" notNull="true" position="1">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="decimal" dbDefault="0" fractionDigits="2" jdbcTypeName="DECIMAL" name="BEDARFSMENGE" notNull="true" position="2" totalDigits="13">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="decimal" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="decimal" dbDefault="0" fractionDigits="2" jdbcTypeName="DECIMAL" name="ENTNAHMEMENGE" notNull="true" position="3" totalDigits="13">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="decimal" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="3" name="MENGENEINHEIT" notNull="true" position="4">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+		<DtField builtInType="string" dbDefault=" " jdbcTypeName="VARCHAR" length="30" name="STATUS" notNull="true" position="5">
+			<DtField.ReferencedType>
+				<Core.Reference package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+			</DtField.ReferencedType>
+		</DtField>
+	</DtStructure.StructureElements>
+</DtGeneralStructure>

@@ -1,0 +1,1489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Thursday, January 12, 2006 1:14:07 PM CET -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1137068047215" name="BwOffeneLieferungenResultView" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="FromReservierungDetail">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="EventHandler:onPlugFromReservierungDetail"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+		<InboundPlug name="fromAufmassDetail">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="EventHandler:onPlugfromAufmassDetail"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+		<InboundPlug name="FromSearchView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="EventHandler:onPlugFromSearchView"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.OutboundPlugs>
+		<OutboundPlug name="toSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="toBwMenu">
+		</OutboundPlug>
+		<OutboundPlug name="toAufmassDetail">
+			<ParameterizedFeature.Parameters>
+				<Parameter name="bestellnummer">
+					<Parameter.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</Parameter.Type>
+				</Parameter>
+				<Parameter name="bestellposition">
+					<Parameter.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</Parameter.Type>
+				</Parameter>
+				<Parameter name="aufmassart">
+					<Parameter.Type>
+						<Core.ForeignReference modelName="DtDictionary" package="com.sap.dictionary" name="string" type="DtSimpleType"/>
+					</Parameter.Type>
+				</Parameter>
+			</ParameterizedFeature.Parameters>
+		</OutboundPlug>
+		<OutboundPlug name="ToDetailReservierungen">
+		</OutboundPlug>
+	</AbstractView.OutboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<CommonDevelopmentObject.TemplateInstances>
+				<EmbeddedTemplateInstance name="Table">
+					<TemplateInstance.TemplateMarkers>
+						<TemplateMarker name="Table_TABLE" role="table">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="kurzText_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:lagerOrtText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="kurzText_editor_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:werkText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:kurzText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:warenEmpfaengerNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="werkText_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:werkText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="werkText_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:kurzText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="lagerOrtText_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsDatum/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="lagerOrtText_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:wunschTermin/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:matAufmassNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsDatum/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:lagerOrtText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:wunschTermin/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:matAufmassNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="reservierungsNr_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:warenEmpfaengerNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+					</TemplateInstance.TemplateMarkers>
+				</EmbeddedTemplateInstance>
+			</CommonDevelopmentObject.TemplateInstances>
+			<UIElementContainer.Children>
+				<TransparentContainer name="CrumbPathTCont">
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="visible">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibilityResult"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:visible"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+					<UIElement.LayoutData>
+						<FlowData name="CrumbPathTCont_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter1">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<LinkToAction name="MainMenuLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:BackToMainMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr1Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="BerichtswesenLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:BackToBwMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr2Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="SearchBeauftragungLinkToAction" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:BackToSearchView"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_10">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr3Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<TextView name="SearchBeauftragungTextView">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0_5" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+						<UIElement name="HorizontalGutter2">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_1">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout_2">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<Group name="Group">
+					<CommonDevelopmentObject.TemplateInstances>
+						<EmbeddedTemplateInstance name="Table">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="Table_0_TABLE" role="table">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsChildrenLoaded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsChildrenLoaded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsExpanded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsExpanded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsLeaf/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsLeaf/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:ID/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:ID/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="dlLo_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:dlLo/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="dlLo_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:dlLo/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bezeichnung_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:bezeichnung/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bezeichnung_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:bezeichnung/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:warenempfaenger/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:warenempfaenger/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+						<EmbeddedTemplateInstance name="TableBestellungen">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="Table_0_1_TABLE" role="table">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsChildrenLoaded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsChildrenLoaded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsExpanded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsExpanded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_0_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsLeaf_0/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_0_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:IsLeaf_0/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:ID/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:ID/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellNummer_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:werkId/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellNummer_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:werkId/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellPos_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:bestellPos/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellPos_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:bestellPos/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellPosKurztext_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:bestellPosKurztext/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bestellPosKurztext_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:bestellPosKurztext/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassNummer_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassNummer/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassNummer_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassNummer/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassKurztext_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassKurztext/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassKurztext_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassKurztext/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassStatus_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassStatus/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmassStatus_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:materialaufmassStatus/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="freigabedatum_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:freigabedatum/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="freigabedatum_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:freigabedatum/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="abnahmedatum_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:abnahmedatum/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="abnahmedatum_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:abnahmedatum/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="erfassungsdatum_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:erfassungsdatum/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="erfassungsdatum_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:erfassungsdatum/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="wunschtermin_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:wunschtermin/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="wunschtermin_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:wunschtermin/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="lieferanschrift_0_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:lieferanschrift_0/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="lieferanschrift_0_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:lieferanschrift_0/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_0_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:warenempfaenger_0/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_0_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:warenempfaenger_0/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="reservierungsnummer_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:reservierungsnummer/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="reservierungsnummer_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:reservierungsnummer/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="waBelegnummer_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:waBelegnummer/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="waBelegnummer_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Bestellungen/Column:waBelegnummer/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+						<EmbeddedTemplateInstance name="Table0">
+							<TemplateInstance.TemplateMarkers>
+								<TemplateMarker name="Table_0_TABLE" role="table">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsChildrenLoaded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsChildrenLoaded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsChildrenLoaded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsExpanded/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsExpanded_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsExpanded/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsLeaf/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="IsLeaf_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:IsLeaf/TableCellEditor/ContextBinding:checked"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:ID/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="ID_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:ID/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="werk_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:werk/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="werk_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:werk/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="zentrallagerort_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:zentrallagerort/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="zentrallagerort_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:zentrallagerort/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="dlLo_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:dlLo/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="dlLo_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:dlLo/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bezeichnung_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:bezeichnung/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="bezeichnung_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:bezeichnung/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:warenempfaenger/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="warenempfaenger_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:warenempfaenger/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="wuTermin_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:wuTermin/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="wuTermin_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:wuTermin/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmass_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:materialaufmass/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="materialaufmass_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:materialaufmass/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="kurztextMaterialaufmass_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:kurztextMaterialaufmass/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="kurztextMaterialaufmass_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:kurztextMaterialaufmass/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="maStatus_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:maStatus/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="maStatus_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:maStatus/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="freigabe_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:freigabe/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="freigabe_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:freigabe/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="abnahme_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:abnahme/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="abnahme_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:abnahme/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="lieferanschrift_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:lieferanschrift/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="lieferanschrift_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:lieferanschrift/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="reservierung_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:reservierung/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="reservierung_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:reservierung/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="waBeleg_editor_ELEMENT" role="inputelement">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:waBeleg/TableCellEditor"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+								<TemplateMarker name="waBeleg_editor_BINDING" role="binding">
+									<TemplateMarker.Participant>
+										<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table_0/Column:waBeleg/TableCellEditor/ContextBinding:text"/>
+									</TemplateMarker.Participant>
+								</TemplateMarker>
+							</TemplateInstance.TemplateMarkers>
+						</EmbeddedTemplateInstance>
+					</CommonDevelopmentObject.TemplateInstances>
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="visible">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibilityResult"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:visible"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+					<UIElement.LayoutData>
+						<FlowData name="LayoutData">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<TransparentContainer name="PrintButtonTCont">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0_1">
+								</FlowData>
+							</UIElement.LayoutData>
+							<UIElementContainer.Children>
+								<CheckBox name="ActivateChkBox">
+									<ViewElement.ContextBindings>
+										<UIElementContextBinding name="checked">
+											<UIElementContextBinding.BoundContextElement>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:activateAll"/>
+											</UIElementContextBinding.BoundContextElement>
+											<UIElementContextBinding.UIElementProperty>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+											</UIElementContextBinding.UIElementProperty>
+										</UIElementContextBinding>
+									</ViewElement.ContextBindings>
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onToggle">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:ActivateAllPrintBox"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Event:onToggle"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<LayoutData name="ActivateChkBox_layoutdata">
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition" path="LayoutDataDefinition:MatrixData"/>
+											</ViewElement.Definition>
+										</LayoutData>
+									</UIElement.LayoutData>
+								</CheckBox>
+							</UIElementContainer.Children>
+							<UIElementContainer.Layout>
+								<Layout name="PrintButtonTCont_layout">
+									<ViewElement.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="MatrixLayout" type="LayoutDefinition"/>
+									</ViewElement.Definition>
+								</Layout>
+							</UIElementContainer.Layout>
+						</TransparentContainer>
+						<Table name="Bestellungen" selectionMode="multi" visibleRowCount="20">
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="visibleRowCount">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibleRowCountBestellungen"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:visibleRowCount"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+								<UIElementContextBinding name="dataSource">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:dataSource"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<ViewElement.OutgoingAggregations>
+								<ViewElementAggregation name="MasterColumn">
+									<ViewElementAggregation.AggregatedObjects>
+										<ViewElement name="MasterColumn1">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="expanded">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:IsExpanded"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractTreeTableColumn" type="UIElementDefinition" path="Property:expanded"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+												<UIElementContextBinding name="childrenLoaded">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:IsChildrenLoaded"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractTreeTableColumn" type="UIElementDefinition" path="Property:childrenLoaded"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+												<UIElementContextBinding name="isLeaf">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:IsLeaf"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractTreeTableColumn" type="UIElementDefinition" path="Property:isLeaf"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.OutgoingAggregations>
+												<ViewElementAggregation name="TableCellEditor">
+													<ViewElementAggregation.AggregatedObjects>
+														<TextView name="bestellNummer_editor_0">
+															<ViewElement.ContextBindings>
+																<UIElementContextBinding name="text">
+																	<UIElementContextBinding.BoundContextElement>
+																		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:bestellNummer"/>
+																	</UIElementContextBinding.BoundContextElement>
+																	<UIElementContextBinding.UIElementProperty>
+																		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+																	</UIElementContextBinding.UIElementProperty>
+																</UIElementContextBinding>
+															</ViewElement.ContextBindings>
+														</TextView>
+													</ViewElementAggregation.AggregatedObjects>
+													<ViewElementAggregation.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractMasterTableColumn" type="UIElementDefinition" path="OutgoingAggregation:TableCellEditor"/>
+													</ViewElementAggregation.Definition>
+												</ViewElementAggregation>
+												<ViewElementAggregation name="Header">
+													<ViewElementAggregation.AggregatedObjects>
+														<Caption name="Header1" text_isDependent="false">
+														</Caption>
+													</ViewElementAggregation.AggregatedObjects>
+													<ViewElementAggregation.Definition>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractMasterTableColumn" type="UIElementDefinition" path="OutgoingAggregation:Header"/>
+													</ViewElementAggregation.Definition>
+												</ViewElementAggregation>
+											</ViewElement.OutgoingAggregations>
+											<ViewElement.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TreeByNestingTableColumn" type="UIElementDefinition"/>
+											</ViewElement.Definition>
+										</ViewElement>
+									</ViewElementAggregation.AggregatedObjects>
+									<ViewElementAggregation.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="OutgoingAggregation:MasterColumn"/>
+									</ViewElementAggregation.Definition>
+								</ViewElementAggregation>
+							</ViewElement.OutgoingAggregations>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+							<Table.Columns>
+								<TableColumn name="werkId">
+									<TableColumn.Header>
+										<Caption name="werkheader" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="werkeditor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:werk"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="zloId">
+									<TableColumn.Header>
+										<Caption name="werkheader_2" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="werkeditor_3">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:zlo"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="dlloId">
+									<TableColumn.Header>
+										<Caption name="dlloIDHeader" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="dlloEditor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:dllo"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="bestellPos">
+									<TableColumn.Header>
+										<Caption name="bestellPos_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="bestellPos_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:bestellPos"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="bestellPosKurztext">
+									<TableColumn.Header>
+										<Caption name="bestellPosKurztext_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="bestellPosKurztext_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:bestellPosKurztext"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="materialaufmassNummer">
+									<TableColumn.Header>
+										<Caption name="materialaufmassNummer_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<LinkToAction name="LinkToAction1" text_isDependent="false">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:materialaufmassNummer"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Link" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:Aufmassnummer"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</LinkToAction>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="materialaufmassKurztext">
+									<TableColumn.Header>
+										<Caption name="materialaufmassKurztext_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="materialaufmassKurztext_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:materialaufmassKurztext"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="materialaufmassStatus">
+									<TableColumn.Header>
+										<Caption name="materialaufmassStatus_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="materialaufmassStatus_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:materialaufmassStatus"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="freigabedatum">
+									<TableColumn.Header>
+										<Caption name="freigabedatum_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="freigabedatum_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:freigabedatum"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="abnahmedatum">
+									<TableColumn.Header>
+										<Caption name="abnahmedatum_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="abnahmedatum_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:abnahmedatum"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="erfassungsdatum" visible="none">
+									<TableColumn.Header>
+										<Caption name="erfassungsdatum_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="erfassungsdatum_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:erfassungsdatum"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="wunschtermin" visible="none">
+									<TableColumn.Header>
+										<Caption name="wunschtermin_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="wunschtermin_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:wunschtermin"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="lieferanschrift_0" visible="none">
+									<TableColumn.Header>
+										<Caption name="lieferanschrift_0_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="lieferanschrift_0_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:lieferanschrift"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="warenempfaenger_0" visible="none">
+									<TableColumn.Header>
+										<Caption name="warenempfaenger_0_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="warenempfaenger_0_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:warenempfaenger"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="reservierungsnummer">
+									<TableColumn.Header>
+										<Caption name="reservierungsnummer_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<LinkToAction name="LinkToAction" text_isDependent="false">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:reservierungsnummer"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Link" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:ClickOnReservierungsnummer"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</LinkToAction>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="waBelegnummer" visible="none">
+									<TableColumn.Header>
+										<Caption name="waBelegnummer_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="waBelegnummer_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:waBelegnummer"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="drucken">
+									<TableColumn.Header>
+										<Caption name="Column_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<CheckBox name="CheckBox">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="enabled">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:IsPrintEnabled"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:enabled"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+												<UIElementContextBinding name="checked">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:TreeEntry/Attribute:IsPrintActive"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onToggle">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:TogglePrintBox"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Event:onToggle"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</CheckBox>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+							</Table.Columns>
+							<Table.ToolBar>
+								<ToolBar name="ToolBar">
+									<ViewElement.OutgoingAggregations>
+										<ViewElementAggregation name="ToolBarRightItems">
+											<ViewElementAggregation.AggregatedObjects>
+												<ToolBarInputField length="3" length_isDependent="false" name="tbInputAnzSichtbarerZeilen">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="value">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibleRowCountBestellungen"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:value"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<ViewElement.EventBindings>
+														<UIElementEventBinding name="onEnter">
+															<UIElementEventBinding.BoundAction>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:visibleRowCountEnter"/>
+															</UIElementEventBinding.BoundAction>
+															<UIElementEventBinding.UIElementEvent>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Event:onEnter"/>
+															</UIElementEventBinding.UIElementEvent>
+														</UIElementEventBinding>
+													</ViewElement.EventBindings>
+												</ToolBarInputField>
+											</ViewElementAggregation.AggregatedObjects>
+											<ViewElementAggregation.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="ToolBar" type="UIElementDefinition" path="OutgoingAggregation:ToolBarRightItems"/>
+											</ViewElementAggregation.Definition>
+										</ViewElementAggregation>
+									</ViewElement.OutgoingAggregations>
+								</ToolBar>
+							</Table.ToolBar>
+						</Table>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+					<Group.Header>
+						<Caption name="Group_Header" text_isDependent="false">
+						</Caption>
+					</Group.Header>
+					<Group.ToolBar>
+						<ToolBar name="ToolBar1">
+							<ViewElement.OutgoingAggregations>
+								<ViewElementAggregation name="ToolBarRightItems">
+									<ViewElementAggregation.AggregatedObjects>
+										<ToolBarButton name="DruckenButton" text_isDependent="false">
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:PrintReport"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</ToolBarButton>
+									</ViewElementAggregation.AggregatedObjects>
+									<ViewElementAggregation.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="ToolBar" type="UIElementDefinition" path="OutgoingAggregation:ToolBarRightItems"/>
+									</ViewElementAggregation.Definition>
+								</ViewElementAggregation>
+							</ViewElement.OutgoingAggregations>
+						</ToolBar>
+					</Group.ToolBar>
+				</Group>
+				<TransparentContainer name="CrumbPathTCont_0">
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="visible">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:leistungsAufmassDetailVisible"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:visible"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+					<UIElement.LayoutData>
+						<FlowData name="CrumbPathTCont_layoutdata_1">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter1_2">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0_3">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<LinkToAction name="MainMenuLinkToAction_4" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:BackToMainMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata_5" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr1Img_6" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_7" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="BerichtswesenLinkToAction_8" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:BackToBwMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata_4_9" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr2Img_10" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2_11" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="SearchBeauftragungLinkToAction_12" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Action:showResult"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_10_13">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr3Img_14" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2_4_15" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<TextView name="SearchBeauftragungTextView_16">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0_5_17" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+						<UIElement name="HorizontalGutter2_18">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_1_19">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout_2_20">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<ViewContainerUIElement name="ViewContainerAufmassDetail">
+					<ViewElement.ContextBindings>
+						<UIElementContextBinding name="visible">
+							<UIElementContextBinding.BoundContextElement>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwOffeneLieferungenResultView" type="Controller" path="Context/ChildNode:localData/Attribute:leistungsAufmassDetailVisible"/>
+							</UIElementContextBinding.BoundContextElement>
+							<UIElementContextBinding.UIElementProperty>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:visible"/>
+							</UIElementContextBinding.UIElementProperty>
+						</UIElementContextBinding>
+					</ViewElement.ContextBindings>
+				</ViewContainerUIElement>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+	<View.ViewContainers>
+		<ViewContainer name="1">
+			<ViewContainer.ViewContainerUIElement>
+				<Core.Reference path="RootUIElementContainer/Child:ViewContainerAufmassDetail"/>
+			</ViewContainer.ViewContainerUIElement>
+		</ViewContainer>
+	</View.ViewContainers>
+</View>

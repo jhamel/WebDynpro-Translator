@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="Vz8va46f5xsv8fkl3cjqr">
+		<property name="$parentUin" value="WebDynpro:Window:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrint"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDWindowDiagram"/>
+		<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrint/ViewsetHierarchyRootNode#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrintViewUsage1">
+			<property name="bounds" value="0,0,500,349"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="WebDynpro:ViewContainerAssignment:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrint/ViewsetHierarchyRootNode#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrintViewUsage1/ViewArea#1">
+				<property name="bounds" value="0,0,130,69"/>
+				<reference referencedUin="WebDynpro:ViewUsage:://WebDynpro/Window#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrint/ViewsetHierarchyRootNode#com.eonis.eea.bpexd.wd.berichte.PopupOffeneLieferungenPrintViewUsage1/ViewArea#1/EmbeddedNode#com.eonis.eea.bpexd.wd.berichte.BwOffenLieferungenPrintViewUsage1">
+					<property name="bounds" value="0,0,100,50"/>
+				</reference>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

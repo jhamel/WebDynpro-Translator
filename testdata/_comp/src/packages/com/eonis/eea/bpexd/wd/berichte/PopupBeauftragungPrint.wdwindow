@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, August 17, 2004 11:00:21 AM CEST -->
+<Window xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Window:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1092733221282" name="PopupBeauftragungPrint" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<Window.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</Window.Parent>
+	<Window.NavigationLinks>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrint" type="NavigationLinks"/>
+	</Window.NavigationLinks>
+	<Window.ViewsetHierarchyRootNodes>
+		<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.PopupBeauftragungPrintViewUsage1">
+			<ViewsetHierarchyNode.View>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrintView" type="View"/>
+			</ViewsetHierarchyNode.View>
+			<ViewUsage.ViewAreas>
+				<ViewContainerAssignment name="1">
+					<Placeholder.EmbeddedNodes>
+						<ViewUsage name="com.eonis.eea.bpexd.wd.berichte.BwBeauftragungPrintViewUsage3">
+							<ViewsetHierarchyNode.View>
+								<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwBeauftragungPrintView" type="View"/>
+							</ViewsetHierarchyNode.View>
+						</ViewUsage>
+					</Placeholder.EmbeddedNodes>
+					<Placeholder.DefaultNode>
+						<Core.Reference path="ViewsetHierarchyRootNode:com.eonis.eea.bpexd.wd.berichte.PopupBeauftragungPrintViewUsage1/ViewArea:1/EmbeddedNode:com.eonis.eea.bpexd.wd.berichte.BwBeauftragungPrintViewUsage3"/>
+					</Placeholder.DefaultNode>
+					<Placeholder.ViewContainer>
+						<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrintView" type="View" path="ViewContainer:1"/>
+					</Placeholder.ViewContainer>
+				</ViewContainerAssignment>
+			</ViewUsage.ViewAreas>
+		</ViewUsage>
+	</Window.ViewsetHierarchyRootNodes>
+	<Window.InterfaceView>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="PopupBeauftragungPrintInterfaceView" type="InterfaceView"/>
+	</Window.InterfaceView>
+	<Window.DefaultViewsetHierarchyRootNode>
+		<Core.Reference path="ViewsetHierarchyRootNode:com.eonis.eea.bpexd.wd.berichte.PopupBeauftragungPrintViewUsage1"/>
+	</Window.DefaultViewsetHierarchyRootNode>
+</Window>

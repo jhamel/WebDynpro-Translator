@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BwMatAnfResultView" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="FromDetailView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="EventHandler:onPlugFromDetailView"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+		<InboundPlug name="FromSearchView">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="EventHandler:onPlugFromSearchView"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.OutboundPlugs>
+		<OutboundPlug name="toSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="toBwMenu">
+		</OutboundPlug>
+		<OutboundPlug name="ToReservationDetails">
+		</OutboundPlug>
+		<OutboundPlug name="ToMatAnfDetails">
+		</OutboundPlug>
+	</AbstractView.OutboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<CommonDevelopmentObject.TemplateInstances>
+				<EmbeddedTemplateInstance name="Table">
+					<TemplateInstance.TemplateMarkers>
+						<TemplateMarker name="Table_TABLE" role="table">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="kurzText_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:lagerOrtText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="kurzText_editor_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:werkText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:kurzText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:warenEmpfaengerNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="werkText_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:werkText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="werkText_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:kurzText/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="lagerOrtText_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsDatum/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="lagerOrtText_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:wunschTermin/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:matAufmassNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_BINDING" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsDatum/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_ELEMENT" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:lagerOrtText/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="wunschTermin_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:wunschTermin/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="matAufmassNr_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:matAufmassNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="reservierungsNr_editor_ELEMENT" role="inputelement">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:reservierungsNr/TableCellEditor"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+						<TemplateMarker name="warenEmpfaengerNr_editor_0_BINDING" role="binding">
+							<TemplateMarker.Participant>
+								<Core.ForeignReference modelName="WebDynpro" package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="View" path="RootUIElementContainer/Child:Group/Child:Table/Column:warenEmpfaengerNr/TableCellEditor/ContextBinding:text"/>
+							</TemplateMarker.Participant>
+						</TemplateMarker>
+					</TemplateInstance.TemplateMarkers>
+				</EmbeddedTemplateInstance>
+			</CommonDevelopmentObject.TemplateInstances>
+			<UIElementContainer.Children>
+				<TransparentContainer name="CrumbPathTCont">
+					<UIElement.LayoutData>
+						<FlowData name="CrumbPathTCont_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter1">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<LinkToAction name="MainMenuLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:BackToMainMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr1Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="BerichtswesenLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:BackToBwMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr2Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<LinkToAction name="SearchBeauftragungLinkToAction" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:BackToSearchView"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_10">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr3Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4_2_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<TextView name="SearchBeauftragungTextView">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0_5" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+						<UIElement name="HorizontalGutter2">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_1">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout_2">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<Group name="Group">
+					<UIElement.LayoutData>
+						<FlowData name="LayoutData">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<CheckBox name="CheckBox">
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="checked">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:localData/Attribute:selectAllItemsForPrint"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onToggle">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:selectAllItemsForPrint"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Event:onToggle"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</CheckBox>
+						<Table name="Table" visibleRowCount="10">
+							<ViewElement.ContextBindings>
+								<UIElementContextBinding name="visibleRowCount">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibleRowCount"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:visibleRowCount"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+								<UIElementContextBinding name="dataSource">
+									<UIElementContextBinding.BoundContextElement>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport"/>
+									</UIElementContextBinding.BoundContextElement>
+									<UIElementContextBinding.UIElementProperty>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Table" type="UIElementDefinition" path="Property:dataSource"/>
+									</UIElementContextBinding.UIElementProperty>
+								</UIElementContextBinding>
+							</ViewElement.ContextBindings>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+							<Table.Columns>
+								<TableColumn name="reservierungsNr">
+									<TableColumn.Header>
+										<Caption name="reservierungsNr_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<LinkToAction name="lnkReservierungsnr" text_isDependent="false">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:reservierungsNr"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Link" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:GotoReservationDetails"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</LinkToAction>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="matAufmassNr">
+									<TableColumn.Header>
+										<Caption name="matAufmassNr_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<LinkToAction name="lnkMatAufmassNr">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:matAufmassNr"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Link" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:GotoMatAnfDetails"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</LinkToAction>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="kurzText">
+									<TableColumn.Header>
+										<Caption name="kurzText_header" text_isDependent="true">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="kurzText_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:kurzText"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="reservierungsDatum">
+									<TableColumn.Header>
+										<Caption imageSource="" imageSource_isDependent="false" name="reservierungsDatum_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="reservierungsDatum_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:reservierungsDatum"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="wunschTermin">
+									<TableColumn.Header>
+										<Caption name="wunschTermin_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="wunschTermin_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:wunschTermin"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="warenEmpfaengerNr">
+									<TableColumn.Header>
+										<Caption name="warenEmpfaengerNr_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="warenEmpfaengerNr_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:warenEmpfaengerNr"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="werkText">
+									<TableColumn.Header>
+										<Caption name="werkText_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="werkText_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:werkText"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="lagerOrtText">
+									<TableColumn.Header>
+										<Caption name="lagerOrtText_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<TextView name="lagerOrtText_editor">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="text">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:lagerOrtText"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:text"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</TextView>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+								<TableColumn name="Print">
+									<TableColumn.Header>
+										<Caption name="Column_header" text_isDependent="false">
+										</Caption>
+									</TableColumn.Header>
+									<TableColumn.TableCellEditor>
+										<CheckBox name="cbPrintActive">
+											<ViewElement.ContextBindings>
+												<UIElementContextBinding name="enabled">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/ChildNode:additionalLocalFields/Attribute:isPrintCheckBoxEnabled"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="UIElement" type="UIElementDefinition" path="Property:enabled"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+												<UIElementContextBinding name="checked">
+													<UIElementContextBinding.BoundContextElement>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:MaterialAnforderungDLLOReportGetList/ChildNode:outputMaterialAnforderungDLLOReportGetList/ChildNode:materialAnforderungenDLLOReport/Attribute:IsPrintActive"/>
+													</UIElementContextBinding.BoundContextElement>
+													<UIElementContextBinding.UIElementProperty>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="CheckBox" type="UIElementDefinition" path="Property:checked"/>
+													</UIElementContextBinding.UIElementProperty>
+												</UIElementContextBinding>
+											</ViewElement.ContextBindings>
+										</CheckBox>
+									</TableColumn.TableCellEditor>
+								</TableColumn>
+							</Table.Columns>
+							<Table.ToolBar>
+								<ToolBar name="ToolBar1">
+									<ViewElement.OutgoingAggregations>
+										<ViewElementAggregation name="ToolBarRightItems">
+											<ViewElementAggregation.AggregatedObjects>
+												<ToolBarInputField length="3" length_isDependent="false" name="tbInputAnzSichtbarerZeilen">
+													<ViewElement.ContextBindings>
+														<UIElementContextBinding name="value">
+															<UIElementContextBinding.BoundContextElement>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Context/ChildNode:localData/Attribute:visibleRowCount"/>
+															</UIElementContextBinding.BoundContextElement>
+															<UIElementContextBinding.UIElementProperty>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Property:value"/>
+															</UIElementContextBinding.UIElementProperty>
+														</UIElementContextBinding>
+													</ViewElement.ContextBindings>
+													<ViewElement.EventBindings>
+														<UIElementEventBinding name="onEnter">
+															<UIElementEventBinding.BoundAction>
+																<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:visibleRowCountEnter"/>
+															</UIElementEventBinding.BoundAction>
+															<UIElementEventBinding.UIElementEvent>
+																<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractInputField" type="UIElementDefinition" path="Event:onEnter"/>
+															</UIElementEventBinding.UIElementEvent>
+														</UIElementEventBinding>
+													</ViewElement.EventBindings>
+												</ToolBarInputField>
+											</ViewElementAggregation.AggregatedObjects>
+											<ViewElementAggregation.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="ToolBar" type="UIElementDefinition" path="OutgoingAggregation:ToolBarRightItems"/>
+											</ViewElementAggregation.Definition>
+										</ViewElementAggregation>
+									</ViewElement.OutgoingAggregations>
+								</ToolBar>
+							</Table.ToolBar>
+						</Table>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+					<Group.Header>
+						<Caption name="Group_Header" text_isDependent="false">
+						</Caption>
+					</Group.Header>
+					<Group.ToolBar>
+						<ToolBar name="ToolBar">
+							<ViewElement.OutgoingAggregations>
+								<ViewElementAggregation name="ToolBarRightItems">
+									<ViewElementAggregation.AggregatedObjects>
+										<ToolBarButton name="tbBtnPrint" visible="visible">
+											<ViewElement.EventBindings>
+												<UIElementEventBinding name="onAction">
+													<UIElementEventBinding.BoundAction>
+														<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BwMatAnfResultView" type="Controller" path="Action:PrintReport"/>
+													</UIElementEventBinding.BoundAction>
+													<UIElementEventBinding.UIElementEvent>
+														<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="AbstractButton" type="UIElementDefinition" path="Event:onAction"/>
+													</UIElementEventBinding.UIElementEvent>
+												</UIElementEventBinding>
+											</ViewElement.EventBindings>
+										</ToolBarButton>
+									</ViewElementAggregation.AggregatedObjects>
+									<ViewElementAggregation.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="ToolBar" type="UIElementDefinition" path="OutgoingAggregation:ToolBarRightItems"/>
+									</ViewElementAggregation.Definition>
+								</ViewElementAggregation>
+							</ViewElement.OutgoingAggregations>
+						</ToolBar>
+					</Group.ToolBar>
+				</Group>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

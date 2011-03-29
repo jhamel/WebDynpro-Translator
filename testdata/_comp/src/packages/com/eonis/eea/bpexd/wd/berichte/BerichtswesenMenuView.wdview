@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Tuesday, May 24, 2005 1:51:43 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1116935503986" name="BerichtswesenMenuView" package="com.eonis.eea.bpexd.wd.berichte" masterLanguage="de">
+	<AbstractView.InboundPlugs>
+		<InboundPlug name="BwMenu">
+			<IncomingEvent.EventHandler>
+				<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="EventHandler:onPlugBwMenu"/>
+			</IncomingEvent.EventHandler>
+		</InboundPlug>
+	</AbstractView.InboundPlugs>
+	<AbstractView.OutboundPlugs>
+		<OutboundPlug name="ToMaZurBestellungSearch">
+		</OutboundPlug>
+		<OutboundPlug name="ToSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="ToLstAufmNrSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="ToAusplattfSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="ToMatAnfSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="ToBestBestSearchView">
+		</OutboundPlug>
+		<OutboundPlug name="ToOffeneLieferungenSearch">
+		</OutboundPlug>
+		<OutboundPlug name="ToMatAbrSearchView">
+		</OutboundPlug>
+	</AbstractView.OutboundPlugs>
+	<AbstractView.ViewController>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="Berichte" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<UIElementContainer.Children>
+				<TransparentContainer name="CrumbPathTCont">
+					<UIElement.LayoutData>
+						<FlowData name="CrumbPathTCont_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<UIElement name="HorizontalGutter1">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_8">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+						<LinkToAction name="MainMenuLinkToAction" size="standard" text_isDependent="false">
+							<ViewElement.EventBindings>
+								<UIElementEventBinding name="onAction">
+									<UIElementEventBinding.BoundAction>
+										<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:BackToMainMenu"/>
+									</UIElementEventBinding.BoundAction>
+									<UIElementEventBinding.UIElementEvent>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+									</UIElementEventBinding.UIElementEvent>
+								</UIElementEventBinding>
+							</ViewElement.EventBindings>
+							<ViewElement.Properties>
+								<ViewElementProperty name="type" value="function">
+									<ViewElementProperty.Definition>
+										<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Property:type"/>
+									</ViewElementProperty.Definition>
+								</ViewElementProperty>
+							</ViewElement.Properties>
+							<UIElement.LayoutData>
+								<FlowData name="LinkToAction1_layoutdata" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</LinkToAction>
+						<Image name="Arr1Img" source="~sapicons/s_drwarr.gif">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_3_4" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Image>
+						<TextView name="BerichtswesenTextView">
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_0" paddingRight="7px">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+						<UIElement name="HorizontalGutter2">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="HorizontalGutter" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData_10">
+								</FlowData>
+							</UIElement.LayoutData>
+						</UIElement>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+				<TransparentContainer name="BerichtswesenTCont" width="">
+					<UIElement.LayoutData>
+						<FlowData name="TransparentContainer3_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<Image name="BerichtswesenImg" source="berichtswesen.gif">
+							<UIElement.LayoutData>
+								<GridData name="LayoutData" vAlign="top">
+								</GridData>
+							</UIElement.LayoutData>
+						</Image>
+						<TransparentContainer height="100%" name="BerichtswesenInnerTCont">
+							<UIElement.LayoutData>
+								<GridData height="" name="TransparentContainer6_layoutdata" paddingBottom="15px" paddingLeft="15px" paddingTop="3px" vAlign="top" width="100%">
+									<ViewElement.Properties>
+										<ViewElementProperty name="cellBackgroundDesign" value="fill2">
+											<ViewElementProperty.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="GridLayout" type="LayoutDefinition" path="LayoutDataDefinition:GridData/Property:cellBackgroundDesign"/>
+											</ViewElementProperty.Definition>
+										</ViewElementProperty>
+									</ViewElement.Properties>
+								</GridData>
+							</UIElement.LayoutData>
+							<UIElementContainer.Children>
+								<TextView design="emphasized" name="HeadlineTextView">
+									<UIElement.LayoutData>
+										<GridData name="LayoutData_8_10">
+										</GridData>
+									</UIElement.LayoutData>
+								</TextView>
+								<TextView name="DescriptionTextView">
+									<ViewElement.Properties>
+										<ViewElementProperty name="semanticColor" value="standard">
+											<ViewElementProperty.Definition>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition" path="Property:semanticColor"/>
+											</ViewElementProperty.Definition>
+										</ViewElementProperty>
+									</ViewElement.Properties>
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+								</TextView>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="BeauftragungenLinkToAction" text_isDependent="false" tooltip_isDependent="false">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="Beauftragungen_layoutdata">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="LeistungsaufmassNrLinkToAction" text_isDependent="false" tooltip_isDependent="false">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToLstAufmNrSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="MaterialAufmasseZurBestellungLinkToAction" text_isDependent="false" visible="visible">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToMaterialaufmasseZurBestellungSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="MaterialAufmass_layoutdata_1">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="OffeneLieferungenLinkToAction" text_isDependent="false" visible="visible">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToOffeneLieferungen"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="LayoutData_1">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="BestandMatAbrLinkToAction" text_isDependent="false" visible="visible">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToMatAbrSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="MatAnfDLLOLinkToAction" text_isDependent="true" tooltip_isDependent="false">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToMatAnfSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="Beauftragungen_layoutdata_4">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="AusschreibungsplattformLinkToAction" text_isDependent="false" tooltip_isDependent="false">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToAusschreibungsplattformSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="LayoutData">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="BestellbestaetigungLinkToAction" text_isDependent="false" tooltip_isDependent="false">
+									<ViewElement.EventBindings>
+										<UIElementEventBinding name="onAction">
+											<UIElementEventBinding.BoundAction>
+												<Core.Reference package="com.eonis.eea.bpexd.wd.berichte" name="BerichtswesenMenuView" type="Controller" path="Action:ToBestellBestaetigungSearchView"/>
+											</UIElementEventBinding.BoundAction>
+											<UIElementEventBinding.UIElementEvent>
+												<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="LinkToAction" type="UIElementDefinition" path="Event:onAction"/>
+											</UIElementEventBinding.UIElementEvent>
+										</UIElementEventBinding>
+									</ViewElement.EventBindings>
+									<UIElement.LayoutData>
+										<GridData name="Beauftragungen_layoutdata_4_5">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="StandMateriallieferungLinkToAction" text_isDependent="false" visible="none">
+									<UIElement.LayoutData>
+										<GridData name="StandMaterialLieferung_layoutdata">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="BestandReVULinkToAction" text_isDependent="false" visible="none">
+									<UIElement.LayoutData>
+										<GridData name="BestandReVU_layoutdata">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+								<LinkToAction imageSource="~sapicons/s_b_colr.gif" imageSource_isDependent="false" name="MaterialAufmassLinkToAction" text_isDependent="false" visible="none">
+									<UIElement.LayoutData>
+										<GridData name="MaterialAufmass_layoutdata">
+										</GridData>
+									</UIElement.LayoutData>
+								</LinkToAction>
+							</UIElementContainer.Children>
+							<UIElementContainer.Layout>
+								<GridLayout name="TransparentContainer6_layout">
+								</GridLayout>
+							</UIElementContainer.Layout>
+						</TransparentContainer>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<GridLayout cellPadding="0" cellSpacing="20" colCount="2" name="TransparentContainer3_layout">
+						</GridLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

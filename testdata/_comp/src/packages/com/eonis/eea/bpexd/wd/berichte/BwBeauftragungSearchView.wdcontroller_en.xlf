@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+<file source-language="en" product-name="Controller:BwBeauftragungSearchView[com.eonis.eea.bpexd.wd.berichte] of Component:Berichte[com.eonis.eea.bpexd.wd.berichte]" datatype="s2x">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc />
+</dtr>
+<giltDirectives>
+<develContact>H15430J</develContact><domain />
+<originalLocale xml:lang="de" />
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="label">
+<trans-unit id="f8924706307447c60287aa1c0f9bfe06" resname="Action:searchBeauftragungDirect@text" maxwidth="255" translate="yes"><source>Find</source></trans-unit></group>
+</body>
+</file>
+</xliff>

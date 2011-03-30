@@ -31,6 +31,14 @@ public class XlfFileCollector implements FileProcessor {
     }
 
     // public methods
+    public void replaceTranslationsForGivenDefaultWord(String defaultWordText, Language language, String translation) {
+        List<Word> words = getWordsByWord(defaultWordText);
+        for (Word word : words) {
+            Word wordEn = word.getTranslationByLanguage(language);
+            wordEn.setText(translation);
+            word.store();
+        }
+    }
 
     public void scanXlfFiles() {
         TraverseDirectory traverseDirectory = new TraverseDirectory(basedir, this);
@@ -47,7 +55,6 @@ public class XlfFileCollector implements FileProcessor {
     }
 
     private void addByLanguagePlusKey(File file) {
-        Language languageOfFile = Language.languageOfFile(file);
         for (Word word : wordsInFile(file)) {
             xlfWordByLanguagePlusKey.put(word.getId(), word);
         }

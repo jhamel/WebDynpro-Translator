@@ -19,7 +19,6 @@ public class CsvReader {
     }
 
     public void readFile() throws Exception {
-        List<Word> result = new ArrayList<Word>();
         String[][] lines = CSVParser.parse(new FileReader(filename), ';');
         for (String[] line : lines) {
             csvLineProcessor.processLine(line);

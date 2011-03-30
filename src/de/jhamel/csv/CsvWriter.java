@@ -1,6 +1,7 @@
 package de.jhamel.csv;
 
-import de.jhamel.wdtranslator.WebDynproTranslatorException;
+import de.jhamel.wdtranslator.TechnicalException;
+import de.jhamel.wdtranslator.xlf.Word;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,17 +10,17 @@ import java.util.List;
 
 public class CsvWriter {
 
-    public static void writeToCsvFile(String fileName, List<? extends CSVable> entries) {
+    public static void writeToCsvFile(String fileName, List<Word> words) {
         BufferedWriter out = null;
         try {
             out = new BufferedWriter(new FileWriter(fileName));
-            for (CSVable csv : entries) {
-                out.write(csv.toCsv());
+            for (Word word : words) {
+                out.write(word.toCsv());
                 out.newLine();
             }
 
         } catch (IOException e) {
-            throw new WebDynproTranslatorException("Could not write to file '" + fileName + "'. (" + e.getMessage() + ")", e);
+            throw new TechnicalException("Could not write to file '" + fileName + "'. (" + e.getMessage() + ")", e);
         } finally {
             closeWriter(out);
         }

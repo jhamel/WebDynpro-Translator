@@ -16,7 +16,7 @@ public class Language {
 
     // fields
 
-    private String languageAbbreviation;
+    private final String languageAbbreviation;
 
     // constructor
 

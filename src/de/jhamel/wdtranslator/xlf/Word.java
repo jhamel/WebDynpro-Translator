@@ -107,4 +107,14 @@ public class Word {
     public void store() {
         new XlfFileValueReplacer().storeWord(this);
     }
+
+    public String toCsv() {
+        final String SEPERATOR = ";";
+        StringBuilder builder = new StringBuilder();
+        builder.append(getText()).append(SEPERATOR);
+        for (Language language : translatedLanguages()) {
+            builder.append(getTranslationByLanguage(language).getText()).append(SEPERATOR);
+        }
+        return builder.toString();
+    }
 }

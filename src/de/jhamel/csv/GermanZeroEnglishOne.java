@@ -16,13 +16,9 @@ public class GermanZeroEnglishOne implements CsvLineProcessor {
     }
 
     public void processLine(String[] line) {
-        String german = line[0];
+        String germanDefault = line[0];
         String english = line[1];
-        List<Word> words = xlfFileCollector.getWordsByWord(german);
-        for(Word word: words){
-            Word wordEn = word.getTranslationByLanguage(Language.ENGLISH);
-            wordEn.setText(english);
-            word.store();
-        }
+        xlfFileCollector.replaceTranslationsForGivenDefaultWord(germanDefault, Language.ENGLISH, english);
     }
+
 }

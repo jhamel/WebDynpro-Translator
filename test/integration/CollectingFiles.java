@@ -3,6 +3,7 @@ package integration;
 import de.jhamel.file.EndsWithFilenameFilter;
 import de.jhamel.file.TraverseDirectory;
 import de.jhamel.file.FileUtil;
+import de.jhamel.wdtranslator.xlf.Language;
 import de.jhamel.wdtranslator.xlf.XlfFileCollector;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ public class CollectingFiles {
         TraverseDirectory traverseDirectory = new TraverseDirectory(BASEDIR, xlfFileCollector);
         traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
         traverseDirectory.processFiles();
-        assertThat(xlfFileCollector.getWordsByLanguageKey(FileUtil.DEFAULT_LANGUAGE_KEY).size(), equalTo(52));
+        assertThat(xlfFileCollector.getWordsByLanguageKey(Language.DEFAULT).size(), equalTo(52));
     }
 
     @Test
@@ -28,6 +29,6 @@ public class CollectingFiles {
         TraverseDirectory traverseDirectory = new TraverseDirectory(BASEDIR, xlfFileCollector);
         traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
         traverseDirectory.processFiles();
-        assertThat(xlfFileCollector.getWordsByLanguageKey("en").size(), equalTo(53));
+        assertThat(xlfFileCollector.getWordsByLanguageKey(Language.ENGLISH).size(), equalTo(53));
     }
 }

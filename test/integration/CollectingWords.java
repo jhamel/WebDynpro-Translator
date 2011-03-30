@@ -1,9 +1,8 @@
 package integration;
 
 
-import de.jhamel.wdtranslator.xlf.XlfKeyWordCollector;
-import de.jhamel.wdtranslator.xlf.XlfWord;
-import integration.FixtureConstants;
+import de.jhamel.wdtranslator.xlf.Word;
+import de.jhamel.wdtranslator.xlf.WordCollector;
 import org.junit.Test;
 
 import java.io.File;
@@ -16,9 +15,9 @@ public class CollectingWords {
 
     @Test
     public void findKeys() {
-        XlfKeyWordCollector collector = new XlfKeyWordCollector();
-        List<XlfWord> xlfWords = collector.scanFile(new File(SAMPLE_FILE));
-        assertEquals(9, xlfWords.size());
+        WordCollector collector = new WordCollector();
+        List<Word> words = collector.scanFile(new File(SAMPLE_FILE));
+        assertEquals(9, words.size());
     }
 
 }

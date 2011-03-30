@@ -1,6 +1,8 @@
 package de.jhamel.wdtranslator.xlf;
 
+import de.jhamel.file.EndsWithFilenameFilter;
 import de.jhamel.file.FileProcessor;
+import de.jhamel.file.TraverseDirectory;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -19,8 +21,22 @@ public class XlfFileCollector implements FileProcessor {
     private HashMap<Language, List<Word>> xlfWordsByLanguage = new HashMap<Language, List<Word>>();
     private HashMap<String, List<Word>> xlfWordsByWord = new HashMap<String, List<Word>>();
     private HashMap<String, Word> xlfWordByLanguagePlusKey = new HashMap<String, Word>();
+    private String basedir;
+
+    public XlfFileCollector() {
+    }
+
+    public XlfFileCollector(String basedir) {
+        this.basedir = basedir;
+    }
 
     // public methods
+
+    public void scanXlfFiles() {
+        TraverseDirectory traverseDirectory = new TraverseDirectory(basedir, this);
+        traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
+        traverseDirectory.processFiles();
+    }
 
     public void processFile(File file) {
         log.trace("Processing file '" + file.getName() + "'");

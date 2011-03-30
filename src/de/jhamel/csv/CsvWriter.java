@@ -1,6 +1,5 @@
 package de.jhamel.csv;
 
-
 import de.jhamel.wdtranslator.WebDynproTranslatorException;
 
 import java.io.BufferedWriter;
@@ -32,7 +31,7 @@ public class CsvWriter {
         try {
             out.close();
         } catch (IOException e) {
-           // at least we tried
+            // at least we tried
         }
     }
 

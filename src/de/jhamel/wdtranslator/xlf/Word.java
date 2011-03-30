@@ -14,16 +14,16 @@ public class Word {
 
     private String key = "";
     private String text = "";
-    private HashMap<Language, Word> translations = new HashMap<Language,Word>();
+    private HashMap<Language, Word> translations = new HashMap<Language, Word>();
 
     // public methods
 
     public static String keyGen(Language language, String key) {
-        return language +"_"+ key;
+        return language + "_" + key;
     }
 
     public void addTranslation(Word word) {
-        translations.put(word.getLanguage(),word);
+        translations.put(word.getLanguage(), word);
     }
 
     public Word getTranslationByLanguage(Language language) {
@@ -39,7 +39,6 @@ public class Word {
     }
 
     // toString
-
 
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -105,4 +104,7 @@ public class Word {
         this.text = text;
     }
 
+    public void store() {
+        new XlfFileValueReplacer().storeWord(this);
+    }
 }

@@ -9,25 +9,21 @@ import java.util.List;
 
 public class CsvReader {
 
-    public static List<Word> readWords(String filename) throws Exception {
+    private String filename;
+    private CsvLineProcessor csvLineProcessor;
+
+    public CsvReader(String filename, CsvLineProcessor csvLineProcessor) {
+        this.filename = filename;
+        this.csvLineProcessor = csvLineProcessor;
+
+    }
+
+    public void readFile() throws Exception {
         List<Word> result = new ArrayList<Word>();
         String[][] lines = CSVParser.parse(new FileReader(filename), ';');
-        for (int i = 0; i < lines.length; i++) {
-            String[] line = lines[i];
-            Word word = new Word();
-            if (line[3] != null && line[3].trim().length() > 0) {
-                Word translation = new Word();
-                translation.setText(line[3]);
-              //  word.setTranslation(translation);
-            }
-            word.setText(line[2]);
-            result.add(word);
+        for (String[] line : lines) {
+            csvLineProcessor.processLine(line);
         }
-        return result;
-
     }
 
-    public static void main(String[] args) throws Exception {
-        CsvReader.readWords("translation.csv");
-    }
 }

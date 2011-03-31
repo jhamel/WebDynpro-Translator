@@ -1,14 +1,9 @@
 package de.jhamel.wdtranslator.xlf;
 
 import org.apache.log4j.Logger;
-import org.jdom.Document;
 import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.xpath.XPath;
-import org.jdom.input.SAXBuilder;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,38 +13,29 @@ public class WordCollector {
 
     private static Logger log = Logger.getLogger(WordCollector.class);
 
-    // fields
-
-    private SAXBuilder builder = new SAXBuilder();
-
     // public methods
 
     public List<Word> scanFile(File file) {
+        XlfXmlHelper xlfXmlHelper = new XlfXmlHelper(file);
+        List<Element> transUnitNodes = xlfXmlHelper.findTransUnitElements();
+
         List<Word> words = new ArrayList<Word>();
-        try {
-            Document doc = builder.build(file);
-            List<Element> transUnitNodes = getTransUnitNodes(doc);
-            if (transUnitNodes == null) return words;
-            for (Element element : transUnitNodes) {
-                Word word = transUnitToXlfWord(file, element);
-                if (word == null) {
-                    log.warn("'" + file.getAbsoluteFile() + "' has 'trans-unit' element without 'id' or 'source'.");
-                   break;
-                }
-                words.add(word);
+        if (transUnitNodes == null) return words;
+
+        for (Element element : transUnitNodes) {
+            Word word = convertTransUnitToWord(file, element);
+            if (word == null) {
+                log.warn("'" + file.getAbsoluteFile() + "' has 'trans-unit' element without 'id' or 'source'.");
+                continue;
             }
-            return words;
-        } catch (JDOMException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            words.add(word);
         }
         return words;
     }
 
     //private methods
 
-    private Word transUnitToXlfWord(File file, Element element) {
+    private Word convertTransUnitToWord(File file, Element element) {
         String id = elementAttributeValue(element, "id");
         String source = elementChildValue(element, "source");
 
@@ -64,7 +50,7 @@ public class WordCollector {
     }
 
     private String elementChildValue(Element element, String name) {
-       if (element == null) return null;
+        if (element == null) return null;
         if (element.getChild(name) == null) return null;
         return element.getChild(name).getValue();
     }
@@ -75,8 +61,4 @@ public class WordCollector {
         return element.getAttribute(attributeName).getValue();
     }
 
-    private List<Element> getTransUnitNodes(Document doc) throws JDOMException {
-        XPath xpath = XPath.newInstance("//trans-unit");
-        return xpath.selectNodes(doc);
-    }
 }

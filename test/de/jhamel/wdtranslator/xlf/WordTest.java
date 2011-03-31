@@ -1,5 +1,7 @@
 package de.jhamel.wdtranslator.xlf;
 
+import de.jhamel.wdtranslator.TechnicalException;
+import integration.FixtureConstants;
 import org.junit.Test;
 
 import java.io.File;
@@ -16,10 +18,9 @@ public class WordTest {
         assertThat(word.getLanguage(), equalTo(Language.GERMAN));
     }
 
-
     @Test
-    public void shouldBeDefaultLanguage(){
-         assertThat(Language.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")),equalTo(Language.DEFAULT));
+    public void shouldBeDefaultLanguage() {
+        assertThat(Language.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")), equalTo(Language.DEFAULT));
     }
 
     @Test
@@ -44,5 +45,33 @@ public class WordTest {
         assertThat(word.getTranslationByLanguage(Language.ENGLISH).getKey(), equalTo("keyEn"));
 
         System.out.println(word);
+    }
+
+    @Test(expected = TechnicalException.class)
+    public void storingFileWithUnsetFileThrowsTechnicalException() {
+        Word word = new Word();
+        word.store();
+    }
+
+    @Test
+    public void storingWord() {
+        Word word = sampleWord();
+        assertThat(word.getText(), equalTo("new"));
+        word.setText("newText");
+        word.store();
+
+        word = sampleWord();
+        assertThat(word.getText(), equalTo("newText"));
+
+        word.setText("new");
+        word.store();
+        assertThat(word.getText(), equalTo("new"));
+
+    }
+
+    private Word sampleWord() {
+        WordCollector collector = new WordCollector();
+        final String SAMPLE_FILE = FixtureConstants.BASEDIR + "/" + "_comp/src/packages/com/eonis/eea/bpexd/wd/berichte/AusplattformShowDetails.wdview.xlf";
+        return collector.scanFile(new File(SAMPLE_FILE)).get(0);
     }
 }

@@ -7,13 +7,14 @@ public class Language {
     // constants
 
     private static final String DEF = "def";
+    private static final String UNDEF = "undefined";
     private static final String DE = "de";
     private static final String EN = "en";
 
     public static final Language DEFAULT = new Language(DEF);
     public static final Language GERMAN = new Language(DE);
     public static final Language ENGLISH = new Language(EN);
-
+    public static final Language UNDEFINED = new Language(UNDEF);
     // fields
 
     private final String languageAbbreviation;
@@ -28,7 +29,8 @@ public class Language {
         if (languageAbbreviation.equalsIgnoreCase(DEF)) return DEFAULT;
         if (languageAbbreviation.equalsIgnoreCase(DE)) return GERMAN;
         if (languageAbbreviation.equalsIgnoreCase(EN)) return ENGLISH;
-        throw new IllegalArgumentException("Language '" + languageAbbreviation + "' is not supported.");
+        return UNDEFINED;
+
     }
 
     public static Language languageOfFile(File file) {
@@ -42,11 +44,11 @@ public class Language {
     // private
 
     private static String languageAbbreviationOfFile(File file) {
-
+        if (file == null) return UNDEF;
         String filename = file.getName();
         int posUnderscore = filename.lastIndexOf("_");
         int posDot = filename.lastIndexOf(".");
-        if (hasUndescoreBeforeDot(posUnderscore, posDot) && (posDot -posUnderscore) == 3) {
+        if (hasUndescoreBeforeDot(posUnderscore, posDot) && (posDot - posUnderscore) == 3) {
             return stringBetweenUnderscoreAndDot(filename, posUnderscore, posDot).toLowerCase();
         }
         return DEF;

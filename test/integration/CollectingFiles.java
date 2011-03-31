@@ -6,10 +6,9 @@ import de.jhamel.wdtranslator.xlf.Language;
 import de.jhamel.wdtranslator.xlf.XlfFileCollector;
 import org.junit.Test;
 
-
+import static integration.FixtureConstants.BASEDIR;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static integration.FixtureConstants.BASEDIR;
 
 public class CollectingFiles {
 

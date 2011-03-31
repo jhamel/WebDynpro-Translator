@@ -1,12 +1,16 @@
 package de.jhamel.wdtranslator.xlf;
 
+import de.jhamel.file.ContainsFilenameFilter;
 import de.jhamel.file.EndsWithFilenameFilter;
 import de.jhamel.file.FileProcessor;
 import de.jhamel.file.TraverseDirectory;
 import org.apache.log4j.Logger;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 public class XlfFileCollector implements FileProcessor {
 
@@ -59,7 +63,7 @@ public class XlfFileCollector implements FileProcessor {
     public void scanXlfFiles() {
         TraverseDirectory traverseDirectory = new TraverseDirectory(basedir, this);
         traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
-        traverseDirectory.addFilenameFilter(new ContainsFilenameFilter("\\bin\\"));
+        traverseDirectory.addFilenameFilter(new ContainsFilenameFilter(File.pathSeparator+"bin"+File.pathSeparator));
         traverseDirectory.processFiles();
     }
 

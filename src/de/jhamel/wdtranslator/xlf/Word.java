@@ -1,5 +1,7 @@
 package de.jhamel.wdtranslator.xlf;
 
+import de.jhamel.wdtranslator.TechnicalException;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.Set;
@@ -105,7 +107,8 @@ public class Word {
     }
 
     public void store() {
-        new XlfFileValueReplacer().storeWord(this);
+        if (file == null) throw new TechnicalException(this + " can not be stored, because it has no file");
+        new XlfXmlHelper(getFile()).replaceValueOfSourceElement(getKey(), getText());
     }
 
     public String toCsv() {

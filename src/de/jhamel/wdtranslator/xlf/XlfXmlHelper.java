@@ -15,9 +15,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class XlfXmlHelper {
+    // constants
 
     private static Logger log = Logger.getLogger(XlfXmlHelper.class);
 
+    // fields
     private SAXBuilder builder = new SAXBuilder();
     private XMLOutputter outputter = new XMLOutputter();
     private File file;

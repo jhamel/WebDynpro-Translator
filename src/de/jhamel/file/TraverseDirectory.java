@@ -9,9 +9,10 @@ import java.util.List;
 
 /**
  * Process recursively all files of a given base directory.
- *
  * Processing of files is handled by a FileProcessor.
- * Files processed can be filtered by FilenameFilters.
+ * Files that should be ignored can be filtered by FilenameFilters.
+ * @see FileProcessor
+ * @see de.jhamel.file.filters.FilenameFilter
  */
 public class TraverseDirectory {
 
@@ -21,9 +22,7 @@ public class TraverseDirectory {
     private FileProcessor fileProcessor;
     private List<FilenameFilter> filenameFilters = new ArrayList<FilenameFilter>();
 
-    /**
-     * @throws IllegalArgumentException in case basedir is not an existing directory
-     */
+    /** @throws IllegalArgumentException in case basedir is not an existing directory */
     public TraverseDirectory(String basedir, FileProcessor fileProcessor) {
         checkIsDirectory(new File(basedir)); // fail early
         log.debug("Instantiating TraverseDirectory with basedir='" + basedir + "' and FileProcessor='" + fileProcessor.getClass() + "'");

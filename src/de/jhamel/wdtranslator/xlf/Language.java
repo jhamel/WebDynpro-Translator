@@ -41,13 +41,13 @@ public class Language {
         String filename = file.getName();
         int posUnderscore = filename.lastIndexOf("_");
         int posDot = filename.lastIndexOf(".");
-        if (hasUndescoreBeforeDot(posUnderscore, posDot) && (posDot - posUnderscore) == 3) {
+        if (hasUnderscoreBeforeDot(posUnderscore, posDot) && (posDot - posUnderscore) == 3) {
             return stringBetweenUnderscoreAndDot(filename, posUnderscore, posDot).toLowerCase();
         }
         return DEF;
     }
 
-    private static boolean hasUndescoreBeforeDot(int posUnderscore, int posDot) {
+    private static boolean hasUnderscoreBeforeDot(int posUnderscore, int posDot) {
         return posUnderscore > 0 && posUnderscore < posDot;
     }
 

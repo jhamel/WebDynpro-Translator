@@ -17,7 +17,7 @@ public class CsvWriter {
         try {
             out = new BufferedWriter(new FileWriter(filename));
             for (Word word : words) {
-                log.trace("Writing line '"+word.toCsv()+"' to '"+ filename +"'.");
+                log.trace("Writing line '" + word.toCsv() + "' to '" + filename + "'.");
                 out.write(word.toCsv());
                 out.newLine();
             }
@@ -27,7 +27,6 @@ public class CsvWriter {
             closeWriter(out);
         }
     }
-
 
     private static void closeWriter(BufferedWriter out) {
         try {

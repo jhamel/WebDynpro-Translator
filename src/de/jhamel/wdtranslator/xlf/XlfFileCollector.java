@@ -14,11 +14,7 @@ import java.util.Set;
 
 public class XlfFileCollector implements FileProcessor {
 
-    // constants
-
     private static Logger log = Logger.getLogger(XlfFileCollector.class);
-
-    // fields
 
     private List<Word> words = new ArrayList<Word>();
     private HashMap<File, List<Word>> xlfWordsByFile = new HashMap<File, List<Word>>();
@@ -33,8 +29,6 @@ public class XlfFileCollector implements FileProcessor {
     public XlfFileCollector(String basedir) {
         this.basedir = basedir;
     }
-
-    // public methods
 
     public void replaceTranslationsForGivenDefaultWord(String defaultWordText, Language language, String translation) {
         List<Word> words = getWordByDefaultText(defaultWordText);
@@ -125,8 +119,6 @@ public class XlfFileCollector implements FileProcessor {
         xlfWordsByWord.put(word, wordsList);
         return wordsList;
     }
-
-    // private methods
 
     private List<Word> retrieveWordsOfFile(File file) {
         return new TransUnitToWordConverter(file).convertTransUnitsToWords();

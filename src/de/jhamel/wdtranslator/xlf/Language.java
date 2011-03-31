@@ -4,8 +4,6 @@ import java.io.File;
 
 public class Language {
 
-    // constants
-
     private static final String DEF = "def";
     private static final String UNDEF = "undefined";
     private static final String DE = "de";
@@ -15,11 +13,8 @@ public class Language {
     public static final Language GERMAN = new Language(DE);
     public static final Language ENGLISH = new Language(EN);
     public static final Language UNDEFINED = new Language(UNDEF);
-    // fields
 
     private final String languageAbbreviation;
-
-    // constructor
 
     public Language(String languageAbbreviation) {
         this.languageAbbreviation = languageAbbreviation;
@@ -40,8 +35,6 @@ public class Language {
     public String toString() {
         return languageAbbreviation;
     }
-
-    // private
 
     private static String languageAbbreviationOfFile(File file) {
         if (file == null) return UNDEF;

@@ -8,17 +8,11 @@ import java.util.Set;
 
 public class Word {
 
-    // constants
-
-    // fields
-
     private File file;
 
     private String key = "";
     private String text = "";
     private HashMap<Language, Word> translations = new HashMap<Language, Word>();
-
-    // public methods
 
     public static String keyGen(Language language, String key) {
         return language + "_" + key;
@@ -40,8 +34,6 @@ public class Word {
         return keyGen(getLanguage(), getKey());
     }
 
-    // toString
-
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append("language=").append(getLanguage()).append(",");
@@ -54,8 +46,6 @@ public class Word {
         }
         return builder.toString();
     }
-
-    // private methods
 
     private Set<Language> translatedLanguages() {
         return this.translations.keySet();
@@ -80,7 +70,6 @@ public class Word {
         result = 31 * result + (translations != null ? translations.hashCode() : 0);
         return result;
     }
-    // getter + setter
 
     public File getFile() {
         return file;

@@ -6,11 +6,8 @@ import org.apache.log4j.Logger;
 import java.io.FileReader;
 
 public class CsvReader {
-        // constants
 
     private static Logger log = Logger.getLogger(CsvReader.class);
-
-    // fiel
 
     private String filename;
     private CsvLineProcessor csvLineProcessor;

@@ -14,17 +14,11 @@ import java.util.List;
  */
 public class TraverseDirectory {
 
-    // constants
-
     private static Logger log = Logger.getLogger(TraverseDirectory.class);
-
-    // fields
 
     private final String basedir;
     private FileProcessor fileProcessor;
     private List<FilenameFilter> filenameFilters = new ArrayList<FilenameFilter>();
-
-    // constructor
 
     /**
      * @throws IllegalArgumentException in case basedir is not an existing directory
@@ -36,8 +30,6 @@ public class TraverseDirectory {
         this.fileProcessor = fileProcessor;
     }
 
-    // public methods
-
     public void processFiles() {
         traverseChildren(new File(basedir));
     }
@@ -46,8 +38,6 @@ public class TraverseDirectory {
         log.debug("Adding FilenameFilter of type '" + filenameFilter.getClass() + "'.");
         filenameFilters.add(filenameFilter);
     }
-
-    // private methods
 
     private void checkIsDirectory(File dir) {
         if (!dir.isDirectory()) {

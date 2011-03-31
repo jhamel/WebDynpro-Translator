@@ -9,23 +9,15 @@ import java.util.List;
 
 public class TransUnitToWordConverter {
 
-    // constants
-
     private static Logger log = Logger.getLogger(TransUnitToWordConverter.class);
-
-    // fields
 
     private File file;
     private XlfXmlHelper xlfXmlHelper;
-
-    // constructor
 
     public TransUnitToWordConverter(File file) {
         this.file = file;
         xlfXmlHelper = new XlfXmlHelper(file);
     }
-
-    // public methods
 
     public List<Word> convertTransUnitsToWords() {
         List<Word> words = new ArrayList<Word>();

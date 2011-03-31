@@ -11,10 +11,6 @@ import java.util.List;
 
 public class CsvWriter {
 
-        // constants
-
-    private static Logger log = Logger.getLogger(CsvWriter.class);
-
     public static void writeToCsvFile(String fileName, List<Word> words) {
         BufferedWriter out = null;
         try {
@@ -31,7 +27,6 @@ public class CsvWriter {
         }
     }
 
-    // private methods
 
     private static void closeWriter(BufferedWriter out) {
         try {

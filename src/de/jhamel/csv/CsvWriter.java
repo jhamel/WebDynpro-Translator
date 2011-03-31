@@ -2,6 +2,7 @@ package de.jhamel.csv;
 
 import de.jhamel.wdtranslator.TechnicalException;
 import de.jhamel.wdtranslator.xlf.Word;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,18 +10,19 @@ import java.io.IOException;
 import java.util.List;
 
 public class CsvWriter {
+    private static Logger log = Logger.getLogger(CsvWriter.class);
 
-    public static void writeToCsvFile(String fileName, List<Word> words) {
+    public static void writeToCsvFile(String filename, List<Word> words) {
         BufferedWriter out = null;
         try {
-            out = new BufferedWriter(new FileWriter(fileName));
+            out = new BufferedWriter(new FileWriter(filename));
             for (Word word : words) {
+                log.trace("Writing line '"+word.toCsv()+"' to '"+ filename +"'.");
                 out.write(word.toCsv());
                 out.newLine();
             }
-
         } catch (IOException e) {
-            throw new TechnicalException("Could not write to file '" + fileName + "'. (" + e.getMessage() + ")", e);
+            throw new TechnicalException("Could not write to file '" + filename + "'. (" + e.getMessage() + ")", e);
         } finally {
             closeWriter(out);
         }

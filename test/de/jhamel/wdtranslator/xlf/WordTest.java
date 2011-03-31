@@ -16,6 +16,12 @@ public class WordTest {
         assertThat(word.getLanguage(), equalTo(Language.GERMAN));
     }
 
+
+    @Test
+    public void shouldBeDefaultLanguage(){
+         assertThat(Language.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")),equalTo(Language.DEFAULT));
+    }
+
     @Test
     public void keyGen() {
         Word word = new Word();

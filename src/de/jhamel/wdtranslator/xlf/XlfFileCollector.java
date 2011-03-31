@@ -15,6 +15,7 @@ public class XlfFileCollector implements FileProcessor {
     private static Logger log = Logger.getLogger(XlfFileCollector.class);
 
     // fields
+
     private List<Word> words = new ArrayList<Word>();
     private WordCollector wordCollector = new WordCollector();
     private HashMap<File, List<Word>> xlfWordsByFile = new HashMap<File, List<Word>>();
@@ -31,18 +32,34 @@ public class XlfFileCollector implements FileProcessor {
     }
 
     // public methods
+
     public void replaceTranslationsForGivenDefaultWord(String defaultWordText, Language language, String translation) {
-        List<Word> words = getWordsByWord(defaultWordText);
+        List<Word> words = getWordByDefaultText(defaultWordText);
         for (Word word : words) {
             Word wordEn = word.getTranslationByLanguage(language);
+            if (wordEn == null) {
+                continue;
+            }
             wordEn.setText(translation);
-            word.store();
+            wordEn.store();
         }
     }
+
+    private List<Word> getWordByDefaultText(String defaultWordText) {
+        List<Word> wordsDefault = new ArrayList<Word>();
+        for (Word word : words()) {
+            if (word.getText().equals(defaultWordText)) {
+                wordsDefault.add(word);
+            }
+        }
+        return wordsDefault;
+    }
+
 
     public void scanXlfFiles() {
         TraverseDirectory traverseDirectory = new TraverseDirectory(basedir, this);
         traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
+        traverseDirectory.addFilenameFilter(new ContainsFilenameFilter("\\bin\\"));
         traverseDirectory.processFiles();
     }
 

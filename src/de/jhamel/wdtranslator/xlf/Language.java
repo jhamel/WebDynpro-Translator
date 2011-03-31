@@ -46,7 +46,7 @@ public class Language {
         String filename = file.getName();
         int posUnderscore = filename.lastIndexOf("_");
         int posDot = filename.lastIndexOf(".");
-        if (hasUndescoreBeforeDot(posUnderscore, posDot)) {
+        if (hasUndescoreBeforeDot(posUnderscore, posDot) && (posDot -posUnderscore) == 3) {
             return stringBetweenUnderscoreAndDot(filename, posUnderscore, posDot).toLowerCase();
         }
         return DEF;

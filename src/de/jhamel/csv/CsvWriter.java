@@ -2,6 +2,7 @@ package de.jhamel.csv;
 
 import de.jhamel.wdtranslator.TechnicalException;
 import de.jhamel.wdtranslator.xlf.Word;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -9,6 +10,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class CsvWriter {
+
+        // constants
+
+    private static Logger log = Logger.getLogger(CsvWriter.class);
 
     public static void writeToCsvFile(String fileName, List<Word> words) {
         BufferedWriter out = null;

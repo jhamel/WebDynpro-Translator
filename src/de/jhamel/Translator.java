@@ -2,33 +2,16 @@ package de.jhamel;
 
 import de.jhamel.csv.CsvReader;
 import de.jhamel.csv.GermanZeroEnglishOne;
-import de.jhamel.file.EndsWithFilenameFilter;
-import de.jhamel.file.TraverseDirectory;
-import de.jhamel.wdtranslator.xlf.*;
-
-import java.util.List;
 
 public class Translator {
-    private static final String BASEDIR = "../test/testdata";
-    private XlfFileCollector xlfFileCollector = new XlfFileCollector(BASEDIR);
+    private static final String BASEDIR = "C:\\Dokumente und Einstellungen\\J19727\\.dtc\\2\\DCs\\eonis.com\\eea\\bpexd\\wd";
 
-    public void doMagic() {
-        xlfFileCollector.scanXlfFiles();
-        CsvReader csvReader = new CsvReader("file.csv",new GermanZeroEnglishOne());
-
-
-
-        List<Word> words = xlfFileCollector.words();
-
-        for (Word word : words) {
-            System.out.println(word);
-        }
-
+    public void doMagic() throws Exception {
+        CsvReader csvReader = new CsvReader("translation_20110330_VDE.csv", new GermanZeroEnglishOne());
+        csvReader.readFile();
     }
 
-
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         new Translator().doMagic();
     }
 }

@@ -1,13 +1,16 @@
 package de.jhamel.csv;
 
 import com.Ostermiller.util.CSVParser;
-import de.jhamel.wdtranslator.xlf.Word;
+import org.apache.log4j.Logger;
 
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CsvReader {
+        // constants
+
+    private static Logger log = Logger.getLogger(CsvReader.class);
+
+    // fiel
 
     private String filename;
     private CsvLineProcessor csvLineProcessor;

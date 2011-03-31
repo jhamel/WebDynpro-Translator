@@ -2,7 +2,6 @@ package integration;
 
 import de.jhamel.file.EndsWithFilenameFilter;
 import de.jhamel.file.TraverseDirectory;
-import de.jhamel.file.FileUtil;
 import de.jhamel.wdtranslator.xlf.Language;
 import de.jhamel.wdtranslator.xlf.XlfFileCollector;
 import org.junit.Test;

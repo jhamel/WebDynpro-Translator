@@ -84,7 +84,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/test/integration/CollectingWords.java" line="19" class="integration.CollectingWords" package="integration">
+      <breakpoint url="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java" line="84" class="de.jhamel.wdtranslator.xlf.XlfFileCollector" package="de.jhamel.wdtranslator.xlf">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -97,7 +97,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java" line="85" class="de.jhamel.wdtranslator.xlf.XlfFileCollector" package="de.jhamel.wdtranslator.xlf">
+      <breakpoint url="file://$PROJECT_DIR$/test/integration/CollectingWords.java" line="17" class="integration.CollectingWords" package="integration">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -151,30 +151,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Word.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/Word.java">
+      <file leaf-file-name="TransUnitToWordConverter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/TransUnitToWordConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.82191783">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WordCollector.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/WordCollector.java">
+      <file leaf-file-name="Element.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/deploy/jdom.jar!/org/jdom/Element.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="40" selection-start="1185" selection-end="1213" vertical-scroll-proportion="0.44629014">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="154" column="0" selection-start="7174" selection-end="7174" vertical-scroll-proportion="-0.8">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XlfXmlHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java">
+      <file leaf-file-name="CollectingWords.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/integration/CollectingWords.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -196,17 +194,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/de/jhamel/file/TraverseDirectory.java" />
-        <option value="$PROJECT_DIR$/src/de/jhamel/file/ContainsFilenameFilter.java" />
-        <option value="$PROJECT_DIR$/test/de/jhamel/file/ContainsFilenameFilter.java" />
         <option value="$PROJECT_DIR$/test/de/jhamel/file/ContainsFilenameFilterTest.java" />
-        <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java" />
-        <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/Language.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileValueReplacer.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/Word.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/WordCollector.java" />
+        <option value="$PROJECT_DIR$/test/integration/CollectingWords.java" />
+        <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java" />
+        <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" />
+        <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/LanguageTest.java" />
+        <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/TransUnitToWordConverter.java" />
       </list>
     </option>
   </component>
@@ -604,13 +602,13 @@
       <recent name="de.jhamel.wdtranslator" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordTest">
-    <configuration default="false" name="WordTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.All in WebDynproTranslator">
+    <configuration default="false" name="EndsWithFilenameFilterTest" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="WebDynproTranslator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.jhamel.wdtranslator.xlf" />
-      <option name="MAIN_CLASS_NAME" value="de.jhamel.wdtranslator.xlf.WordTest" />
+      <option name="PACKAGE_NAME" value="de.jhamel.file" />
+      <option name="MAIN_CLASS_NAME" value="de.jhamel.file.EndsWithFilenameFilterTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -627,14 +625,58 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="XlfFileCollectorTest" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="CollectingWords" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="WebDynproTranslator" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.jhamel.wdtranslator.xlf" />
-      <option name="MAIN_CLASS_NAME" value="de.jhamel.wdtranslator.xlf.XlfFileCollectorTest" />
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.CollectingWords" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CollectingFiles" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="WebDynproTranslator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.CollectingFiles" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CollectingWords.findKeys" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="WebDynproTranslator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.CollectingWords" />
+      <option name="METHOD_NAME" value="findKeys" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -646,13 +688,11 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56638" />
+        <option name="DEBUG_PORT" value="59118" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="All in WebDynproTranslator" type="JUnit" factoryName="JUnit" temporary="true">
@@ -663,50 +703,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="XlfFileReplacerTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="WebDynproTranslator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.jhamel.wdtranslator.xlf" />
-      <option name="MAIN_CLASS_NAME" value="de.jhamel.wdtranslator.xlf.XlfFileReplacerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EndsWithFilenameFilterTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="WebDynproTranslator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.jhamel.file" />
-      <option name="MAIN_CLASS_NAME" value="de.jhamel.file.EndsWithFilenameFilterTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -827,11 +823,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.WordTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.XlfFileCollectorTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in WebDynproTranslator" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.XlfFileReplacerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EndsWithFilenameFilterTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EndsWithFilenameFilterTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CollectingWords" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CollectingFiles" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CollectingWords.findKeys" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in WebDynproTranslator" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -869,6 +865,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39914164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -880,11 +877,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975476" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.345187" sideWeight="0.57939917" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42060086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="20" y="378" width="1631" height="311" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42060086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="20" y="378" width="1631" height="311" />
       <window_info id="Test Runs" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39914164" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -926,42 +922,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="0" selection-start="4328" selection-end="4328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/csv/GermanZeroEnglishOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/deploy/jdom.jar!/org/jdom/input/SAXBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="5268" selection-end="5268" vertical-scroll-proportion="-0.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/CollectingWords.java">
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/file/FilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/XlfFileCollectorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/file/TraverseDirectory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="55" column="0" selection-start="1673" selection-end="1673" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -973,35 +943,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="4186" selection-end="4186" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+        <state line="47" column="0" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/Word.java">
+    <entry file="file://$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/XlfFileCollectorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java">
+    <entry file="file://$PROJECT_DIR$/test/integration/CollectingFiles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/deploy/log4j-1.2.16.jar!/org/apache/log4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/integration/CollectingWords.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/WordCollector.java">
+    <entry file="jar://$PROJECT_DIR$/lib/deploy/jdom.jar!/org/jdom/Element.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="40" selection-start="1185" selection-end="1213" vertical-scroll-proportion="0.44629014">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="154" column="0" selection-start="7174" selection-end="7174" vertical-scroll-proportion="-0.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/TransUnitToWordConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="536" selection-end="536" vertical-scroll-proportion="0.82191783">
+          <folding />
         </state>
       </provider>
     </entry>

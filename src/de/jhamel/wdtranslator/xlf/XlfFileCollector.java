@@ -21,7 +21,6 @@ public class XlfFileCollector implements FileProcessor {
     // fields
 
     private List<Word> words = new ArrayList<Word>();
-    private WordCollector wordCollector = new WordCollector();
     private HashMap<File, List<Word>> xlfWordsByFile = new HashMap<File, List<Word>>();
     private HashMap<Language, List<Word>> xlfWordsByLanguage = new HashMap<Language, List<Word>>();
     private HashMap<String, List<Word>> xlfWordsByWord = new HashMap<String, List<Word>>();
@@ -130,7 +129,7 @@ public class XlfFileCollector implements FileProcessor {
     // private methods
 
     private List<Word> retrieveWordsOfFile(File file) {
-        return wordCollector.scanFile(file);
+        return new TransUnitToWordConverter(file).convertTransUnitsToWords();
     }
 
     private void addByFile(File file) {

@@ -9,9 +9,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class LanguageTest {
 
-    @Test(expected = IllegalArgumentException.class)
-    public void getInstanceByAbbreviationForUnknownAbbreviationThrowsIllegalArgumentException() {
-        Language.getInstance("not a language");
+    @Test
+    public void getInstanceByAbbreviationForUnknownAbbreviationReturnsUndefinedLanguage() {
+        assertThat(Language.getInstance("not a language"), equalTo(Language.UNDEFINED));
     }
 
     @Test

@@ -1,8 +1,8 @@
 package integration;
 
 
+import de.jhamel.wdtranslator.xlf.TransUnitToWordConverter;
 import de.jhamel.wdtranslator.xlf.Word;
-import de.jhamel.wdtranslator.xlf.WordCollector;
 import org.junit.Test;
 
 import java.io.File;
@@ -15,8 +15,8 @@ public class CollectingWords {
 
     @Test
     public void findKeys() {
-        WordCollector collector = new WordCollector();
-        List<Word> words = collector.scanFile(new File(SAMPLE_FILE));
+        TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(SAMPLE_FILE));
+        List<Word> words = converter.convertTransUnitsToWords();
         assertEquals(9, words.size());
     }
 

@@ -70,8 +70,9 @@ public class WordTest {
     }
 
     private Word sampleWord() {
-        WordCollector collector = new WordCollector();
+
         final String SAMPLE_FILE = FixtureConstants.BASEDIR + "/" + "_comp/src/packages/com/eonis/eea/bpexd/wd/berichte/AusplattformShowDetails.wdview.xlf";
-        return collector.scanFile(new File(SAMPLE_FILE)).get(0);
+           TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(SAMPLE_FILE));
+        return converter.convertTransUnitsToWords().get(0);
     }
 }

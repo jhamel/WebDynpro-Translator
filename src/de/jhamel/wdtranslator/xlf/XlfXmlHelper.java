@@ -85,4 +85,5 @@ public class XlfXmlHelper {
             throw new TechnicalException("Could not store '" + file.getAbsolutePath() + "'.", e);
         }
     }
+
 }

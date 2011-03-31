@@ -1,7 +1,7 @@
 package de.jhamel.wdtranslator.xlf;
 
-import de.jhamel.file.ContainsFilenameFilter;
-import de.jhamel.file.EndsWithFilenameFilter;
+import de.jhamel.file.filters.ContainsFilenameFilter;
+import de.jhamel.file.filters.EndsWithFilenameFilter;
 import de.jhamel.file.FileProcessor;
 import de.jhamel.file.TraverseDirectory;
 import org.apache.log4j.Logger;

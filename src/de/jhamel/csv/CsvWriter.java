@@ -2,7 +2,6 @@ package de.jhamel.csv;
 
 import de.jhamel.wdtranslator.TechnicalException;
 import de.jhamel.wdtranslator.xlf.Word;
-import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

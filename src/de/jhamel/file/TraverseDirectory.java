@@ -1,5 +1,6 @@
 package de.jhamel.file;
 
+import de.jhamel.file.filters.FilenameFilter;
 import org.apache.log4j.Logger;
 
 import java.io.File;

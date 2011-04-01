@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet >
+	<view uin="V-qm6t9glz3p1os-h2k52i">
+		<property name="$parentUin" value="WebDynpro:Component:://WebDynpro/Component#org.example.SampleComponent"/>
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="WDComponentDiagram"/>
+		<reference referencedUin="WebDynpro:Component:://WebDynpro/Component#org.example.SampleComponent">
+			<property name="bounds" value="10,10,834,570"/>
+			<reference referencedUin="WebDynpro:ComponentInterface:://WebDynpro/ComponentInterfaceImplementation#org.example.SampleComponentInterface">
+				<property name="bounds" value="0,0,128,50"/>
+				<reference referencedUin="WebDynpro:InterfaceController:://WebDynpro/Controller#org.example.SampleComponentInterface">
+					<property name="bounds" value="0,0,129,50"/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:ModelUsages:://WebDynpro/Component#org.example.SampleComponent">
+				<property name="bounds" value="0,0,90,50"/>
+			</reference>
+			<reference referencedUin="WebDynpro:ComponentUsages:://WebDynpro/Component#org.example.SampleComponent">
+				<property name="bounds" value="0,0,180,50"/>
+			</reference>
+			<reference referencedUin="WebDynpro:CustomControllers:://WebDynpro/Component#org.example.SampleComponent">
+				<property name="bounds" value="0,0,121,50"/>
+				<reference referencedUin="WebDynpro:ComponentController:://WebDynpro/Controller#org.example.SampleComponent">
+					<property name="bounds" value="0,0,139,50"/>
+				</reference>
+			</reference>
+			<reference referencedUin="WebDynpro:Views:://WebDynpro/Component#org.example.SampleComponent">
+				<property name="bounds" value="0,0,57,50"/>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#org.example.SecondSampleView">
+					<property name="bounds" value="0,0,125,50"/>
+				</reference>
+				<reference referencedUin="WebDynpro:View:://WebDynpro/View#org.example.SampleComponentView">
+					<property name="bounds" value="0,0,145,50"/>
+				</reference>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>

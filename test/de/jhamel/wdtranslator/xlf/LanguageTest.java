@@ -3,9 +3,11 @@ package de.jhamel.wdtranslator.xlf;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class LanguageTest {
 
@@ -31,5 +33,11 @@ public class LanguageTest {
         assertThat(Language.languageOfFile(new File("abc.txt")), equalTo(Language.DEFAULT));
         assertThat(Language.languageOfFile(new File("abc_de.txt")), equalTo(Language.GERMAN));
         assertThat(Language.languageOfFile(new File("abc_en.txt")), equalTo(Language.ENGLISH));
+    }
+
+        @Test
+    public void locale() {
+        assertThat(Locale.GERMANY.getLanguage(), equalToIgnoringCase("de"));
+
     }
 }

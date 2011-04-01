@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Window xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Window:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="SampleComponent" package="org.example" masterLanguage="en">
+	<Window.Parent>
+		<Core.Reference package="org.example" name="SampleComponent" type="Component"/>
+	</Window.Parent>
+	<Window.NavigationLinks>
+		<Core.Reference package="org.example" name="SampleComponent" type="NavigationLinks"/>
+	</Window.NavigationLinks>
+	<Window.ViewsetHierarchyRootNodes>
+		<ViewUsage name="org.example.SampleComponentViewUsage1">
+			<ViewsetHierarchyNode.View>
+				<Core.Reference package="org.example" name="SampleComponentView" type="View"/>
+			</ViewsetHierarchyNode.View>
+		</ViewUsage>
+	</Window.ViewsetHierarchyRootNodes>
+	<Window.InterfaceView>
+		<Core.Reference package="org.example" name="SampleComponentInterfaceView" type="InterfaceView"/>
+	</Window.InterfaceView>
+	<Window.DefaultViewsetHierarchyRootNode>
+		<Core.Reference path="ViewsetHierarchyRootNode:org.example.SampleComponentViewUsage1"/>
+	</Window.DefaultViewsetHierarchyRootNode>
+</Window>

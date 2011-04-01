@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<Component xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.Component:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="SampleComponent" package="org.example" masterLanguage="en">
+	<Component.ComponentInterface>
+		<Core.Reference package="org.example" name="SampleComponentInterface" type="ComponentInterfaceImplementation"/>
+	</Component.ComponentInterface>
+	<Component.Controllers>
+		<Core.Reference package="org.example" name="SampleComponent" type="Controller"/>
+		<Core.Reference package="org.example" name="SampleComponentView" type="Controller"/>
+		<Core.Reference package="org.example" name="SecondSampleView" type="Controller"/>
+	</Component.Controllers>
+	<Component.EmptyView>
+		<EmptyView name="EmptyView">
+			<AbstractView.InboundPlugs>
+				<InboundPlug name="ShowEmptyView">
+				</InboundPlug>
+			</AbstractView.InboundPlugs>
+		</EmptyView>
+	</Component.EmptyView>
+	<Component.MessagePool>
+		<Core.Reference package="org.example" name="SampleComponentMessagePool" type="MessagePool"/>
+	</Component.MessagePool>
+	<Component.Views>
+		<Core.Reference package="org.example" name="SampleComponentView" type="View"/>
+		<Core.Reference package="org.example" name="SecondSampleView" type="View"/>
+	</Component.Views>
+	<Component.Windows>
+		<Core.Reference package="org.example" name="SampleComponent" type="Window"/>
+	</Component.Windows>
+	<Component.ComponentController>
+		<Core.Reference package="org.example" name="SampleComponent" type="Controller"/>
+	</Component.ComponentController>
+	<Component.UsedUIELibraries>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Standard" type="UIElementLibrary"/>
+		<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="BusinessGraphics" type="UIElementLibrary"/>
+	</Component.UsedUIELibraries>
+</Component>

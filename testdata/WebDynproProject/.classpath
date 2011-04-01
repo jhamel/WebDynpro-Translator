@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="src" path="src/packages"/>
+    <classpathentry kind="src" path="gen_ddic/datatypes"/>
+    <classpathentry kind="src" path="gen_wdp/packages"/>
+    <classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_basesrvc.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_basesrvc.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_admin.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_admin.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_clientserver.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_clientserver.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_progmodel.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_progmodel.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_services.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_services.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_modelimpl.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_modelimpl.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_repository.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_repository.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_repository_pmr.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_repository_pmr.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_model_dynamicrfc.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_model_dynamicrfc.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_designtime_coupling_api.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_designtime_coupling_api.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_designtime_coupling.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_runtime_designtime_coupling.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_portal.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/_webdynpro_portal.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/com_sap_tc_graphics_igs.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/com_sap_tc_graphics_igs.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/jARM.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.webdynpro.runtime_2.0.0/lib/jARM.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/SAPJavaConnectivityBuilderCore.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/SAPJavaConnectivityBuilderCore.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/lib/aii_proxy_rt.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/lib/aii_proxy_rt.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/lib/aii_util_misc.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.ide.jcb.core_2.0.0/lib/aii_util_misc.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.mw.jco_2.0.0/lib/sapjco.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.mw.jco_2.0.0/lib/sapjco.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/logging.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/logging.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/loggingStandard.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/loggingStandard.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/jARM.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.tssap.sap.libs.logging_2.0.0/lib/jARM.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.exception_2.0.0/lib/exception.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.exception_2.0.0/lib/exception.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.sld.client_2.0.0/lib/lcrclient.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.sld.client_2.0.0/lib/lcrclient.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.sld.client_2.0.0/lib/sldclient.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.sld.client_2.0.0/lib/sldclient.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.tc.cmi_1.0.0/_cmi_api.jar" rootpath="" sourcepath="WD_RUNTIME/com.sap.tc.cmi_1.0.0/_cmi_api.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.dictionary.runtime_2.0.0/lib/SapDictionaryTypesRuntime.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.dictionary.runtime_2.0.0/lib/SapDictionaryTypesRuntime.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.dictionary.services_2.0.0/lib/SapDictionaryTypeServices.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.dictionary.services_2.0.0/lib/SapDictionaryTypeServices.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cache_api.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cache_api.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cache_plugins.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cache_plugins.jar"/>
+    <classpathentry kind="var"
+        path="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cachemgmt.jar"
+        rootpath="" sourcepath="WD_RUNTIME/com.sap.util.cache.ide_2.0.0/lib/cachemgmt.jar"/>
+    <classpathentry kind="output" path="bin"/>
+</classpath>

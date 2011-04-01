@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<View xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.View:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="SampleComponentView" package="org.example" masterLanguage="en">
+	<AbstractView.ViewController>
+		<Core.Reference package="org.example" name="SampleComponentView" type="Controller"/>
+	</AbstractView.ViewController>
+	<View.Parent>
+		<Core.Reference package="org.example" name="SampleComponent" type="Component"/>
+	</View.Parent>
+	<View.RootUIElementContainer>
+		<TransparentContainer name="RootUIElementContainer">
+			<UIElementContainer.Children>
+				<TextView name="DefaultTextView">
+					<UIElement.LayoutData>
+						<FlowData name="DefaultTextView_layoutdata">
+						</FlowData>
+					</UIElement.LayoutData>
+				</TextView>
+				<TransparentContainer name="TransparentContainer">
+					<ViewElement.Definition>
+						<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TransparentContainer" type="UIElementDefinition"/>
+					</ViewElement.Definition>
+					<UIElement.LayoutData>
+						<FlowData name="LayoutData">
+						</FlowData>
+					</UIElement.LayoutData>
+					<UIElementContainer.Children>
+						<Button name="Button" text_isDependent="false">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="Button" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</Button>
+						<TextView name="TextView">
+							<ViewElement.Definition>
+								<Core.Reference package="com.sap.ide.webdynpro.uielementdefinitions" name="TextView" type="UIElementDefinition"/>
+							</ViewElement.Definition>
+							<UIElement.LayoutData>
+								<FlowData name="LayoutData">
+								</FlowData>
+							</UIElement.LayoutData>
+						</TextView>
+					</UIElementContainer.Children>
+					<UIElementContainer.Layout>
+						<FlowLayout name="Layout">
+						</FlowLayout>
+					</UIElementContainer.Layout>
+				</TransparentContainer>
+			</UIElementContainer.Children>
+			<UIElementContainer.Layout>
+				<FlowLayout name="Layout">
+				</FlowLayout>
+			</UIElementContainer.Layout>
+		</TransparentContainer>
+	</View.RootUIElementContainer>
+</View>

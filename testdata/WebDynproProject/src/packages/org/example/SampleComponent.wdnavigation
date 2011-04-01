@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<NavigationLinks xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.NavigationLinks:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="SampleComponent" package="org.example" masterLanguage="en">
+	<NavigationLinks.Parent>
+		<Core.Reference package="org.example" name="SampleComponent" type="Window"/>
+	</NavigationLinks.Parent>
+</NavigationLinks>

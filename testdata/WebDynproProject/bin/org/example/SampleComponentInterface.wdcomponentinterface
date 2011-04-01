@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MetaDataAPI generated on: Friday, May 25, 2007 3:26:31 PM CEST -->
+<ComponentInterfaceImplementation xmlns="http://xml.sap.com/2002/10/metamodel/webdynpro" xmlns:IDX="urn:sap.com:WebDynpro.ComponentInterfaceImplementation:2.0" mmRelease="6.30" mmVersion="2.0" mmTimestamp="1180099591892" name="SampleComponentInterface" package="org.example" masterLanguage="en">
+	<ComponentInterface.Controllers>
+		<Core.Reference package="org.example" name="SampleComponentInterface" type="Controller"/>
+		<Core.Reference package="org.example" name="SampleComponentInterfaceView" type="Controller"/>
+		<Core.Reference package="org.example" name="SampleComponentInterfaceCfg" type="Controller"/>
+	</ComponentInterface.Controllers>
+	<ComponentInterface.InterfaceViews>
+		<Core.Reference package="org.example" name="SampleComponentInterfaceView" type="InterfaceView"/>
+	</ComponentInterface.InterfaceViews>
+	<ComponentInterface.ConfigurationController>
+		<Core.Reference package="org.example" name="SampleComponentInterfaceCfg" type="Controller"/>
+	</ComponentInterface.ConfigurationController>
+	<ComponentInterface.InterfaceController>
+		<Core.Reference package="org.example" name="SampleComponentInterface" type="Controller"/>
+	</ComponentInterface.InterfaceController>
+	<ComponentInterfaceImplementation.Parent>
+		<Core.Reference package="org.example" name="SampleComponent" type="Component"/>
+	</ComponentInterfaceImplementation.Parent>
+</ComponentInterfaceImplementation>

@@ -56,7 +56,7 @@ public class XlfFileCollector implements FileProcessor {
     public void scanXlfFiles() {
         TraverseDirectory traverseDirectory = new TraverseDirectory(basedir, this);
         traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
-        traverseDirectory.addFilenameFilter(new ContainsFilenameFilter(File.pathSeparator+"bin"+File.pathSeparator));
+        traverseDirectory.addFilenameFilter(new ContainsFilenameFilter(File.separator+"bin"+File.separator));
         traverseDirectory.processFiles();
     }
 

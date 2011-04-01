@@ -56,23 +56,22 @@ public class WordTest {
     @Test
     public void storingWord() {
         Word word = sampleWord();
-        assertThat(word.getText(), equalTo("new"));
+        assertThat(word.getText(), equalTo("SampleComponentView"));
         word.setText("newText");
         word.store();
 
         word = sampleWord();
         assertThat(word.getText(), equalTo("newText"));
 
-        word.setText("new");
+        word.setText("SampleComponentView");
         word.store();
-        assertThat(word.getText(), equalTo("new"));
+        assertThat(word.getText(), equalTo("SampleComponentView"));
 
     }
 
     private Word sampleWord() {
 
-        final String SAMPLE_FILE = FixtureConstants.BASEDIR + "/" + "_comp/src/packages/com/eonis/eea/bpexd/wd/berichte/AusplattformShowDetails.wdview.xlf";
-           TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(SAMPLE_FILE));
+        TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(FixtureConstants.SAMPLE_FILE));
         return converter.convertTransUnitsToWords().get(0);
     }
 }

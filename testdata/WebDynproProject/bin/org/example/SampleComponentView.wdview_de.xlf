@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xliff version="1.1">
+<file source-language="en" product-name="@@33dd02c8fa3241a82555c50c15d8ad61View:SampleComponentView[org.example] of Component:SampleComponent[org.example]" datatype="javaPropertyResourceBundle">
+<header>
+<skl>
+</skl>
+<phase-group>
+</phase-group>
+<s2x xmlns="http://www.sap.com">
+<dtr>
+<sc></sc>
+</dtr>
+<giltDirectives>
+<develContact>J19727</develContact><domain>Consumer Products Industry</domain>
+<originalLocale xml:lang="en"/>
+<maxLength>255</maxLength>
+</giltDirectives>
+</s2x>
+</header>
+<body>
+<group restype="informationMessage">
+<trans-unit id="db1c68d7d3ca473e1190aea4eed8a302" resname="RootUIElementContainer/Child:DefaultTextView@text" maxwidth="16384" translate="yes"><source>SampleComponentView</source></trans-unit>
+<trans-unit id="484e46d9db7042cc340cb64a7349bad0" resname="RootUIElementContainer/Child:TransparentContainer/Child:TextView@text" maxwidth="16384" translate="yes"><source>TextViewText</source></trans-unit>
+</group>
+<group restype="button">
+<trans-unit id="266b3409b9394dbb2d9686d7333525a9" resname="RootUIElementContainer/Child:TransparentContainer/Child:Button@text" maxwidth="255" translate="yes"><source>ButtonText</source></trans-unit>
+</group>
+</body>
+</file>
+</xliff>

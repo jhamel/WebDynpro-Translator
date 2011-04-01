@@ -13,20 +13,9 @@ import static org.hamcrest.Matchers.equalTo;
 public class CollectingFiles {
 
     @Test
-    public void collectFilesEndingWithXLFWithDefaultLanguage() {
-        XlfFileCollector xlfFileCollector = new XlfFileCollector();
-        TraverseDirectory traverseDirectory = new TraverseDirectory(BASEDIR, xlfFileCollector);
-        traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
-        traverseDirectory.processFiles();
-        assertThat(xlfFileCollector.getWordsByLanguageKey(Language.DEFAULT).size(), equalTo(52));
-    }
-
-    @Test
-    public void collectFilesEndingWithXLFWithEnLanguage() {
-        XlfFileCollector xlfFileCollector = new XlfFileCollector();
-        TraverseDirectory traverseDirectory = new TraverseDirectory(BASEDIR, xlfFileCollector);
-        traverseDirectory.addFilenameFilter(new EndsWithFilenameFilter(".xlf"));
-        traverseDirectory.processFiles();
-        assertThat(xlfFileCollector.getWordsByLanguageKey(Language.ENGLISH).size(), equalTo(53));
+    public void collectFiles() {
+        XlfFileCollector xlfFileCollector = new XlfFileCollector(FixtureConstants.BASEDIR);
+        xlfFileCollector.scanXlfFiles();
+        assertThat(xlfFileCollector.words().size(), equalTo(4));
     }
 }

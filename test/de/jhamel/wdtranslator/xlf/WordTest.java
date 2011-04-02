@@ -5,6 +5,7 @@ import integration.FixtureConstants;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -15,20 +16,20 @@ public class WordTest {
     public void language() {
         Word word = new Word();
         word.setFile(new File("abc_de.txt"));
-        assertThat(word.getLanguage(), equalTo(Language.GERMAN));
+        assertThat(word.getLanguage(), equalTo(Locale.GERMAN));
     }
 
     @Test
     public void shouldBeDefaultLanguage() {
-        assertThat(Language.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")), equalTo(Language.DEFAULT));
+        assertThat(LocaleUtil.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")), equalTo(Locale.getDefault()));
     }
 
     @Test
-    public void keyGen() {
+    public void uniqueId() {
         Word word = new Word();
         word.setKey("key");
         word.setFile(new File("abc_de.txt"));
-        assertThat(word.getLanguage(), equalTo(Language.GERMAN));
+        assertThat(word.getUniqueId(), equalTo("de_key"));
     }
 
     @Test
@@ -42,7 +43,7 @@ public class WordTest {
         word.setFile(new File("abc.txt"));
         word.addTranslation(wordEn);
 
-        assertThat(word.getTranslationByLanguage(Language.ENGLISH).getKey(), equalTo("keyEn"));
+        assertThat(word.getTranslationByLocale(Locale.ENGLISH).getKey(), equalTo("keyEn"));
 
         System.out.println(word);
     }
@@ -69,8 +70,22 @@ public class WordTest {
 
     }
 
-    private Word sampleWord() {
+    @Test
+    public void wordToCsv() {
+        Word word = new Word();
+        assertThat(word.toCsv(), equalTo(""));
+        word.setText("default");
+        assertThat(word.toCsv(), equalTo("default"));
 
+        Word wordEn = new Word();
+        wordEn.setText("translation");
+        word.addTranslation(wordEn);
+
+        assertThat(word.toCsv(), equalTo("default;translation;"));
+
+    }
+
+    private Word sampleWord() {
         TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(FixtureConstants.SAMPLE_FILE));
         return converter.convertTransUnitsToWords().get(0);
     }

@@ -7,10 +7,7 @@ import de.jhamel.file.TraverseDirectory;
 import org.apache.log4j.Logger;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class XlfFileCollector implements FileProcessor {
 
@@ -18,7 +15,7 @@ public class XlfFileCollector implements FileProcessor {
 
     private List<Word> words = new ArrayList<Word>();
     private HashMap<File, List<Word>> xlfWordsByFile = new HashMap<File, List<Word>>();
-    private HashMap<Language, List<Word>> xlfWordsByLanguage = new HashMap<Language, List<Word>>();
+    private HashMap<Locale, List<Word>> xlfWordsByLocale = new HashMap<Locale, List<Word>>();
     private HashMap<String, List<Word>> xlfWordsByWord = new HashMap<String, List<Word>>();
     private HashMap<String, Word> xlfWordByLanguagePlusKey = new HashMap<String, Word>();
     private String basedir;
@@ -30,10 +27,10 @@ public class XlfFileCollector implements FileProcessor {
         this.basedir = basedir;
     }
 
-    public void replaceTranslationsForGivenDefaultWord(String defaultWordText, Language language, String translation) {
+    public void replaceTranslationsForGivenDefaultWord(String defaultWordText, Locale locale, String translation) {
         List<Word> words = getWordByDefaultText(defaultWordText);
         for (Word word : words) {
-            Word wordEn = word.getTranslationByLanguage(language);
+            Word wordEn = word.getTranslationByLocale(locale);
             if (wordEn == null) {
                 continue;
             }
@@ -63,42 +60,42 @@ public class XlfFileCollector implements FileProcessor {
     public void processFile(File file) {
         log.trace("Processing file '" + file.getName() + "'");
         addByFile(file);  // must be first add, because others depend on it
-        addByLanguage(file);
+        addByLocale(file);
         addByWord(file);
-        addByLanguagePlusKey(file);
+        addByUniqueId(file);
     }
 
-    private void addByLanguagePlusKey(File file) {
+    private void addByUniqueId(File file) {
         for (Word word : wordsInFile(file)) {
-            xlfWordByLanguagePlusKey.put(word.getId(), word);
+            xlfWordByLanguagePlusKey.put(word.getUniqueId(), word);
         }
     }
 
     public List<Word> words() {
         if (words.size() > 0) return words;
-        words = getWordsByLanguageKey(Language.DEFAULT);
+        words = getWordsByLanguageKey(Locale.getDefault());
 
-        for (Language language : translationLanguages()) {
+        for (Locale locale : translationLanguages()) {
             for (Word word : words) {
-                Word translatedWord = xlfWordByLanguagePlusKey.get(Word.keyGen(language, word.getKey()));
+                Word translatedWord = xlfWordByLanguagePlusKey.get(Word.generateUniqueIdentifier(locale, word.getKey()));
                 if (translatedWord != null) word.addTranslation(translatedWord);
             }
         }
         return words;
     }
 
-    private Set<Language> translationLanguages() {
-        Set<Language> translationLanguages = xlfWordsByLanguage.keySet();
-        translationLanguages.remove(Language.DEFAULT);
+    private Set<Locale> translationLanguages() {
+        Set<Locale> translationLanguages = xlfWordsByLocale.keySet();
+        translationLanguages.remove(Locale.getDefault());
         return translationLanguages;
     }
 
-    public List<Word> getWordsByLanguageKey(Language language) {
-        List<Word> wordsList = xlfWordsByLanguage.get(language);
+    public List<Word> getWordsByLanguageKey(Locale locale) {
+        List<Word> wordsList = xlfWordsByLocale.get(locale);
         if (wordsList == null) {
             wordsList = new ArrayList<Word>();
         }
-        xlfWordsByLanguage.put(language, wordsList);
+        xlfWordsByLocale.put(locale, wordsList);
         return wordsList;
     }
 
@@ -129,9 +126,9 @@ public class XlfFileCollector implements FileProcessor {
         wordsList.addAll(retrieveWordsOfFile(file));
     }
 
-    private void addByLanguage(File file) {
-        Language languageKey = Language.languageOfFile(file);
-        List<Word> wordsList = getWordsByLanguageKey(languageKey);
+    private void addByLocale(File file) {
+        Locale localeOfFile = LocaleUtil.languageOfFile(file);
+        List<Word> wordsList = getWordsByLanguageKey(localeOfFile);
         wordsList.addAll(wordsInFile(file));
     }
 

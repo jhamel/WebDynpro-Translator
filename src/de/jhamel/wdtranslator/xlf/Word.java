@@ -4,34 +4,39 @@ import de.jhamel.wdtranslator.TechnicalException;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Set;
 
+/** Word within in a XLF-file. */
 public class Word {
-
+    /** File within the word was found. */
     private File file;
-
+    /** Value of xpath "//trans-unit[@id]" for the current word within te XLF-file */
     private String key = "";
+    /** Value of xpath "//trans-unit/source" for the current word within te XLF-file */
     private String text = "";
-    private HashMap<Language, Word> translations = new HashMap<Language, Word>();
+    /** Translations tat were found */
+    private HashMap<Locale, Word> translations = new HashMap<Locale, Word>();
 
-    public static String keyGen(Language language, String key) {
-        return language + "_" + key;
+    /** Generates unique id for word. */
+    public static String generateUniqueIdentifier(Locale locale, String key) {
+        return locale.getLanguage() + "_" + key;
     }
 
     public void addTranslation(Word word) {
         translations.put(word.getLanguage(), word);
     }
 
-    public Word getTranslationByLanguage(Language language) {
-        return translations.get(language);
+    public Word getTranslationByLocale(Locale locale) {
+        return translations.get(locale);
     }
 
-    public Language getLanguage() {
-        return Language.languageOfFile(file);
+    public Locale getLanguage() {
+        return LocaleUtil.languageOfFile(file);
     }
 
-    public String getId() {
-        return keyGen(getLanguage(), getKey());
+    public String getUniqueId() {
+        return generateUniqueIdentifier(getLanguage(), getKey());
     }
 
     public String toString() {
@@ -39,15 +44,15 @@ public class Word {
         builder.append("language=").append(getLanguage()).append(",");
         builder.append("key=").append(getKey()).append(",");
         builder.append("text=").append(getText()).append(",");
-        for (Language language : translatedLanguages()) {
+        for (Locale language : translatedLanguages()) {
             builder.append("[");
-            builder.append(getTranslationByLanguage(language));
+            builder.append(getTranslationByLocale(language));
             builder.append("]");
         }
         return builder.toString();
     }
 
-    private Set<Language> translatedLanguages() {
+    private Set<Locale> translatedLanguages() {
         return this.translations.keySet();
     }
 
@@ -101,11 +106,12 @@ public class Word {
     }
 
     public String toCsv() {
-        final String SEPERATOR = ";";
+        final String CSV_SEPERATOR = ";";
         StringBuilder builder = new StringBuilder();
-        builder.append(getText()).append(SEPERATOR);
-        for (Language language : translatedLanguages()) {
-            builder.append(getTranslationByLanguage(language).getText()).append(SEPERATOR);
+        builder.append(getText());
+        if (translatedLanguages().size() > 0) builder.append(CSV_SEPERATOR);
+        for (Locale language : translatedLanguages()) {
+            builder.append(getTranslationByLocale(language).getText()).append(CSV_SEPERATOR);
         }
         return builder.toString();
     }

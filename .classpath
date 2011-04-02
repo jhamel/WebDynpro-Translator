@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="lib/deploy/jaxen.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/ostermillerutils_1_07_00.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/saxpath.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/xalan.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/xerces.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/develop/hamcrest-all-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/develop/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/develop/mockito-all-1.8.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="testdata/WebDynproProject/out"/>
+</classpath>

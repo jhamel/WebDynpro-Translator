@@ -11,17 +11,34 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class XlfFileCollectorTest {
 
-
     @Test
-    public void process() {
+    public void processFile() {
         XlfFileCollector collector = new XlfFileCollector();
         collector.processFile(new File(FixtureConstants.SAMPLE_FILE));
         assertThat(collector.words().size(), equalTo(3));
-        assertThat(collector.getWordsByLanguageKey(Locale.GERMAN).size(), equalTo(0));
-        collector.processFile(new File(FixtureConstants.SAMPLE_FILE_DE));
-        assertThat(collector.words().size(), equalTo(3));
-        System.out.println(collector.words());
-        assertThat(collector.getWordsByLanguageKey(Locale.GERMAN).size(), equalTo(3));
-        System.out.println(collector.words());
     }
+
+    @Test
+    public void wordsByDefaultLocale() {
+        XlfFileCollector collector = new XlfFileCollector();
+        collector.processFile(new File(FixtureConstants.SAMPLE_FILE));
+        assertThat(collector.getWordsByLocale(Locale.getDefault()).size(), equalTo(3));
+    }
+
+    @Test
+    public void wordsByLocale() {
+        Locale.setDefault(Locale.UK);
+        XlfFileCollector collector = new XlfFileCollector();
+        collector.processFile(new File(FixtureConstants.SAMPLE_FILE_DE));
+        assertThat(collector.getWordsByLocale(Locale.GERMAN).size(), equalTo(3));
+    }
+
+    @Test
+    public void fdfs() {
+        Locale.setDefault(Locale.UK);
+        XlfFileCollector collector = new XlfFileCollector(FixtureConstants.BASEDIR);
+        collector.scanXlfFiles();
+        assertThat(collector.getWordsByLocale(Locale.GERMAN).size(), equalTo(3));
+    }
+
 }

@@ -5,7 +5,7 @@ import java.util.Locale;
 
 public class LocaleUtil {
 
-    public static Locale languageOfFile(File file) {
+    public static Locale localeOfFile(File file) {
         if(file == null) return null;
         String localeAbbreviation = localeAbbreviationOfFile(file);
         if (localeAbbreviation.equals("")) return Locale.getDefault();

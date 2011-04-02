@@ -21,7 +21,7 @@ public class WordTest {
 
     @Test
     public void shouldBeDefaultLanguage() {
-        assertThat(LocaleUtil.languageOfFile(new File("Menge_3NK.dtsimpletype.xlf")), equalTo(Locale.getDefault()));
+        assertThat(LocaleUtil.localeOfFile(new File("Menge_3NK.dtsimpletype.xlf")), equalTo(Locale.getDefault()));
     }
 
     @Test

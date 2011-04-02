@@ -7,15 +7,14 @@ import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class LocaleUtilTest {
 
     @Test
     public void languageOfFileMatchesFilenameEnding() {
-        assertThat(LocaleUtil.languageOfFile(new File("abc.txt")), equalTo(Locale.getDefault()));
-        assertThat(LocaleUtil.languageOfFile(new File("abc_de.txt")), equalTo(Locale.GERMAN));
-        assertThat(LocaleUtil.languageOfFile(new File("abc_en.txt")), equalTo(Locale.ENGLISH));
+        assertThat(LocaleUtil.localeOfFile(new File("abc.txt")), equalTo(Locale.getDefault()));
+        assertThat(LocaleUtil.localeOfFile(new File("abc_de.txt")), equalTo(Locale.GERMAN));
+        assertThat(LocaleUtil.localeOfFile(new File("abc_en.txt")), equalTo(Locale.ENGLISH));
     }
 
 }

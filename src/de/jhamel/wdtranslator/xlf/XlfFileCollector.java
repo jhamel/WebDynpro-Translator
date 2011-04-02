@@ -73,7 +73,7 @@ public class XlfFileCollector implements FileProcessor {
 
     public List<Word> words() {
         if (words.size() > 0) return words;
-        words = getWordsByLanguageKey(Locale.getDefault());
+        words = getWordsByLocale(Locale.getDefault());
 
         for (Locale locale : translationLanguages()) {
             for (Word word : words) {
@@ -90,7 +90,7 @@ public class XlfFileCollector implements FileProcessor {
         return translationLanguages;
     }
 
-    public List<Word> getWordsByLanguageKey(Locale locale) {
+    public List<Word> getWordsByLocale(Locale locale) {
         List<Word> wordsList = xlfWordsByLocale.get(locale);
         if (wordsList == null) {
             wordsList = new ArrayList<Word>();
@@ -127,8 +127,8 @@ public class XlfFileCollector implements FileProcessor {
     }
 
     private void addByLocale(File file) {
-        Locale localeOfFile = LocaleUtil.languageOfFile(file);
-        List<Word> wordsList = getWordsByLanguageKey(localeOfFile);
+        Locale localeOfFile = LocaleUtil.localeOfFile(file);
+        List<Word> wordsList = getWordsByLocale(localeOfFile);
         wordsList.addAll(wordsInFile(file));
     }
 

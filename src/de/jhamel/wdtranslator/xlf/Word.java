@@ -32,7 +32,7 @@ public class Word {
     }
 
     public Locale getLanguage() {
-        return LocaleUtil.languageOfFile(file);
+        return LocaleUtil.localeOfFile(file);
     }
 
     public String getUniqueId() {

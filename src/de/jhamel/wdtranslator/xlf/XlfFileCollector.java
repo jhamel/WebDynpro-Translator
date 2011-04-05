@@ -14,10 +14,10 @@ public class XlfFileCollector implements FileProcessor {
     private static Logger log = Logger.getLogger(XlfFileCollector.class);
 
     private List<Word> words = new ArrayList<Word>();
-    private HashMap<File, List<Word>> xlfWordsByFile = new HashMap<File, List<Word>>();
-    private HashMap<Locale, List<Word>> xlfWordsByLocale = new HashMap<Locale, List<Word>>();
-    private HashMap<String, List<Word>> xlfWordsByWord = new HashMap<String, List<Word>>();
-    private HashMap<String, Word> xlfWordByLanguagePlusKey = new HashMap<String, Word>();
+    private HashMap<File, List<Word>> wordsByFile = new HashMap<File, List<Word>>();
+    private HashMap<Locale, List<Word>> wordsByLocale = new HashMap<Locale, List<Word>>();
+    private HashMap<String, List<Word>> wordsByText = new HashMap<String, List<Word>>();
+    private HashMap<String, Word> wordByUniqueIdentifier = new HashMap<String, Word>();
     private String basedir;
 
     public XlfFileCollector() {
@@ -61,13 +61,13 @@ public class XlfFileCollector implements FileProcessor {
         log.trace("Processing file '" + file.getName() + "'");
         addByFile(file);  // must be first add, because others depend on it
         addByLocale(file);
-        addByWord(file);
+        addByText(file);
         addByUniqueId(file);
     }
 
     private void addByUniqueId(File file) {
         for (Word word : wordsInFile(file)) {
-            xlfWordByLanguagePlusKey.put(word.getUniqueId(), word);
+            wordByUniqueIdentifier.put(word.getUniqueId(), word);
         }
     }
 
@@ -77,43 +77,43 @@ public class XlfFileCollector implements FileProcessor {
 
         for (Locale locale : translationLanguages()) {
             for (Word word : words) {
-                Word translatedWord = xlfWordByLanguagePlusKey.get(Word.generateUniqueIdentifier(locale, word.getKey()));
+                Word translatedWord = wordByUniqueIdentifier.get(Word.generateUniqueIdentifier(locale, word.getKey()));
                 if (translatedWord != null) word.addTranslation(translatedWord);
             }
         }
         return words;
     }
 
-    private Set<Locale> translationLanguages() {
-        Set<Locale> translationLanguages = xlfWordsByLocale.keySet();
+    public Set<Locale> translationLanguages() {
+        Set<Locale> translationLanguages = wordsByLocale.keySet();
         translationLanguages.remove(Locale.getDefault());
         return translationLanguages;
     }
 
     public List<Word> getWordsByLocale(Locale locale) {
-        List<Word> wordsList = xlfWordsByLocale.get(locale);
+        List<Word> wordsList = wordsByLocale.get(locale);
         if (wordsList == null) {
             wordsList = new ArrayList<Word>();
         }
-        xlfWordsByLocale.put(locale, wordsList);
+        wordsByLocale.put(locale, wordsList);
         return wordsList;
     }
 
     public List<Word> wordsInFile(File file) {
-        List<Word> wordsList = xlfWordsByFile.get(file);
+        List<Word> wordsList = wordsByFile.get(file);
         if (wordsList == null) {
             wordsList = new ArrayList<Word>();
         }
-        xlfWordsByFile.put(file, wordsList);
+        wordsByFile.put(file, wordsList);
         return wordsList;
     }
 
     public List<Word> getWordsByWord(String word) {
-        List<Word> wordsList = xlfWordsByWord.get(word);
+        List<Word> wordsList = wordsByText.get(word);
         if (wordsList == null) {
             wordsList = new ArrayList<Word>();
         }
-        xlfWordsByWord.put(word, wordsList);
+        wordsByText.put(word, wordsList);
         return wordsList;
     }
 
@@ -132,12 +132,12 @@ public class XlfFileCollector implements FileProcessor {
         wordsList.addAll(wordsInFile(file));
     }
 
-    private void addByWord(File file) {
+    private void addByText(File file) {
         List<Word> words = wordsInFile(file);
         for (Word word : words) {
             List<Word> wordsList = getWordsByWord(word.getText());
             wordsList.add(word);
-            xlfWordsByWord.put(word.getText(), wordsList);
+            wordsByText.put(word.getText(), wordsList);
         }
     }
 

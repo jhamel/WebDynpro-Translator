@@ -36,16 +36,15 @@ public class XlfFileCollectorTest {
     @Test
     public void wordsByLocaleGERMAN() {
         Locale.setDefault(Locale.UK);
-        XlfFileCollector collector = new XlfFileCollector(FixtureConstants.BASEDIR);
-        collector.scanXlfFiles();
+        XlfFileCollector collector = XlfDirectoryTraverser.collectWords(FixtureConstants.BASEDIR);
+
         assertThat(collector.getWordsByLocale(Locale.GERMAN).size(), equalTo(3));
     }
 
     @Test
     public void translationLanguages() {
         Locale.setDefault(Locale.UK);
-        XlfFileCollector collector = new XlfFileCollector(FixtureConstants.BASEDIR);
-        collector.scanXlfFiles();
+        XlfFileCollector collector = XlfDirectoryTraverser.collectWords(FixtureConstants.BASEDIR);
         assertThat(collector.translationLanguages().size(), equalTo(1));
     }
 

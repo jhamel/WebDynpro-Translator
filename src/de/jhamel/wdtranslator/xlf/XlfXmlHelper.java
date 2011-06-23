@@ -6,12 +6,12 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
+import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 import org.jdom.xpath.XPath;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+
 import java.util.List;
 
 public class XlfXmlHelper {
@@ -21,12 +21,15 @@ public class XlfXmlHelper {
 
     // fields
     private SAXBuilder builder = new SAXBuilder();
-    private XMLOutputter outputter = new XMLOutputter();
+    private XMLOutputter outputter;
     private File file;
     private Document doc;
 
     public XlfXmlHelper(File file) {
         this.file = file;
+        Format format = Format.getRawFormat();
+        format.setEncoding("UTF-8");
+        outputter = new XMLOutputter(format);
         initJdomDocument(file);
     }
 
@@ -41,12 +44,19 @@ public class XlfXmlHelper {
     }
 
     public void replaceValueOfSourceElement(String id, String newValue) {
+        if (newValue.contains("Währung")) {
+System.out.println("--"+file.getAbsolutePath());
+        }
         Element element = findElementById(id);
         String currentTextValueInFile = element.getText();
 
         log.trace("Try storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
 
-        if (currentTextValueInFile.equals(newValue)) log.trace("No change, skip storing.");
+        if (currentTextValueInFile.equals(newValue)) {
+            log.trace("No change, skip storing.");
+            return;
+        }
+        System.out.println("Try storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
 
         log.debug("Storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
         element.setText(newValue);
@@ -79,8 +89,12 @@ public class XlfXmlHelper {
     }
 
     public void store() {
+        System.out.println(file);
         try {
-            outputter.output(doc, new FileWriter(file));
+
+            outputter.output(doc, new OutputStreamWriter(new FileOutputStream(file), "UTF8"));
+
+            //outputter.output(doc, System.out);
         } catch (IOException e) {
             throw new TechnicalException("Could not store '" + file.getAbsolutePath() + "'.", e);
         }

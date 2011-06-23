@@ -5,6 +5,14 @@ import java.util.Locale;
 
 public class LocaleUtil {
 
+    public static String localizeFilename(String filename,Locale language){
+        if(filename.isEmpty()) return filename;
+        int indexOfLastPoint = filename.lastIndexOf(".");
+        String filenameUntilPoint = filename.substring(0,indexOfLastPoint);
+        String filenameAfterPoint = filename.substring(indexOfLastPoint);
+        return filenameUntilPoint+"_"+language+filenameAfterPoint;
+    }
+
     public static Locale localeOfFile(File file) {
         if(file == null) return null;
         String localeAbbreviation = localeAbbreviationOfFile(file);

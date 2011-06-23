@@ -7,12 +7,13 @@ import org.apache.log4j.Logger;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.Collection;
+import java.util.Locale;
 
 public class CsvWriter {
     private static Logger log = Logger.getLogger(CsvWriter.class);
 
-    public static void writeToCsvFile(String filename, List<Word> words) {
+    public static void writeToCsvFile(String filename, Collection<Word> words, Locale locale) {
         BufferedWriter out = null;
         try {
             out = new BufferedWriter(new FileWriter(filename));

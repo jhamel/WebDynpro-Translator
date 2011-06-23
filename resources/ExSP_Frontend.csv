@@ -1,0 +1,682 @@
+Es muss mindestens ein Status ausgewählt werden.;Veuillez sélectionner au moins un statut.
+Leistungsaufmassnr. suchen;Rechercher le n° de fourniture de service
+Übernehmen;Accepter 
+Alle Materialanforderungen für den Druck aktivieren;Activer toutes les demandes d'articles en vue de leur impression
+Buchungskreis;Code de société
+Dialog schließen;Fermer la boîte de dialogue
+Meldungsbereich immer expandiert anzeigen;Toujours afficher la zone de message étendue
+Es wurde keine Leistungsaufmaßnr. übergeben. Deshalb werden keine Detaildaten angezeigt.;Aucun n° de fourniture de service n'a été indiqué, si bien qu'aucune donnée détaillée n'est affichée.
+Basis ME;Unité de base
+Leistung;Activité
+Suche Starten;Lancer une recherche
+zurückgezogen;retiré
+Es ist ein unerklärbares Problem aufgetreten. Die Operation {0} wurde im Backend erfolgreich ausgeführt. Es wurde jedoch kein Objekt zurückgeliefert. \r\nBitte verständigen Sie den Anwendungssupport.;Un problème inattendu s'est produit. L'opération {0} a été effectuée avec succès dans Backend. Aucun objet n'a cependant été renvoyé. \r\nVeuillez vous reporter au manuel d'utilisation.
+Lagerortnr.;N° de dépôt
+Lagerortnummer;Numéro de dépôt
+Freigabe;Validation
+Neu;Nouveau
+Bestellübersicht;Aperçu de commande
+Es sind Zeilen mit 0,00 {0} vorhanden. Wollen Sie freigeben?;Il existe des lignes avec 0,00 {0}. Souhaitez-vous valider ?
+Ausschreibung Drucken;Imprimer la soumission
+Entnahmemenge;Quantité reçue
+Konsignationslieferant;Fournisseur en consigne
+Rückbuch.;Reprise
+Art-Icon;Icône article
+Auswahl übernehmen;Accepter la sélection
+Name einer Einkäuferorganisation;Nom d'une organisation d'achat
+Andere Bestellung suchen;Rechercher une autre commande
+Version 1.0;Version 1.0
+Telefax 1;Télécopie 1
+Materialrücklieferung Drucken;Imprimer un renvoi d'article
+"Das ""von"" Datum muss kleiner oder gleich dem ""bis"" Datum sein.";"La date ""du"" doit être antérieure ou égale à la date ""au""."
+Name (Kurztext) des Service Providers;Nom (abrégé) du fournisseur de services
+Bestand ReVU - Material anzeigen;Affichage du stock d'articles EAR
+Telefonnummer;Numéro de téléphone
+Schließen;Fermer
+-;-
+Teilaufmaß;fourniture partielle
+bis;à
+Anford.;Cond.
+Legt die Anzahl neu anzulegender Positionen fest;Détermine le nombre de postes nouvellement créés
+Chargenpflicht von Materialien;Charge d'articles
+Definiert den Ort der Leistungserbringung;Définit l'emplacement où se déroule l'activité
+Zurück;Retour
+A;A
+Der Dialog muss aus technischen Gründen angezeigt werden;Le dialogue doit être affiché pour des raisons techniques
+Struktur für den PDF-Report Materialanforderung auf DLLO;Structure des conditions matérielles du rapport PDF à l'emplacement du dépôt du fournisseur de services
+Offene Lieferungen anzeigen;Affichage des livraisons en attente
+Bestandsübersicht;Aperçu du stock
+Ausschreibungsplattform;Plate-forme de soumission
+Typ;Type
+neu;nouveau
+Auswahl Dienstleisterlagerort für Materialabrechnung;Sélection d'un dépôt de fournisseur de services pour la comptabilité articles
+Kenz. Enderfassung;Indiq. version finale
+Langtext des Leistungsaufmasses;Texte complet de la mesure d'activité
+Materialabrechnung Drucken;Imprimer la comptabilité article
+Abw. Wert zu LA;Valeur diff. de la fourniture de services
+Technische Druckansicht;Visualisation technique
+Zeile;Ligne
+Verfallsdatum Charge;Date d'échéance charge
+akt. Anz. / max. Anz. Abrechnungen;qté act. / qté max. règlements
+Sichern;Garantir
+Mat.-Aufmaßnnr.;N° de fourniture art.
+Menge am zentralen Lagerort;Quantité au dépôt central
+Materialaufmaße zur Bestellung;Fourniture d'article pour commande
+Menge;Quantité
+Lösche Position;Supprimer un poste
+ext. Nummer;Numéro ext.
+DL-LO;Emplacement du dépôt du fournisseur de services
+Werk;Usine
+Der von Ihnen eingegebene Text kann nicht in ein Datum umgewandelt werden. Bitte überprüfen Sie die Eingabe.;Le texte fourni ne peut pas être converti en date. Veuillez vérifier la saisie.
+"Status ""offen""";"Statut ""en attente"""
+Keine Nullzeilen;Aucune ligne nulle
+Ausschreibung absagen;Refuser la soumission
+Aufmaßnr.;N° de fourniture
+Priorität;Priorité
+Materialselektion;Sélection d'article
+angenommen;accepté
+Submissionsnummer;Numéro de soumission
+Name einer Einkäufergruppe;Nom d'un groupe d'acheteurs
+v;v
+Art;Type
+Sind Sie sicher, dass Sie ein Nullblatt erzeugen wollen? \r\nDanach kann kein weiteres Leistungsaufmaß für diese Bestellposition mehr angelegt werden.;Êtes-vous certain de vouloir créer une feuille blanche ? \r\nIl ne sera ensuite plus possible d'ajouter une autre fourniture de services à cette rubrique de commande.
+ServiceLine: 0800 - 10 333 01;Aide en ligne : 0800 - 10 333 01
+Zum Beleg;Vers le document
+Sie haben keine Berechtigung auf die Anwendung zuzugreifen. Bitte verständigen Sie Ihren Administrator;Vous n'êtes pas autorisé à utiliser l'application. Veuillez contacter votre Administrateur
+Mitteilungen ({0});Messages ({0})
+Aufmassnr.;N° de fourniture
+LA-Beleg;Document de fourniture de services
+Ausschreibungen;Soumissions
+Tel. Nr.;N° tél.
+Position einer Beauftragung (Bestellung);Article d'une cession (commande)
+Best.Nr.;N° cde
+EON Rot;EON Rouge
+Dokument herunterladen;Télécharger un document
+Abgeruf. Menge;Qté invoquée
+Name der Einkäufergruppe;Nom du groupe d'acheteurs
+MA-Status;Statut de fourniture d'article
+Ausschreibung Bearbeiten;Traiter une soumission
+Reserviert;Réservé
+Abnahmedatum;Date d'acceptation
+Ablehnung;Refus
+Übersicht;Aperçu
+Materialnummer;Numéro d'article
+Datum;Date
+Anlieferungsadresse;Adresse de livraison
+Bestellungen drucken;Imprimer les commandes
+ServiceLine der E.ON IS;Aide en ligne d'E.ON IS
+Sammelauswahl;Sélection groupée
+Dateiname;Nom de fichier
+Preise immer mit 2 NK-Stellen anzeigen;Toujours afficher les prix avec 2 décimales
+Lieferantendetails;Détails des fournisseurs
+Kurztext in der Materialanforderung auf DLLO;Texte abrégé dans la demande d'article à l'emplacement du dépôt du fournisseur de services
+Telefax;Télécopie
+Zur Aufmaßerfassung;Vers la création de fourniture
+vorläufige Menge;Quantité provisoire
+Ausschreibungen anzeigen;Afficher les soumissions
+Neue Suche;Nouvelle recherche
+(gesperrt);(sauvegardé)
+Materialanforderungsnr.;N° de demande d'article
+E.ON @ future;E.ON @ future
+Nehmen Sie hier Einstellungen vor, die für die gesamte Anwendung gültig sind.;Utilisez ici les paramètres qui sont valables pour l'ensemble de l'application.
+Zum Aktionsportal;Vers le portail de l'action
+Mat.-Aufmaß Kurztext;Texte abrégé de fourniture art. 
+Aufmaßart;Type de fourniture
+Ausschreibung anzeigen;Afficher une soumission
+Zur Materialanforderung auf DL LO;Vers la demande d'article sur l'emplacement du dépôt du fournisseur de services
+Lieferantennummer;Numéro de fournisseur
+Anforderungsübersicht;Aperçu de demande
+Mengeneinheit;Unité de mesure de quantité
+Anforderung;Demande
+Leistungsnummer;Numéro de fourniture 
+Lagerortauswahl Materialanforderung;Sélection de dépôt de demande d'article
+beschreibender Text der hochzuladenden Datei;Texte descriptif du fichier en cours de téléchargement
+Gesamtmenge;Quantité globale
+Materialaufmaß mit Pl;Fourniture d'article avec PI 
+Posnr;N° de poste
+Es erfolgt die Anzeige von durch den DL abgelehnten bzw. bestätigten Bestellungen;Vient ensuite l'affichage des commandes refusées ou confirmées via le fournisseur de services
+Bestellannahme;Prise de commande
+Für die Bestellposition ({0}, {1}) sind keine Planleistungen vorhanden.;Aucune fourniture n'est prévue pour les postes de commande ({0}, {1}).
+Angebotsnummer;Numéro d'offre
+Straße;Rue
+Angebot;Offre
+Benutzer;Utilisateur
+verf. Menge;Quantité disponible
+Aufmaßdetails;Détails de la fourniture
+Einkaufsgruppe;Groupe d'achat
+gesicherte Menge;Quantité assurée
+Eindeutige ID einer Firma des Gesellschaftsmodells;ID unique d'une société du modèle de société
+Dokumente des Auftraggebers;Documents du donneur d'ordres
+Haupt-Menü;Menu principal
+in Abnahme;en diminution
+Berichtswesen;Reporting
+Status existiert nicht für die Materialrückbuchung;Ce statut n'existe pas pour la reprise d'article
+Bestellungsansicht;Aperçu de commande
+Definiert einen kurzen, beschreibenden Text des Leistungsaufmasses;Comporte un texte descriptif abrégé de la fourniture de services
+Zeitraum;Durée
+Kurztext;Texte abrégé
+Erneutes Lesen der Komponentensteuerung aus dem Backend-System.;Nouvelle lecture du contrôle de composants du système Backend.
+Belegnummer;Numéro de document
+Beim Anlegen neuer Leistungsaufmaßpositionen ist ein Fehler aufgetreten.\r\nBitte informieren Sie den Administrator;Une erreur s'est produite lors de l'ajout d'une nouvelle fourniture de services\r\nVeuillez en informer l'administrateur
+ausführlicher Text;Texte complet
+Ausschreibung Downloaden;Télécharger la soumission
+Anzahl neuer Positionen in Leistungs- und Materialaufmass;Nombre de nouveaux postes dans la fourniture de services et d'article s
+Priorität einer Mitteilung;Priorité d'un message
+Ch. pflicht;Devoir ch. 
+Inhalt;Contenu
+Materialanforderungen suchen;Chercher les demandes d'articles
+Einstellungen;Paramètres
+BestellMenge;Quantité de commande
+Bestandsübersicht Suchen;Rechercher un aperçu de stock
+Position;Poste
+Materialanforderung suchen;Rechercher une demande d'article
+PLZ;Code postal
+Abgeschlossen;Achevé
+Stammdaten DL;Données de base du fournisseur de services
+Icon;Icône
+Andere Bestellung auswählen;Sélectionner une autre commande
+Bitte geben Sie eine Leistungsaufmaßnummer ein.;Veuillez saisir un numéro de fourniture de services.
+Weitere Positionen;Autres postes
+Löschkz.;Indicateur suppr.
+WA-Belegnr.;N° de doc de fourniture du matériel
+Aufmaß Details;Détails de fourniture
+Tech. Verantwortlicher;Resp.  technique 
+Firmendaten neu laden;Charger à nouveau les données de l'entreprise
+MA-Nr.;N° d'article
+Auftrag bestätigen;Confirmer le contrat
+Freigegeben;Validé
+Abrufe gegen Kontrakte;Appels sur contrats
+Bestellungen anzeigen;Afficher les commandes
+Leistungsaufmaß Nr.;N° de fourniture de services 
+DL-LO Bez.;Description Dépôt du fournisseur de services
+ME;Unité de quantité
+(Dieser Dialog musste aus technischen Gründen angezeigt werden.);(Ce dialogue a dû être affiché pour des raisons techniques.)
+Protokollerfassung zum PM-Auftrag;Création de protocole vers commande PM
+Allgemeine Daten;Données générales
+Anwendungskomponente ist nicht freigegeben.;Les composants d'utilisation ne sont pas validés.
+Neues Aufmass anlegen;Ajouter une autre fourniture
+-->;-->
+Suche starten;Lancer une recherche
+gesichert;garanti
+Aufmaß Nr.;N° de fourniture
+Ausschreibungsübersicht;Aperçu de soumission
+Mg.Einh.;Unité de quantité
+Charge;Charge
+E-Mail;E-mail
+Nr. Gutschrift;N° de crédit
+Zum Berichtswesen;Vers le reporting
+Nr. Extern;N° externe
+Gesamtaufmaß;fourniture globale 
+Preis;Prix
+Offene Lieferungen drucken;Imprimer les livraisons en attente
+Freigabedatum;Date de validation
+Abrufe;Appels
+Falls Sie Probleme mit der Anwendung haben, setzen Sie sich bitte mit unserer ServiceLine in Verbindung.;En cas de problèmes d'utilisation, veuillez contacter notre aide en ligne.
+Aktionsportal;Portail d'action
+Interner Fehler: Plug {0} nicht gefunden.;Erreur interne : Plug {0} non trouvé.
+LA-Wert;Valeur de fourniture de services
+"Sie haben über den URL Parameter ""authtoken"" eingestellt, dass Sie die R3-Zugangsdaten explizit definieren möchten. Dieser Dialog gibt Ihnen hierzu Gelegenheit";"Vous avez indiqué sur le paramètre URL ""authtoken"", que vous souhaitez définir les données d'accès à R3 de façon explicite. Ce dialogue vous permet de le faire"
+Materialanforderungen anzeigen;Afficher les demandes d'articles
+gültig bis;valable jusqu'au
+Ausschreibung;Soumission
+Auftragsbestätigungen anzeigen;Afficher les confirmations de commandes
+Bitte wählen Sie Werk und Lagerort für die Materialanforderung aus;Veuillez sélectionner l'usine et le dépôt de la demande d'article
+Details anzeigen;Afficher les détails
+Auftragsbestätigungen suchen;Chercher les confirmations de commande
+Werk- und Lagerortauswahl;Sélection d'usine et de dépôt
+Bei der Ermittlung der Gesellschaftsdaten ist ein Fehler aufgetreten. Der Dienstleister Kurztext kann nicht angezeigt werden.;Une erreur s'est produite lors de la communication des données de l'entreprise. Impossible d'afficher le texte abrégé du fournisseur de services.
+Kommunikationsplattform;Plate-forme de communication
+Absagen;Refuser
+Kontrakt / Muster-LV;Contrat/Modèle de spécification de service
+Einkäufergr.;Gpe acheteurs
+Aufgrund eines Timeout Problems wurde eine neue Session Bean erzeugt und anschließend versucht die Operation erneut auszuführen. Es wurde jedoch keine auszuführende Methode definiert.;En raison d'un problème de timeout, le système a créé une nouvelle Session Bean puis a de nouveau tenté d'effectuer l'opération. Aucune méthode particulière n'a cependant été définie.
+Leistungsaufmassdetails anzeigen;Afficher les détails de fourniture de services 
+Einkäufer;Acheteur
+Menge zentr. LO;Qté dépôt central
+Werksnummer;Numéro d'usine
+Bestellung;Commande
+Erfa. Datum;Date  créat. 
+Preis je ME;Prix par unité de quantité
+Nummer;Numéro
+Werke / Lagerorte;Usines/Dépôts
+Aufmaß Direkterfassung;Création directe de fourniture 
+Frei verwendbarer Bestand;Stock en accès libre
+Abn. Datum;Date  acc. 
+Ok;Ok
+Anforderung pflegen;Traiter la demande
+Reservierungendetails;Détails de réservation
+Übersicht Auftragsbestätigung;Aperçu confirmation de commande
+Weiter;Suite
+Mat.-Rückgabe;Retour art.
+Nein;Non
+Der Status existiert in der Materialrücklieferung nicht;Ce statut n'existe pas dans le retour d'article
+Werknr.;N° d'usine
+Anfrageart;Type de question
+Anfragenummer;Numéro de question
+Alle Bestellungen für den Druck aktivieren;Activer toutes les commandes en vue de leur impression
+Positionsdetails;Détails du poste
+Bestellnummer;Numéro de commande
+Nr. eines Leistungsaufmasses;N° d'une fourniture de service  
+Liest die aktuellen Daten neu ein und aktualisiert daraufhin die Anzeige;Relit les données actuelles et met ensuite à jour l'affichage
+Bu.dat Gutschrift;Crédit Bu.dat 
+Allgemeiner Mengentyp;Type de quantité général
+Submission;Soumission
+Firma: {0}, EKOrg: {1}, Dienstleister: {2}, SID: {3}, Mandant: {4};Enterprise : {0}, Organisation d'achat : {1}, Fournisseur : {2}, SID: {3}, Mandataire : {4}
+Gültig bis;Valable jusqu'au
+Andere Materialanforderung auswählen;Sélectionner une autre demande d'article
+Suchen;Rechercher
+Leistungsaufmaßnummer suchen;Rechercher un numéro de fourniture de services 
+Erfassungsblatt;Feuille de création
+Belegdatum;Date du document
+Beschreibung;Description
+Mat.-Endaufmaß;Fourniture finale art. 
+Bitte wählen Sie einen Zentrallagerort aus;Veuillez sélectionner un dépôt central
+Die ID des angemeldeten Benutzers konnte nicht ermittelt werden.;L'ID de l'utilisateur indiqué n'a pas pu être communiqué.
+Beim Versuch die Methode {0} aus dem Hauptmenü aufzurufen, ist ein Fehler aufgetreten. Sollte der Fehler wiederholt auftreten, verständigen Sie bitte den Support.;Une erreur s'est produite lors d'une tentative pour invoquer la méthode {0} à partir du menu principal. Si l'erreur se reproduit, veuillez consulter l'assistance.
+Angebot bearbeiten;Traiter l'offre
+Reservierung;Réservation
+Bitte liefern Sie an folgende Adresse;Veuillez livrer à l'adresse suivante
+akt. Anz. / max. Anz. Rücklieferungen;qté act. / qté maxi retours
+Bitte wählen Sie zunächst ein Dokument aus.;Veuillez ensuite sélectionner un document.
+Lagerort;Dépôt
+Menge der Materialanforderungsposition;Quantité du poste de la demande d'article
+Abgebot;Procédure d'évaluation
+Standard;Standard
+Abladestelle oder abweichende Lieferanschrift;Emplacement de déchargement ou autre adresse de livraison
+Zur Bestellannahme;Vers la prise de commande
+Materialrücklieferung;Retour d'article
+Buchungsdatum Gutschr.;Date d'enreg. crédit
+Einkaufsbeleg;Document d'achat
+Bitte geben Sie zunächst alle Leistungsaufmaße frei, bevor Sie einen neuen Beleg anlegen.;Veuillez valider toutes les fournitures de services, avant d'ajouter un nouveau document. 
+Warenempfänger;Destinataire des marchandises
+verfügbare Menge;Quantité disponible
+Wählen Sie einen Absagegrund aus;Veuillez sélectionner un motif de refus
+40 Zeichen Langtext;Texte complet de 40 caractères
+Neuen Beleg anlegen;Ajouter un document
+Beauftragungsübersicht aus dem Extranet Dienstleister;Aperçu de mise en service en provenance de l'extranet du fournisseur
+Sammelauswahl Materialien;Sélection groupée d'articles
+Lieferdatum;Date de livraison
+Zur Ausschreibungsplattform;Vers la plate-forme de soumission
+Materialendaufmaßkennzeichen setzen;Définir les caractéristiques des fournitures d'articles 
+Währung;Devise
+EK-Org.;Organisation d'achat
+abgesagt;refusé
+Reservierungsdetails;Détails de réservation
+Reservierungsnummer;Numéro de réservation
+Bedarfstermin;Date de livraison souhaitée
+Betreff;Objet
+Eindeutige ID eines Service Providers (Dienstleisters);ID unique d'un fournisseur de services
+Alle markieren;Marquer tout
+Sie haben Änderungen an der Ausschreibung vorgenommen. Wollen Sie diese verwerfen?;Vous avez introduit des modifications à la soumission. Souhaitez-vous les annuler ?
+Ja;Oui
+EK-Gruppe;Groupe d'achat
+KA1;Commande client 1
+Anz. sichtb. Zeilen;Affich. les lignes visibles
+KA2;Commande client 2
+Positionen;Postes
+Firmennr.;N° entr.
+Absprünge;Branches
+Anforderer;Demandeur
+Freigeben;Valider
+Dateibeschreibung;Description de fichier
+Bestellnr.;N° cde
+Materialkatalog;Catalogue d'articles
+PDF;PDF
+Meldung;Message
+Auswahl Dienstleisterlagerort für Materialrückbuchung;Sélection du dépôt de fournisseur de services pour reprise d'articles
+Offene Lieferungen suchen;Rechercher les livraisons en attente
+Warenausgangdetails;Détails de sortie de marchandises
+Materialanforderung auf DLLO Drucken;Imprimer une demande d'article sur emplacement du dépôt fournisseur
+externer Sachbearbeiter;Technicien externe
+Abweichende Lieferanschrift;Autre adresse de livraison
+Bestätigung sichern;Garantir la confirmation
+offen;en attente
+Reservierungsnr.;N° de réservation
+Einkausorganisation;Organisation d'achat
+Texte des AG;Textes de l'AG
+Wollen sie die Ausschreibung wirklich absagen?;Souhaitez-vous vraiment refuser la soumission ?
+Die aktuelle Leistungsposition ist leer. Bitte geben sie eine Leistungsnummer und Menge ein.;Le poste de fourniture actuel est vide. Veuillez indiquer un numéro de fourniture et une quantité.
+LE;Entrée de service
+Bestellwert;Valeur de commande
+Bearbeitungsstatus;Statut de traitement
+Gesamtnettowert;Valeur nette globale
+Telefon 1;Tél. 1
+Fehler bei der Zuordnung von Werk und Lagerort. Sind Werke und Lagerorte für den Dienstleister definiert?;Erreur dans l'attribution de l'usine et du dépôt. Les usines et les dépôts de ce fournisseur de services sont-ils définis ?
+Offen;En attente
+Mehrfachselektion von Materialien;Sélection multiple d'articles
+Gesamtbestellwert;Valeur de commande globale
+Aufmasse;fournitures
+Pos. Nr.;N° de poste
+Leistungsaufmaß;Fourniture de services
+Gepl. Menge;Qté  prévue 
+Währ.;Devise
+Gesamtwert (Netto);Valeur globale (nette)
+Nr. Freistellungsbescheinigung;N° de certificat d'exemption
+Whrg;Devise
+Leistungsaufmaße;Fournitures de service 
+Abbrechen;Interrompre
+Bestellposition;Poste de commande
+Materialaufmaß zur Bestellung Suchen;Rechercher la fourniture d'article à commander 
+Herunterladen;Télécharger
+Es muss mindestens eine Bestellung ausgewählt werden.;Veuillez sélectionner au moins une commande.
+Anz. neuer Positionen;Nbre de nouveaux postes
+Mat.-nr;N° art.
+Stand Materiallieferung anzeigen;Afficher l'état de livraison des articles
+Chargennummer;Numéro de charge
+Liste offener Lieferungen anzeigen;Afficher la liste des livraisons en attente
+bestellt;commandé
+Materialaufmaß zur Bestellung drucken;Imprimer la fourniture d'articles à commander
+Externe Bearbeitungsnummer des Leistungsaufmasses;Numéro de traitement externe de la fourniture de services 
+Materialanforderung auf DL-LO;Demande d'article au dépôt fournisseur
+Buchungsdatum;Date d'enregistrement
+Wert LE-Blatt;Feuille d'entrée de la valeur du service
+Nachricht;Rapport
+Bestellmenge;Quantité commandée
+Gülitg bis;Valable jusqu'au
+Suche;Recherche
+Angebotsart;Début de l'offre
+Das PDF-Dokument kann nicht angezeigt werden.;Le document PDF ne peut pas être affiché.
+Die Bestellnr. {0} wurde nicht gefunden.;Le n° de commande {0} n'a pas été trouvé.
+Fehler beim Aufruf der Methode {0} des Component Controllers. Details: {1}. Weitere Details entnehmen Sie den Logdateien.;Erreur lors de l'invocation de la méthode {0} du Component Controller. Détails : {1}. Vous trouverez plus de détails dans les fichiers-journaux.
+Nullblatt;Feuille vierge
+Wert pro Mengeneinheit;Valeur par unité de mesure de quantité
+Offene Lieferungen;Livraisons en attente
+Materialabrechnung drucken;Imprimer la comptabilité article
+Bew. erlaubt;Doc. autorisé
+Benutzerkennung;ID utilisateur
+E.ON @ Future Beschaffungsprozess Netzbauleistung Extranet Dienstleister;E.ON @ Futur processus d'approvisionnement construction de réseau Extranet pour fournisseur de services
+Rücklieferung;Retour
+Herrunterladen;Télécharger
+Für das chargenpflichtige Material {0} wurde keine Charge definiert.;Aucune charge n'a été définie pour l'article soumis à charge {0}.
+"Status ""abgeschlossen""";"Statut ""achevé"""
+Materialaufmaß zur Bestellung anzeigen;Afficher la fourniture d'articles à commander 
+akt. Anz. / max. Anz. Rückbuchungen;qté act. / qté maxi reprises
+Es gibt keine ausgewählte aktuelle Materialanforderung, deren Daten gelesen werden könnten.;Impossible de lire les données des demandes d'articles actuellement sélectionnées.
+Bitte geben Sie eine Reservierungsnummer ein.;Veuillez saisir un numéro de réservation.
+Meldungen;Messages
+Es erfolgt die Anzeige von durch den DL angenommenen bzw. abgelehnten Anfragen;Vient ensuite l'affichage des questions acceptées ou refusées via le fournisseur de services
+hoch;élevé
+Charge in Abrechnung oder Anforderung verwendet;La charge devient une facture ou demande
+Materialanforderungsübersicht;Aperçu des demandes de fournitures
+Bitte klicken Sie auf folgenden Link, um die Datei auf Ihren Computer herunterzuladen;Veuillez cliquer sur le lien suivant afin de télécharger le fichier sur votre ordinateur
+Der Status existiert in der Materialabrechnung nicht;Ce statut n'existe pas dans la comptabilité articles
+Unternehmen;Entreprise
+Anlieferadresse;Adresse de livraison
+Sie haben die Möglichkeit für die unten aufgeführten Regionalen Versorgungsunternehmen (ReVU) Daten zu erfassen.;Vous avez la possibilité de saisir des données pour les entreprises d'approvisionnement régionales (EAR) indiquées ci-dessous.
+(gelöscht);(supprimé)
+Anfragetyp;Type de question
+Liste der Ausschreibungen;Liste des soumissions
+Werksbez.;Descr. usine
+Hochladen;Télécharger
+Bestellung bearbeiten;Traiter une commande
+Anrede;Titre
+Leistungsort;Lieu de fourniture
+Eindeutige Nr. einer Bestellung;N° unique d'une commande
+Suche Materialaufmaß zur Bestellung;Recherche de fourniture d'articles à commander 
+Mehrfachselektion von Leistungen;Sélection multiple de fournitures
+Leistungsaufmassnr.;N° de fourniture services
+Wert Gutschr.;Valeur de crédit
+Lagerorttext;Texte dépôt
+Anzeige von Leistungsaufmaßen und Gutschriften zu Bestellungen, welche selektiert werden können;Affichage de fournitures de services et crédits des commandes qui ont pu être sélectionnées.
+Benutzername;Nom de l'utilisateur
+Dokumentenstruktur des R/3 DMS;Structure des documents du système R/3 DMS
+Komponentensteuerung lesen;Lecture de contrôle de composants
+Materialrückgaben;Retours d'articles
+Beenden;Terminer
+Aufmaß Status;Statut de la fourniture
+Aufmass Kennzeichen;Signaler la fourniture
+MEAKZ setzen;Fixer les indicateurs de fin de fourniture de l'article 
+Neue Position;Nouveau poste
+erledigt;effectué
+Muster-LV;Modèle de spécification de service
+Reservierungsdaten bearbeiten / anzeigen;Traiter/afficher les dates de réservation
+LE-Blatt;Feuille d'entrée de service
+Belegart;Type de document
+Leistungsaufmaß kann nicht gelesen werden. Die Pos. enthält keine Leistungsaufmaße.;Impossible de lire la fourniture de services. Le poste ne comporte pas de fourniture de services.
+Anfrage;Question
+Planleistungen abrufen;Invoquer les fournitures planifiées
+Erfassung;Saisie
+Einkäuferorganisation;Organisation d'acheteurs
+Mat.-bezeichnung;Description art.
+Wollen Sie alle noch offenen Planleistungen jetzt tatsächlich abrufen?;Souhaitez-vous vraiment invoquer maintenant toutes les fournitures prévues encore en attente ?
+Vorname;Prénom
+gering;faible
+Nachname;Nom
+Menge am Dienstleister Lagerort;Quantité au dépôt central du fournisseur
+Bestellung Suchen;Rechercher une commande
+Die Angebotsnr. {0} wurde nicht gefunden.;Le n° d'offre {0} n'a pas été trouvé.
+Basisdatum;Date de base
+Zum Dokument;Vers le document
+Bestelllnummer;Numéro de commande
+Materialendaufmaßkennzeichen ist gesetzt;La fourniture d'article est cochée 
+Materialanforderungen drucken;Imprimer les demandes d'articles
+Anz. sichtbarer Zeilen;Affich. les lignes visibles
+Dokumente des AG;Document de l'AG
+Anforderung anlegen;Ajouter une demande
+Direktsuche;Recherche directe
+Gesichert;Garanti
+Materialanforderung auf ZL Drucken;Imprimer une demande d'article au dépôt central
+Materialabrechnung;Comptabilité article
+Bestelldatum;Date de commande
+Materialaufmass anzeigen;Afficher les fournitures d'articles 
+Ausschreibungen bearbeiten;Traiter les soumissions
+Absagegrund;Motif de refus
+Folgende Auswertungen sind möglich:;Les valeurs suivantes sont possibles :
+Zurück zur Übersicht;Retour à l'aperçu
+Positionskurztext;Texte abrégé du poste
+Sachb. extern;Techn. ext.
+WEMPF;Destinataire des marchandises
+Beim Herunterladen des Dokumentes ist ein Fehler aufgetreten.\r\nFehlerdetails: {0};Une erreur s'est produite lors du téléchargement du document.\r\nDétails de l'erreur : {0}
+freigegeben;valider
+Lagerortbez.;Descr. du dépôt
+Materialaufmaß zur Bestellung Übersicht;Aperçu de fourniture d'articles à commander
+Wert / ME;Valeur/Unité de quantité
+Ergebnis Materialanforderung auf Dienstleisterlagerort;Résultat de demande d'article sur dépôt de fournisseur de services
+Chargenpflicht eines Materials;Charges d'un article
+Start;Démarrage
+Anz. neuer DL-Positionen;Affich. nouveaux postes fournisseur de services
+Lösche Leistung;Effacer une fourniture
+Material;Article
+Bereitstellung für DL-LO;Préparation pour emplacement de dépôt de fournisseur de services
+Bestellungen suchen;Rechercher des commandes
+Planleistungen;Fournitures planifiées
+Datum 2 (Datum zur freien Verwendung);Date 2 (date d'accès libre)
+Aufmaß erfassen;Saisir une fourniture
+Technisches Regelwerk;Réglementation technique
+Basistermin;Date de base
+Positionsnummer;Numéro de poste
+Endaufmaß;Fourniture finale 
+Lagerortauswahl Materialrücklieferung;Sélection de dépôt de reprise d'article
+Name 2;Nom 2
+Name 1;Nom 1
+Abnahme;Diminution
+Rücklieferung;Retour
+ges. Menge;Qté gar.
+icon;icône
+Materialanforderung auf DL-LO suchen;Rechercher une demande d'article sur l'emplacement du dépôt de fournisseur de services
+Bestellbezogene Materialanforderungen vornehmen;Sélectionner des demandes d'articles liées à la commande
+Dokumente zum LA;Documents pour la fourniture de services
+Pos.;Pos.
+Ergebnis Bestellsuche;Résultat de recherche de commande
+Einkaufsorganisation;Organisation achat
+Aufmassart;Type de fourniture
+Lieferanten;Fournisseurs
+Ch.pflicht;Devoir de gestion de charge
+Name der Einkäuferorganisation;Nom de l'organisation d'achat
+Eindeutige Nummer einer Firma;Numéro unique d'une entreprise
+Status;Statut
+Filter für Leistungsnummer;Filtre pour numéro de fourniture
+Menge DL-LO;Quantité dépôt fournisseur de services
+Abgenommen;Diminué
+abgenommen;diminué
+Lieferanschrift;Adresse de livraison
+R/3 Logon Daten;Données de connexion à R/3
+Rückbuchung;Reprise
+Bezeichnung;Description
+Angebotsfrist;Durée de l'offre
+Drucken;Imprimer
+Das Freigeben eines Leistungsaufmaßes ohne Aufmaßpositionen ist nicht möglich.;La validation d'une fourniture de service sans poste de fourniture n'est pas possible.
+Anwendungs-Ids zum Dienstleister wurden neu gelesen.;Les ID d'utilisation du fournisseur de services ont été relues.
+Bitte wählen Sie das gewünschte ReVU aus.;Veuillez sélectionner l'EAR souhaitée.
+Materialrückgabe;Retour d'article
+Das Löschen der Leistungsnummer ist nicht erlaubt.;La suppression du numéro de fourniture n'est pas permise.
+Es ist keine Bestellung zum Drucken markiert.;Aucune commande n'est signalée pour l'impression.
+Bitte Planleistungen abrufen.;Veuillez invoquer les fournitures planifiées.
+Bedarfsnummer;Numéro de besoin
+MusterLV;Modèle de spécification du service
+Materialendaufmaßkennzeichen gesetzt;Fournitures d'articles cochées 
+Abrechnung;Comptabilité
+Auswahl löschen;Supprimer la sélection
+Datum der Bestellung;Date de la commande
+Grafik;Graphique
+{0} ({1}, {2});{0} ({1}, {2})
+R/3 Kennwort;Mot de passe R/3
+Rückbuchung;Reprise
+Leist. Ort;Lieu de prest. 
+Bestellung suchen;Rechercher une commande
+Definiert die abweichende Lieferanschrift (auch Abladestelle);Définit l'autre adresse de livraison (ainsi que le lieu de déchargement)
+Leistungsaufmassnummer;Numéro de fourniture de service
+Zu- / Abschlag [%];[%] augmentation/diminution
+Anzahl sichtbarer Zeilen der Tabelle;Nombre de lignes visibles du tableau
+Hier werden Programmmeldungen angezeigt. Klappen Sie den Bereich ggf. auf.;Ici sont affichés les messages du programme. Déplacez la zone si nécessaire.
+WA-Jahr;Année de sortie des marchandises
+Mengen in der Materialanforderungspos. dürfen nur pos. sein;Les quantités dans le poste de demande d'articles doivent être impérativement positives.
+Zuschlag oder Abschlag in Prozent;Augmentation ou diminution en pourcentage
+Anwendungseinstellungen;Paramètres de l'application
+abgelehnt;refusé
+Zurück zur Materialselektion;Retour à la sélection d'articles
+Kontr.Pos.;Article du contrat
+Materialnr;N° d'article
+Lst.nummer;Numéro pr.
+Leist. ort;Lieu pr.
+Gültig von;Valable du
+Neue Leistung;Nouvelle fourniture
+Materialanforderung auf Dienstleisterlagerort bearbeiten;Traiter une demande d'article au dépôt du fournisseur de services
+Menge mit 3 NK-Stellen;Quantité avec 3 décimales
+Akt. TAs / max. TAs Lst.aufmaß;TA act. / TA maxi prest.service
+Bestandsübersicht drucken;Imprimer un aperçu de stock
+Einkaufsbelegart;Type de document d'achat
+Belegkopftext;Texte d'en-tête de document
+Anzahl;Nombre
+Sie haben Änderungen an der Materialanforderung vorgenommen. Wollen Sie diese verwerfen?;Vous avez introduit des modifications à la demande d'article. Souhaitez-vous les annuler ?
+Eindeutige Nummer des Dienstleisters;Numéro unique du fournisseur de services
+Lst.-Aufmaß;Fournis. serv.
+Abw. Lieferanschr.;Valeur Adresse de livraison
+Aufmaß Detail;Détail de fourniture
+Verfallsdatum;Date d'échéance
+Selektionssuche;Recherche de sélection
+Aufgaben ({0});Tâches ({0})
+Ende;Fin
+Datum 2;Date 2
+Materialanforderung auf Dienstleisterlagerort;Demande d'article au dépôt du fournisseur de services
+Interner Fehler: Die Methode {0} ist nicht vorhanden. Bitte verständigen Sie den Systemadministrator;Erreur interne : La méthode {0} n'est pas disponible. Veuillez consulter l'administrateur système
+ges. Bestellwert;Valeur cde gar.
+Definiert den externen Sachbearbeiter des Leistungsaufmasses;Définit le technicien externe de la fourniture de services
+Wunschtermin;Date souhaitée
+Bitte geben Sie einen Kurztext ein;Veuillez saisir un texte abrégé
+BestellWert;Valeur de commande
+Aufmaßerfassung;Saisie de fourniture 
+zum Dokument;vers le document
+Guten Tag,;Bonjour,
+Pos. Kurztext;Texte abrégé d'article
+Sie haben Änderungen am Summen-LV vorgenommen. Wollen sie diese wirklich verwerfen?;Vous avez introduit des modifications à la somme des spécifications de service. Souhaitez-vous vraiment les annuler ?
+Es existieren noch gesicherte Aufmaße innerhalb der ausgewählten Bestellpositionen. Wollen Sie wirklich für alle Bestellpositionen das Endaufmaßkennzeichen setzen?;Il existe encore des fournitures garanties au sein des positions de commande sélectionnées. Souhaitez-vous vraiment cocher la fourniture finale pour tous les postes de commande ?
+Aufmasserfassung;Saisie de fourniture
+Kommunikation Bestellwesen;Communication de commande
+Zentrallagerort;Dépôt central
+Anwendungskomponente ist nicht freigegeben;Le composant d'utilisation n'est pas validé
+mittel;moyen
+Materialanforderungsdetails;Détails de demande d'articles
+Bestellungen ohne Kontraktbezug;Commandes sans clauses contractuelles
+Bitte wählen Sie einen Bereitstellungs-DL-LO aus;Veuillez sélectionner un dépôt de fournisseur de services pour la mise à disposition
+ext. Bearbeiter;Intervenant  ext.
+Gesichert;Garanti
+WA-Menge;Quantité de marchandises livrées
+LA-Status;Statut de fourniture de services
+Haupt-Menu;Menu principal
+Summen LV;Totaux de spécifications de services
+Gesamtwert;Valeur globale
+Bitte wählen Sie einen Lagerort aus;Veuillez sélectionner un dépôt
+Materialrückbuchung Drucken;Imprimer une reprise d'article
+Best.datum;Date cde
+Z-LO Bez.;Des. dépôt central 
+Bestandsübersicht suchen;Rechercher un aperçu de stock
+Der Status exisitiert in der Materialanforderung nicht;Ce statut n'existe pas dans la demande d'article
+Freigegeben;Validé
+Lst. Aufm.;Pr. serv.
+Materialaufmaß Nr.;N° fourniture art. 
+rückl. Menge;Qté  repr. 
+Verbunden mit einer Suche nach Leistungsaufmaßnummern werden die Leistungserfassungen im Einzelnen angelistet;Les fournitures de services sont affichées individuellement en cas de recherche par numéro de fourniture de service
+Bestellung drucken;Imprimer une commande
+Ausschreibung suchen;Rechercher une soumission
+Rücklief.;Retour
+Nr. einer Bestellung;N° d'une commande
+Sie sind im Unternehmen {0} vermutlich mehreren Dienstleistern zugeordnet. Bitte kontaktieren Sie den Support.;Dans l'entreprise {0}, vous êtes probablement associés à plusieurs fournisseurs de services. Veuillez contacter l'assistance.
+Kurztext für Leisutngsaufmasse;Texte abrégé pour la fourniture de service 
+Materialrückbuchung;Reprise d'article
+Kons.lieferant;Fournisseur cons.
+Leistungsaufmaß aus dem Extranet Dienstleister;Fourniture de services en provenance de l'extranet du fournisseur
+Bedarfsmenge;Quantité nécessaire
+Chargenbezeichnung;Description des charges
+Preisbez. Datum;Des. prix date
+Lieferantennr.;N° de fournisseur
+Dienstleistungspositionen zur Position {0};Postes de fourniture de services vers le poste {0}
+Kz. Enderfg.;Entrée finale abrégée
+Best.-Nr.;N° cde
+Auftragsbestätigungen;Confirmations de commandes
+Name (Kurztext) des Dienstleisters;Nom (texte abrégé) du fournisseur de services
+Eigene Dokumente;Document personnel
+Name (Kurzbezeichnung) des Unternehmens;Nom (description abrégée) de l'entreprise
+Einkäufergruppe;Groupe d'acheteurs
+Abrech.;Compta.
+Löschen;Supprimer
+Materialanforderung;Demande d'article
+Prüfen;Vérifier
+Charge verw.;Elim. charge
+Ort;Lieu
+Einkaufsorg;Org achat
+Dienstleister;Fournisseur de services
+Materialanforderungen auf DL-LO anzeigen;Afficher les demandes d'articles au dépôt du fournisseur de services
+Wert eines Leistungsaufmaßes;Valeur d'une fourniture de services 
+Löschkennzeichen;Case Supprimer
+TestView;TestView
+Bitte wählen Sie das gewünschte ReVU;Veuillez sélectionner l'EAR souhaitée
+Kontrakt;Contrat
+Bestellung anzeigen;Afficher une commande
+rückb. Menge;Qté repr.
+Alle Einträge für den Druck aktivieren;Activer toutes les entrées en vue de leur impression
+Abgenommen;Diminué
+Langtext;Texte complet
+Dienstleisternr.;N° de fournisseur de services
+Bestandsübersicht anzeigen;Afficher un aperçu de stock
+Bitte klicken Sie auf die Verknüpfung (Link), um die Datei auf Ihren PC zu laden.;Veuillez cliquer sur ce lien pour télécharger le fichier sur votre PC.
+Fenster schließen;Fermer la fenêtre
+von;de
+Erfassungsdatum;Date de saisie
+Leistungsaufmaße zur Bestellung;Fourniture de services vers commande 
+Leistungsselektion;Sélection de fourniture
+Annahme;Adoption
+unbestimmt;indéfini
+Lagerortbeschreibung;Description de dépôt
+Ihre Nummer;Votre numéro
+Mat.-Aufmaß;Fourniture art.
+Anzeige aktualisieren;Actualiser l'affichage
+Zeitraum von;Période du
+Sachb. Ext.;Techn. ext.
+Unternehmen:;Entreprise :
+Bestellungen;Commandes
+0800 - 10 333 01;0800 - 10 333 01
+Z-LO;Emplacement du dépôt central
+Alle entmarkieren;Signaler tout
+Name;Nom
+Pos;Pos
+Kurztext (Name) einer Company;Texte abrégé (nom) d'une société
+Anzeige der Materialanforderungen und der daraus erstellten Reservierungen;Affichage des demandes d'articles et des réservations correspondantes
+akt. Anz. / max. Anz. Anforderungen;qté act. / qté maxi demandées
+entn. Menge;Qté  réc.
+Kontaktadresse;Adresse de contact
+Dokument;Document
+Erfasser;Agent de saisie
+Bitte geben Sie eine Leistungsnummer ein;Veuillez saisir un numéro de service
+Bitte allen chargenpflichtigen Materialien mindestens eine Charge zuordnen.;Veuillez attribuer au moins une charge à tous les articles soumis à charges.
+Sie haben Änderungen vorgenommen. Wollen Sie diese verwerfen?;Vous avez introduit des modifications. Souhaitez-vous les annuler ?

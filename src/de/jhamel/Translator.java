@@ -1,17 +1,21 @@
 package de.jhamel;
 
+import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvReader;
-import de.jhamel.csv.GermanZeroEnglishOne;
+import de.jhamel.wdtranslator.XlfTranslator;
+
+import java.util.Locale;
+//import de.jhamel.csv.GermanZeroEnglishOne;
 
 public class Translator {
-    private static final String BASEDIR = "C:\\Dokumente und Einstellungen\\J19727\\.dtc\\2\\DCs\\eonis.com\\eea\\bpexd\\wd";
 
-    public void doMagic() throws Exception {
-        CsvReader csvReader = new CsvReader(new GermanZeroEnglishOne());
-        csvReader.readFile("translation_20110330_VDE.csv");
+
+    public void doMagic(String csvInputFile, Locale locale, String wdProjectDir, int defaultLangColumn, int translateLangColumn) throws Exception {
+		XlfTranslator xlfTranslator = new XlfTranslator(wdProjectDir);
+		xlfTranslator.translate(csvInputFile, locale, defaultLangColumn, translateLangColumn);
     }
 
     public static void main(String[] args) throws Exception {
-        new Translator().doMagic();
+        new Translator().doMagic(AppConstants.CSV_INPUT, AppConstants.CURRENT_LOCALE, AppConstants.WDDIR, AppConstants.DEFAULT_LANG_COLUMN, AppConstants.TRANSLATE_LANG_COLUMN);
     }
 }

@@ -17,4 +17,9 @@ public class LocaleUtilTest {
         assertThat(LocaleUtil.localeOfFile(new File("abc_en.txt")), equalTo(Locale.ENGLISH));
     }
 
+    @Test
+    public void localizeFilename() {
+        assertThat(LocaleUtil.localizeFilename("abc.txt",Locale.FRENCH), equalTo("abc_fr.txt"));
+    }
+
 }

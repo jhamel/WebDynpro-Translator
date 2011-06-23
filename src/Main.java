@@ -151,7 +151,8 @@ public class Main {
 
 		Option baseDirWebDynpro   = OptionBuilder.withArgName( "baseDirWebDynpro" )
                                 .hasArg()
-                                .withDescription("base directory of the Web Dynpro project(s). e.g.: C:/Dokumente und Einstellungen/helmut/.dtc/52/DCs/eonis.com/eea/bpexd/wd\n" +
+                                .withDescription("base directory of the Web Dynpro project(s). e.g.: C:/Dokumente und\n" +
+										"Einstellungen/your-user/.dtc/1/DCs/yourcompany.com/path1/path2/wd\n" +
 												"REQUIRED")
 								.withLongOpt("bWD")
                                 .create("w");

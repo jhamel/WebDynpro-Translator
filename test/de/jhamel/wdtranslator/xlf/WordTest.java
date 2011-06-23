@@ -9,15 +9,9 @@ import java.util.Locale;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.mockito.Mockito.*;
 
 public class WordTest {
-
-    @Test
-    public void language() {
-        Word word = new Word();
-        word.setFile(new File("abc_de.txt"));
-        assertThat(word.getLanguage(), equalTo(Locale.GERMAN));
-    }
 
     @Test
     public void shouldBeDefaultLanguage() {
@@ -28,6 +22,7 @@ public class WordTest {
     public void uniqueId() {
         Word word = new Word();
         word.setKey("key");
+        word.setLanguage(Locale.GERMAN);
         word.setFile(new File("abc_de.txt"));
         assertThat(word.getUniqueId(), equalTo("de_key"));
     }
@@ -37,15 +32,18 @@ public class WordTest {
         Word wordEn = new Word();
         wordEn.setKey("keyEn");
         wordEn.setText("textEn");
+        wordEn.setLanguage(Locale.ENGLISH);
         wordEn.setFile(new File("abc_en.txt"));
 
         Word word = new Word();
         word.setFile(new File("abc.txt"));
+        wordEn.setLanguage(Locale.ENGLISH);
+
         word.addTranslation(wordEn);
 
         assertThat(word.getTranslationByLocale(Locale.ENGLISH).getKey(), equalTo("keyEn"));
 
-        System.out.println(word);
+
     }
 
     @Test(expected = TechnicalException.class)
@@ -67,7 +65,40 @@ public class WordTest {
         word.setText("SampleComponentView");
         word.store();
         assertThat(word.getText(), equalTo("SampleComponentView"));
+    }
 
+    @Test
+    public void storeTranslation() {
+        Word word = mock(Word.class);
+        word.setText("abc");
+        word.setFile(new File("abc.txt"));
+        word.setLanguage(Locale.GERMAN);
+
+        Word wordFr = mock(Word.class);
+        wordFr.setText("le abc");
+        wordFr.setFile(new File("abc_fr.txt"));
+        wordFr.setLanguage(Locale.FRENCH);
+
+        word.store();
+
+        verify(word, times(1)).store();
+        verify(wordFr, times(1)).store();
+    }
+
+
+    @Test
+    public void storingWordTranslation() {
+        Word word = sampleWord();
+        assertThat(word.getText(), equalTo("SampleComponentView"));
+        word.setText("newText");
+        word.store();
+
+        word = sampleWord();
+        assertThat(word.getText(), equalTo("newText"));
+
+        word.setText("SampleComponentView");
+        word.store();
+        assertThat(word.getText(), equalTo("SampleComponentView"));
     }
 
     @Test
@@ -85,8 +116,28 @@ public class WordTest {
 
     }
 
+    @Test
+    public void addTranslation() {
+        Word word = new Word();
+        word.setFile(new File("file.xlf"));
+        word.setKey("key");
+        word.setText("word");
+        word.addTranslation(Locale.FRENCH, "le word");
+
+        assertThat(word.getTranslationByLocale(Locale.FRENCH).getKey(), equalTo("key"));
+        assertThat(word.getTranslationByLocale(Locale.FRENCH).getText(), equalTo("le word"));
+        assertThat(word.getTranslationByLocale(Locale.FRENCH).getFile().getName(), equalTo("file_fr.xlf"));
+
+
+    }
+
+
     private Word sampleWord() {
-        TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(FixtureConstants.SAMPLE_FILE));
+        System.out.print("./testdata/WebDynproProject".replace("/", File.separator));
+        File sampleFile = new File(FixtureConstants.SAMPLE_FILE);
+        assertThat(sampleFile.exists(), equalTo(true));
+
+        TransUnitToWordConverter converter = new TransUnitToWordConverter(sampleFile);
         return converter.convertTransUnitsToWords().get(0);
     }
 }

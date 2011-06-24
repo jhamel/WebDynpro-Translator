@@ -14,5 +14,7 @@
 	<classpathentry kind="lib" path="lib/develop/junit-4.8.2.jar"/>
 	<classpathentry kind="lib" path="lib/develop/mockito-all-1.8.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="testdata/WebDynproProject/out"/>
+	<classpathentry kind="lib" path="lib/deploy/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/deploy/commons-io-2.0.1.jar"/>
+	<classpathentry kind="output" path="out"/>
 </classpath>

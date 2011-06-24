@@ -1,17 +1,22 @@
-import com.sun.tools.javac.util.Log;
+import java.io.File;
+import java.util.Locale;
+
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.CommandLineParser;
+import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.Option;
+import org.apache.commons.cli.OptionBuilder;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import org.apache.commons.cli.PosixParser;
+import org.apache.log4j.Logger;
+
 import de.jhamel.Translator;
-import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvWriter;
 import de.jhamel.file.TraverseDirectory;
 import de.jhamel.file.filters.ContainsFilenameFilter;
 import de.jhamel.file.filters.EndsWithFilenameFilter;
 import de.jhamel.wdtranslator.xlf.XlfFileCollector;
-import org.apache.commons.cli.*;
-import org.apache.log4j.Logger;
-
-import javax.crypto.CipherInputStream;
-import java.io.File;
-import java.util.Locale;
 
 public class Main {
 	private static Logger log = Logger.getLogger(Main.class);

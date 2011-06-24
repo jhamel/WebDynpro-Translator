@@ -5,9 +5,8 @@
 package org.example.wdp;
 
 import com.sap.tc.webdynpro.progmodel.api.*;
-import com.sap.tc.webdynpro.progmodel.gci.*;
 import com.sap.tc.webdynpro.progmodel.context.*;
-import com.sap.tc.webdynpro.services.exceptions.WDRuntimeException;
+import com.sap.tc.webdynpro.progmodel.gci.*;
 
 public interface IPublicSampleComponentInterface extends org.example.wdp.IExternalSampleComponentInterface {
 

@@ -1,6 +1,5 @@
 package de.jhamel.file.filters;
 
-import de.jhamel.file.filters.EndsWithFilenameFilter;
 import org.junit.Test;
 
 import java.io.File;

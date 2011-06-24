@@ -4,12 +4,7 @@
 // ---------------------------------------------------------------------------
 package org.example.wdp;
 
-import com.sap.tc.webdynpro.progmodel.api.IWDMessage;
-import com.sap.tc.webdynpro.progmodel.api.WDMessage;
-import com.sap.tc.webdynpro.services.message.WDMessageType;
-
-
-/** 
+/**
  * This interface encapsulates all messages for this component. 
  * The message constants can be used in conjunction with 
  * the IWDMessageManager.reportMessage method.

@@ -4,16 +4,10 @@
 // ---------------------------------------------------------------------------
 package org.example.wdp;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 import com.sap.tc.logging.Location;
 import com.sap.tc.webdynpro.progmodel.api.*;
-import com.sap.tc.webdynpro.progmodel.gci.*;
 import com.sap.tc.webdynpro.progmodel.context.*;
 import com.sap.tc.webdynpro.progmodel.gci.*;
-import com.sap.tc.webdynpro.services.exceptions.WDRuntimeException;
 
 public class InternalSecondSampleView
   implements IPrivateSecondSampleView, com.sap.tc.webdynpro.progmodel.gci.IGCIViewDelegate

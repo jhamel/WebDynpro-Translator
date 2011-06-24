@@ -1,7 +1,6 @@
 package de.jhamel;
 
 import de.jhamel.constants.AppConstants;
-import de.jhamel.csv.CsvReader;
 import de.jhamel.wdtranslator.XlfTranslator;
 
 import java.util.Locale;

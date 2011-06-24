@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # set the input parameters here
-wdBaseDir=~/Downloads/wdtrans/
-#wdBaseDir="/private/tmp/5336/C/Dokumente und Einstellungen/helmut/.dtc/52/DCs/eonis.com/eea/bpexd/wd/"
+#wdBaseDir=~/Downloads/wdtrans/
+wdBaseDir="/private/tmp/5336/C/Dokumente und Einstellungen/helmut/.dtc/52/DCs/eonis.com/eea/bpexd/wd/"
 csvOutputFile=./resources/ExSP_Frontend_DO_NOT_CHANGE_FORMAT_out.csv
 language=nl
 

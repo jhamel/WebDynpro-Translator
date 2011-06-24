@@ -5,12 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exportcsv.sh" afterPath="$PROJECT_DIR$/exportcsv.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importcsv.sh" afterPath="$PROJECT_DIR$/importcsv.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/csv/NewLanguages.java" afterPath="$PROJECT_DIR$/src/de/jhamel/csv/NewLanguages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java" afterPath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" afterPath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j.properties" afterPath="$PROJECT_DIR$/src/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" afterPath="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java" afterPath="$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java" />
     </list>
     <ignored path="WebDynproTranslator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,10 +145,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.95637584">
+            <state line="45" column="0" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,19 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewLanguages.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/jhamel/csv/NewLanguages.java">
+      <file leaf-file-name="Translator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/jhamel/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="8" selection-start="3779" selection-end="3779" vertical-scroll-proportion="0.0">
+            <state line="14" column="28" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,19 +174,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="log4j.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="73" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+            <state line="1" column="21" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -209,7 +186,34 @@
       <file leaf-file-name="XlfTranslator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
+            <state line="41" column="26" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CsvReader.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.6493936">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileReader.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar!/java/io/FileReader.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="14" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVParser.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/deploy/ostermillerutils_1_07_00.jar!/com/Ostermiller/util/CSVParser.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="39" selection-start="3305" selection-end="3305" vertical-scroll-proportion="-33.24">
               <folding />
             </state>
           </provider>
@@ -234,7 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/Word.java" />
         <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/XlfFileCollectorTest.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java" />
         <option value="$PROJECT_DIR$/README" />
@@ -244,6 +247,7 @@
         <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
       </list>
     </option>
@@ -342,6 +346,38 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="WebDynproTranslator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDynproTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDynproTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.jhamel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDynproTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebDynproTranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="de.jhamel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wdtranslator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -797,44 +833,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/translation_20110330_DE-EN-FR-NL_VDE.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="55" selection-start="455" selection-end="455" vertical-scroll-proportion="0.042505592">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ExSP_Frontend_now.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="301" selection-end="301" vertical-scroll-proportion="0.10626398">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/importcsv.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="416" selection-start="421" selection-end="421" vertical-scroll-proportion="0.03242321">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/ExSP_Frontend_DO_NOT_CHANGE_FORMAT.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -860,19 +861,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="73" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="45" column="0" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="jar://$PROJECT_DIR$/lib/deploy/ostermillerutils_1_07_00.jar!/com/Ostermiller/util/CSVParser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.95637584">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="57" column="39" selection-start="3305" selection-end="3305" vertical-scroll-proportion="-33.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/../Classes/classes.jar!/java/io/FileReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="14" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="26" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.6493936">
+          <folding />
         </state>
       </provider>
     </entry>

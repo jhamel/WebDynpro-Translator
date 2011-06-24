@@ -71,6 +71,10 @@ public class Main {
 			String baseDirWebDynpro = cmd.getOptionValue("w");
 			int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
 			int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
+			String charset = cmd.getOptionValue("c");
+			if(charset == null) {
+				charset = AppConstants.DEFAULT_CSV_CHARSET;
+			}
 
 			StringBuilder builder = new StringBuilder();
 			builder.append("Parameters: \n");
@@ -79,12 +83,13 @@ public class Main {
 			builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
 			builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
 			builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
+			builder.append("charset: ").append(charset).append("\n");
 			log.info(builder.toString());
 
 			if( csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
 				Locale locale = new Locale(language);
 				// Here we do the main work
-				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn);
+				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
 				log.info("import of csv file finished");
 			} else {
 				Main.showHelp();
@@ -199,6 +204,16 @@ public class Main {
 								.withLongOpt("transLangColumn")
                                 .create("t");
 		options.addOption(translateLangColumn);
+
+		Option charset   = OptionBuilder.withArgName( "Charset" )
+                                .hasArg()
+                                .withDescription("Charset of the csv file that is read when a == in. If not defined " +
+										"UTF-8 will be used.\nAllowed values are those that are supported by " +
+										"java.nio.charset.Charset.availableCharsets().\nMost common are " +
+										"ISO-8859-1, UTF-8")
+								.withLongOpt("charset")
+                                .create("c");
+		options.addOption(charset);
 
 		return options;
 	}

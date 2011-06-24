@@ -21,24 +21,29 @@ You can use the program by executing the Main class with a java runtime. For you
 script in the root folder of the project that you can use as a template.
 
 usage: Main [-adhilotw]
-            This application imports a csv file and then updates the xlf files of a WD project
-            or extracts the items of the xlf files of a WD project and exports a csv file that can be send to a
-            translation office
- -a,--action <action>                    defines the action which should be executed. <in> for import of a csv file and
-                                         updating the WD projects xlf files, <out> for export of a csv file that can be.
-                                         REQUIRED
- -d,--defaultLangColumn <columnNumber>   0 based number of column in which the default language can be found
-                                         REQUIRED when option a == in
- -h,--help                               show this help
- -i,--csvinputfile <csvInputFile>        filename of the csv file to import.
-                                         REQUIRED when option a == in
- -l,--language <isoLanguage>             language that is to be used by the action. Use the iso language code, e.g. de,
-                                         fr, uk, us
-                                         REQUIRED when option a == in
- -o,--csvOutputFile <csvOutputFile>      filename including path of the csv file that is generated.
-                                         REQUIRED when a == out
- -t,--transLangColumn <columnNumber>     0 based number of column in which the translated language can be found.
-                                         REQUIRED when option a == in
- -w,--bWD <baseDirWebDynpro>             base directory of the Web Dynpro project(s). e.g.: C:/Dokumente und
-                                         Einstellungen/your-user/.dtc/1/DCs/yourcompany.com/path1/path2/wd
-                                         REQUIRED
+         This application imports a csv file and then updates the xlf files of a WD project
+         or extracts the items of the xlf files of a WD project and exports a csv file that can be send to a
+         translation office
+-a,--action <action>                    defines the action which should be executed. <in> for import of a csv file and
+                                      updating the WD projects xlf files, <out> for export of a csv file that can be.
+                                      REQUIRED
+-c,--charset <Charset>                  Charset of the csv file that is read when a == in. If not defined UTF-8 will be
+                                      used.
+                                      Allowed values are those that are supported by
+                                      java.nio.charset.Charset.availableCharsets().
+                                      Most common are ISO-8859-1, UTF-8
+-d,--defaultLangColumn <columnNumber>   0 based number of column in which the default language can be found
+                                      REQUIRED when option a == in
+-h,--help                               show this help
+-i,--csvinputfile <csvInputFile>        filename of the csv file to import.
+                                      REQUIRED when option a == in
+-l,--language <isoLanguage>             language that is to be used by the action. Use the iso language code, e.g. de,
+                                      fr, uk, us
+                                      REQUIRED when option a == in
+-o,--csvOutputFile <csvOutputFile>      filename including path of the csv file that is generated.
+                                      REQUIRED when a == out
+-t,--transLangColumn <columnNumber>     0 based number of column in which the translated language can be found.
+                                      REQUIRED when option a == in
+-w,--bWD <baseDirWebDynpro>             base directory of the Web Dynpro project(s). e.g.: C:/Dokumente und
+                                      Einstellungen/your-user/.dtc/1/DCs/yourcompany.com/path1/path2/wd
+                                      REQUIRED

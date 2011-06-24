@@ -12,7 +12,7 @@ public class XlfTranslatorTest {
     @Test
     public void translate() {
         XlfTranslator xlfTranslator = new XlfTranslator(BASEDIR);
-        xlfTranslator.translate(CSV, Locale.FRENCH, 0, 4);
+        xlfTranslator.translate(CSV, Locale.FRENCH, 0, 4, "UTF-8");
 
 
     }

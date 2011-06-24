@@ -30,5 +30,7 @@ public interface AppConstants {
 	public static final int DEFAULT_LANG_COLUMN = 0;
 	/** Spalte der CSV-Datei, in der das Wort / der der übersetzte Begriff steht */
 	public static final int TRANSLATE_LANG_COLUMN = 1;
+	/** Default Charset, das beim Einlesen der CSV-Datei verwendet wird. */
+	public static final String DEFAULT_CSV_CHARSET = "UTF-8";
 
 }

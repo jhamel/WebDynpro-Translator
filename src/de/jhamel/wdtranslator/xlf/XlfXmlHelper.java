@@ -44,8 +44,8 @@ public class XlfXmlHelper {
     }
 
     public void replaceValueOfSourceElement(String id, String newValue) {
-        if (newValue.contains("Währung")) {
-System.out.println("--"+file.getAbsolutePath());
+        if (newValue.contains("WÃ¤hrung")) {
+            System.out.println("--" + file.getAbsolutePath());
         }
         Element element = findElementById(id);
         String currentTextValueInFile = element.getText();

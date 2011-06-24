@@ -44,19 +44,18 @@ public class XlfXmlHelper {
     }
 
     public void replaceValueOfSourceElement(String id, String newValue) {
-        if (newValue.contains("Währung")) {
-System.out.println("--"+file.getAbsolutePath());
+        if (newValue.contains("Wï¿½hrung")) {
+			System.out.println("--"+file.getAbsolutePath());
         }
         Element element = findElementById(id);
         String currentTextValueInFile = element.getText();
 
-        log.trace("Try storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
+        log.debug("Try storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
 
         if (currentTextValueInFile.equals(newValue)) {
-            log.trace("No change, skip storing.");
+            log.debug("No change, skip storing.");
             return;
         }
-        System.out.println("Try storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
 
         log.debug("Storing '" + currentTextValueInFile + "' to '" + newValue + "' in " + file.getAbsolutePath());
         element.setText(newValue);
@@ -89,7 +88,8 @@ System.out.println("--"+file.getAbsolutePath());
     }
 
     public void store() {
-        System.out.println(file);
+		log.trace("entering store");
+        log.debug("file: " + file);
         try {
 
             outputter.output(doc, new OutputStreamWriter(new FileOutputStream(file), "UTF8"));
@@ -98,6 +98,7 @@ System.out.println("--"+file.getAbsolutePath());
         } catch (IOException e) {
             throw new TechnicalException("Could not store '" + file.getAbsolutePath() + "'.", e);
         }
+		log.trace("exiting store");
     }
 
 }

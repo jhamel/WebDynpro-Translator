@@ -24,7 +24,6 @@ public class Main {
 //    public static final String CSV = "/Users/helmut/projekte/EON/EIS/WD Translator/translation_20110330_DE-EN-FR-NL_VDE.csv";
 
     public static void main(String[] args) throws Exception {
-
 		options = Main.buildOptions();
 		// create the parser
 		CommandLineParser parser = new PosixParser();
@@ -36,11 +35,10 @@ public class Main {
 			if(cmd.hasOption("help")) {
 				Main.showHelp();
 			} else {
+				System.out.println("Please be patient. Have a look at the log files if you want to know whats going on.");
 				if(cmd.hasOption("a")) {
-					System.out.println(cmd.getOptionValue("a"));
 					if(cmd.getOptionValue("a").equals("in")) {
 						// Here we go to the import task
-						//System.out.println("OK. Ich importiere jetzt die CSV-Datei");
 						importCSV(cmd);
 					} else if(cmd.getOptionValue("a").equals("out")) {
 						// Here we export the language strings of the WD projects into a csv file
@@ -67,16 +65,27 @@ public class Main {
 	 */
     private static void importCSV(CommandLine cmd) throws Exception {
 		try {
+			log.info("starting import of csv file");
 			String csvInputFile = cmd.getOptionValue("i");
 			String language = cmd.getOptionValue("l");
 			String baseDirWebDynpro = cmd.getOptionValue("w");
 			int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
 			int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
 
+			StringBuilder builder = new StringBuilder();
+			builder.append("Parameters: \n");
+			builder.append("csvInputFile: ").append(csvInputFile).append("\n");
+			builder.append("language: ").append(language).append("\n");
+			builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+			builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
+			builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
+			log.info(builder.toString());
+
 			if( csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
 				Locale locale = new Locale(language);
 				// Here we do the main work
 				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn);
+				log.info("import of csv file finished");
 			} else {
 				Main.showHelp();
 			}
@@ -90,10 +99,18 @@ public class Main {
 	 * @param cmd
 	 */
     private static void createCSV(CommandLine cmd) {
+		log.info("starting export of csv file");
 		String csvOutputFile = cmd.getOptionValue("o");
 		String baseDirWebDynpro = cmd.getOptionValue("w");
 		String language = cmd.getOptionValue("l");
 		//String baseDirProject = cmd.getOptionValue("d");
+
+		StringBuilder builder = new StringBuilder();
+		builder.append("Parameters: \n");
+		builder.append("csvOutputFile: ").append(csvOutputFile).append("\n");
+		builder.append("language: ").append(language).append("\n");
+		builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+		log.info(builder.toString());
 
 		if(csvOutputFile != null && baseDirWebDynpro != null && language != null) {
 			Locale locale = new Locale(language);
@@ -101,6 +118,7 @@ public class Main {
 			XlfFileCollector xlfFileCollector = scanFilesForWords(baseDirWebDynpro);
 
 			CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale);
+			log.info("export of csv file finished");
 		} else {
 			Main.showHelp();
 		}

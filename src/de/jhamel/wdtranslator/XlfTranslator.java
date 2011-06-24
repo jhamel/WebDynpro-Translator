@@ -26,6 +26,7 @@ public class XlfTranslator {
 	 * @param csvFile name of the csv file to read
 	 */
     private void readCsvData(String csvFile) {
+		log.trace("entering readCsvData");
         CsvReader csvReader = new CsvReader(new CsvLineProcessor() {
 			/**
 			 * processes a single line of the csv file. This method is called by the CsvReader
@@ -42,7 +43,7 @@ public class XlfTranslator {
         } catch (Exception e) {
             throw new TechnicalException("Could not read CSV file '" + csvFile + "'", e);
         }
-
+		log.trace("exiting readCsvData");
     }
 
 	/**
@@ -53,11 +54,16 @@ public class XlfTranslator {
 	 * @param csvColumnTranslationLanguage Spalte der CSV-Datei, in der das übersetzte Wort steht, 0-basiert
 	 */
     public void translate(String csvFile, Locale language, int csvColumnDefaultLanguage, int csvColumnTranslationLanguage) {
+		log.trace("entering translate");
 		// read the csv file into the list of String[]
         readCsvData(csvFile);
 		// traverse the lines of the List
         for (String[] line : csvLines) {
-            log.debug(" translating CSV line: " + line);
+			StringBuilder builder = new StringBuilder();
+			for(String str: line) {
+				builder.append(str).append("; ");
+			}
+            log.debug("translating CSV line: " + builder.toString());
 
             List<Word> wordsByDefaultLanguage = xlfFileCollector.wordsByDefaultText(line[csvColumnDefaultLanguage]);
 			// iterate through the list of defaultlanguage words
@@ -67,6 +73,7 @@ public class XlfTranslator {
                 word.store();
             }
         }
+		log.trace("exiting translate");
 
     }
 }

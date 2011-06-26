@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54b1808f-4c0c-4265-905f-8a325b7bb03b" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/importcsv.sh" afterPath="$PROJECT_DIR$/importcsv.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/csv/CsvWriter.java" afterPath="$PROJECT_DIR$/src/de/jhamel/csv/CsvWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" afterPath="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" />
     </list>
     <ignored path="WebDynproTranslator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,15 +185,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -962,7 +949,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added charset handling when importing csv file. The used charset can be transmitted via command line option -c&#10;Updated shell scripts&#10;Added a log4J SocketAppender so that Chainsaw or any other central monitoring tool can be used.&#10;Adjusted logging in the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added charset support for the export csv task of the program&#10;Added markdown to README file" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -977,6 +964,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Added README file and altered the command line help for -w option" />
     <MESSAGE value="Added charset handling when importing csv file. The used charset can be transmitted via command line option -c&#10;Updated shell scripts&#10;Added a log4J SocketAppender so that Chainsaw or any other central monitoring tool can be used.&#10;Adjusted logging in the application" />
+    <MESSAGE value="Added charset support for the export csv task of the program&#10;Added markdown to README file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1055,7 +1043,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="16" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
           <folding />

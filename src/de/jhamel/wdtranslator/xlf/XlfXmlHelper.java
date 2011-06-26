@@ -92,7 +92,7 @@ public class XlfXmlHelper {
         log.debug("file: " + file);
         try {
 
-            outputter.output(doc, new OutputStreamWriter(new FileOutputStream(file), "UTF8"));
+            outputter.output(doc, new OutputStreamWriter(new FileOutputStream(file), "UTF-8"));
 
             //outputter.output(doc, System.out);
         } catch (IOException e) {

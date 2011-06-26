@@ -108,6 +108,10 @@ public class Main {
 		String csvOutputFile = cmd.getOptionValue("o");
 		String baseDirWebDynpro = cmd.getOptionValue("w");
 		String language = cmd.getOptionValue("l");
+		String charset = cmd.getOptionValue("c");
+		if(charset == null) {
+			charset = AppConstants.DEFAULT_CSV_CHARSET;
+		}
 		//String baseDirProject = cmd.getOptionValue("d");
 
 		StringBuilder builder = new StringBuilder();
@@ -115,6 +119,7 @@ public class Main {
 		builder.append("csvOutputFile: ").append(csvOutputFile).append("\n");
 		builder.append("language: ").append(language).append("\n");
 		builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+		builder.append("charset: ").append(charset).append("\n");
 		log.info(builder.toString());
 
 		if(csvOutputFile != null && baseDirWebDynpro != null && language != null) {
@@ -122,7 +127,7 @@ public class Main {
 
 			XlfFileCollector xlfFileCollector = scanFilesForWords(baseDirWebDynpro);
 
-			CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale);
+			CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale, charset);
 			log.info("export of csv file finished");
 		} else {
 			Main.showHelp();
@@ -207,7 +212,7 @@ public class Main {
 
 		Option charset   = OptionBuilder.withArgName( "Charset" )
                                 .hasArg()
-                                .withDescription("Charset of the csv file that is read when a == in. If not defined " +
+                                .withDescription("Charset of the csv file that is read (a==in) or written (a==out). If not defined " +
 										"UTF-8 will be used.\nAllowed values are those that are supported by " +
 										"java.nio.charset.Charset.availableCharsets().\nMost common are " +
 										"ISO-8859-1, UTF-8")

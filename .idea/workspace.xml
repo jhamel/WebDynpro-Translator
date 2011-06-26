@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54b1808f-4c0c-4265-905f-8a325b7bb03b" name="Default" comment="Added charset support for the export csv task of the program&#10;Added markdown to README file">
+    <list default="true" id="54b1808f-4c0c-4265-905f-8a325b7bb03b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checktranslation.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java" afterPath="$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java" />
     </list>
     <ignored path="WebDynproTranslator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,15 +150,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XlfTranslator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="2737" selection-end="2737" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="XlfFileCollector.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfFileCollector.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -181,7 +175,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="64" selection-start="8522" selection-end="8522" vertical-scroll-proportion="0.0">
+            <state line="228" column="47" selection-start="9071" selection-end="9071" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +183,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webdynprotranslator.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webdynprotranslator.xml">
+      <file leaf-file-name="checktranslation.sh" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checktranslation.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.64846414">
+            <state line="5" column="10" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConstants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="11" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkTranslation.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/checkTranslation.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.15079366">
               <folding />
             </state>
           </provider>
@@ -235,17 +247,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/de/jhamel/wdtranslator/xlf/WordTest.java" />
         <option value="$PROJECT_DIR$/src/log4j.properties" />
         <option value="$PROJECT_DIR$/src/de/jhamel/csv/CsvReader.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/XlfTranslator.java" />
-        <option value="$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/Translator.java" />
         <option value="$PROJECT_DIR$/test/integration/XlfTranslatorTest.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/wdtranslator/xlf/XlfXmlHelper.java" />
         <option value="$PROJECT_DIR$/src/de/jhamel/csv/CsvWriter.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java" />
+        <option value="$PROJECT_DIR$/checktranslation.sh" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -529,7 +541,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -567,6 +579,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
@@ -584,30 +597,7 @@
       <recent name="de.jhamel.wdtranslator" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ImportCSV">
-    <configuration default="false" name="LocaleUtilTest.locale" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" />
-      <module name="WebDynproTranslator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.jhamel.wdtranslator.xlf" />
-      <option name="MAIN_CLASS_NAME" value="de.jhamel.wdtranslator.xlf.LocaleUtilTest" />
-      <option name="METHOD_NAME" value="locale" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Groovy Script.checkTranslation">
     <configuration default="false" name="LocaleUtilTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="WebDynproTranslator" />
@@ -718,6 +708,17 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="checkTranslation" type="GroovyScriptRunConfiguration" factoryName="Groovy Script" temporary="true">
+      <module name="WebDynproTranslator" />
+      <setting name="path" value="$PROJECT_DIR$/checkTranslation.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -794,6 +795,20 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy Script">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="false" name="ShowHelp" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -861,11 +876,11 @@
       <item index="0" class="java.lang.String" itemvalue="Application.ShowHelp" />
       <item index="1" class="java.lang.String" itemvalue="Application.ImportCSV" />
       <item index="2" class="java.lang.String" itemvalue="Application.ExportCSV" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LocaleUtilTest.locale" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LocaleUtilTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.XlfFileCollectorTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.de in WebDynproTranslator" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.WordTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LocaleUtilTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.XlfFileCollectorTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.de in WebDynproTranslator" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.WordTest" />
+      <item index="7" class="java.lang.String" itemvalue="Groovy Script.checkTranslation" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -899,7 +914,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -907,7 +922,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.345187" sideWeight="0.33154505" order="1" side_tool="true" content_ui="tabs" />
@@ -974,23 +989,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/de/jhamel/file/TraverseDirectory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/jhamel/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webdynprotranslator.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1034,15 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="64" selection-start="8522" selection-end="8522" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="16" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
@@ -1050,9 +1042,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webdynprotranslator.xml">
+    <entry file="file://$PROJECT_DIR$/src/de/jhamel/constants/AppConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.64846414">
+        <state line="36" column="11" selection-start="2084" selection-end="2084" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="228" column="47" selection-start="9071" selection-end="9071" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checktranslation.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkTranslation.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="388" selection-end="388" vertical-scroll-proportion="0.15079366">
           <folding />
         </state>
       </provider>
@@ -1060,9 +1075,81 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="Copyright.UI">
         <settings>
           <splitter-proportions />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Bean Validation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>grails-1.3.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>WebDynproTranslator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>deploy</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
         </settings>
       </state>
       <state key="ScopeChooserConfigurable.UI">

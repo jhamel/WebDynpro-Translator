@@ -33,4 +33,7 @@ public interface AppConstants {
 	/** Default Charset, das beim Einlesen der CSV-Datei verwendet wird. */
 	public static final String DEFAULT_CSV_CHARSET = "UTF-8";
 
+	/** Separator of the csv file */
+	public static final char CSV_ENTRY_SEPERATOR = ';';
+
 }

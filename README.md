@@ -68,3 +68,4 @@ At the beginning of the script you define the parameters of the java program lik
 #### exportcsv.sh
 Use this script to export the content of the xlf files of your Web Dynpro project(s) into a csv file  
 At the beginning of the script you define the parameters of the java program like *baseDirWebDynpro*, *csvoutputfile* ect.
+

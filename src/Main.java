@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import com.Ostermiller.util.CSVParser;
+import com.sun.tools.javac.util.Log;
+>>>>>>> a5113337c194b85d7eb1b5dbd4f288d9862c4af0
 import de.jhamel.Translator;
 import de.jhamel.csv.CsvWriter;
 import de.jhamel.file.TraverseDirectory;
@@ -8,6 +13,9 @@ import org.apache.commons.cli.*;
 import org.apache.log4j.Logger;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.Locale;
 
 public class Main {
@@ -21,7 +29,6 @@ public class Main {
 //    public static final String CSV = "/Users/helmut/projekte/EON/EIS/WD Translator/translation_20110330_DE-EN-FR-NL_VDE.csv";
 
     public static void main(String[] args) throws Exception {
-
 		options = Main.buildOptions();
 		// create the parser
 		CommandLineParser parser = new PosixParser();
@@ -33,15 +40,16 @@ public class Main {
 			if(cmd.hasOption("help")) {
 				Main.showHelp();
 			} else {
+				System.out.println("Please be patient. Have a look at the log files if you want to know whats going on.");
 				if(cmd.hasOption("a")) {
-					System.out.println(cmd.getOptionValue("a"));
 					if(cmd.getOptionValue("a").equals("in")) {
 						// Here we go to the import task
-						//System.out.println("OK. Ich importiere jetzt die CSV-Datei");
 						importCSV(cmd);
 					} else if(cmd.getOptionValue("a").equals("out")) {
 						// Here we export the language strings of the WD projects into a csv file
 						createCSV(cmd);
+					} else if(cmd.getOptionValue("a").equals("check")) {
+						checkTranslation(cmd);
 					} else {
 						Main.showHelp();
 					}
@@ -58,22 +66,106 @@ public class Main {
     }
 
 	/**
+	 * checks the translation or lets better say checks if there are inconsistencies in the translated
+	 * entries.
+	 *
+	 * After importing a translated csv file into your Web Dynpro project you should export one and check this
+	 * exported file with this script.
+	 * It compares two columns of the file. Usually the column of the projects default language
+	 * and one translated language.
+	 * If it finds equal values in those columns it protocols those
+	 * A protocol entry is also written if the value of the translation language is empty.
+	 *
+	 * @param cmd CommandLine object
+	 */
+	private static void checkTranslation(CommandLine cmd) {
+		try {
+			log.info("starting csv file check");
+			String csvFile = cmd.getOptionValue("i");
+			int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
+			int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
+			String charset = cmd.getOptionValue("c");
+			if(charset == null) {
+				charset = AppConstants.DEFAULT_CSV_CHARSET;
+			}
+
+			StringBuilder builder = new StringBuilder();
+			builder.append("Parameters: \n");
+			builder.append("csvInputFile: ").append(csvFile).append("\n");
+			builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
+			builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
+			builder.append("charset: ").append(charset).append("\n");
+			log.info(builder.toString());
+
+			String[][] lines = CSVParser.parse(new InputStreamReader(new FileInputStream(csvFile), Charset.forName(charset)), AppConstants.CSV_ENTRY_SEPERATOR);
+
+			System.out.println( "Checking the file " + csvFile + " for correct translations");
+			System.out.println( "Comparing column " + defaultLangColumn + " (default language) and column " + translateLangColumn + " (translated language)");
+			System.out.println( "");
+			System.out.println( "equal values start with ==, empty tranlations with <<\n");
+			System.out.println( "line\tvalue");
+
+			int lineCount = 0;
+			int lineCountDiffSame = 0;
+			int lineCountDiffEmpty = 0;
+			for (String[] line : lines) {
+				lineCount++;
+				try {
+					if (line[defaultLangColumn].equals(line[translateLangColumn])) {
+						lineCountDiffSame++;
+						System.out.println(lineCount+":\t== " + line[defaultLangColumn]);
+					}
+					if (line[translateLangColumn].trim().isEmpty()) {
+						lineCountDiffEmpty++;
+						System.out.println( lineCount + ":\t<< " + line[defaultLangColumn]);
+					}
+				} catch (ArrayIndexOutOfBoundsException ex) {
+					System.out.println("An ArrayIndexOutOfBoundsException occured in line " + lineCount + " of the file. Please check it");
+				}
+			}
+
+			System.out.println("Number of checked rows: " + lineCount);
+			System.out.println("Number of rows with same values in default language column and translated language column: " + lineCountDiffSame);
+			System.out.println("Number of rows with empty translation: " + lineCountDiffEmpty);
+
+		} catch (Exception ex) {
+			log.error(ex.getMessage(), ex);
+		}
+	}
+
+	/**
 	 * Import the CSV-File and create the XLF-Files in the WD project(s)
 	 * @param cmd
 	 * @throws Exception
 	 */
     private static void importCSV(CommandLine cmd) throws Exception {
 		try {
+			log.info("starting import of csv file");
 			String csvInputFile = cmd.getOptionValue("i");
 			String language = cmd.getOptionValue("l");
 			String baseDirWebDynpro = cmd.getOptionValue("w");
 			int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
 			int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
+			String charset = cmd.getOptionValue("c");
+			if(charset == null) {
+				charset = AppConstants.DEFAULT_CSV_CHARSET;
+			}
+
+			StringBuilder builder = new StringBuilder();
+			builder.append("Parameters: \n");
+			builder.append("csvInputFile: ").append(csvInputFile).append("\n");
+			builder.append("language: ").append(language).append("\n");
+			builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+			builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
+			builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
+			builder.append("charset: ").append(charset).append("\n");
+			log.info(builder.toString());
 
 			if( csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
 				Locale locale = new Locale(language);
 				// Here we do the main work
-				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn);
+				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
+				log.info("import of csv file finished");
 			} else {
 				Main.showHelp();
 			}
@@ -87,17 +179,31 @@ public class Main {
 	 * @param cmd
 	 */
     private static void createCSV(CommandLine cmd) {
+		log.info("starting export of csv file");
 		String csvOutputFile = cmd.getOptionValue("o");
 		String baseDirWebDynpro = cmd.getOptionValue("w");
 		String language = cmd.getOptionValue("l");
+		String charset = cmd.getOptionValue("c");
+		if(charset == null) {
+			charset = AppConstants.DEFAULT_CSV_CHARSET;
+		}
 		//String baseDirProject = cmd.getOptionValue("d");
+
+		StringBuilder builder = new StringBuilder();
+		builder.append("Parameters: \n");
+		builder.append("csvOutputFile: ").append(csvOutputFile).append("\n");
+		builder.append("language: ").append(language).append("\n");
+		builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+		builder.append("charset: ").append(charset).append("\n");
+		log.info(builder.toString());
 
 		if(csvOutputFile != null && baseDirWebDynpro != null && language != null) {
 			Locale locale = new Locale(language);
 
 			XlfFileCollector xlfFileCollector = scanFilesForWords(baseDirWebDynpro);
 
-			CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale);
+			CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale, charset);
+			log.info("export of csv file finished");
 		} else {
 			Main.showHelp();
 		}
@@ -124,16 +230,21 @@ public class Main {
 		// help option to show the help screen
 		options.addOption("h", "help", false, "show this help");
 		// action option
-		Option action = OptionBuilder.withDescription("defines the action which should be executed. " +
-													"<in> for import of a csv file and updating the WD projects xlf files, " +
+		Option action = OptionBuilder.withDescription("defines the action to be executed.\n" +
+													"<in> for import of a csv file and updating the WD projects xlf files,\n" +
 													"<out> for export of a csv file that can be.\n" +
-													"REQUIRED").withLongOpt("action").hasArg().withArgName("action").create("a");
+													"<check> to check the translation" +
+													"REQUIRED")
+								.withLongOpt("action")
+								.hasArg()
+								.withArgName("action")
+								.create("a");
 		options.addOption(action);
 
 		Option csvInputFile   = OptionBuilder.withArgName( "csvInputFile" )
                                 .hasArg()
                                 .withDescription("filename of the csv file to import.\n" +
-												"REQUIRED when option a == in")
+												"REQUIRED when option a==in or a==check")
 								.withLongOpt("csvinputfile")
                                 .create("i");
 		options.addOption(csvInputFile);
@@ -141,7 +252,7 @@ public class Main {
 		Option outputFile   = OptionBuilder.withArgName( "csvOutputFile" )
                                 .hasArg()
                                 .withDescription("filename including path of the csv file that is generated.\n" +
-												"REQUIRED when a == out")
+												"REQUIRED when a==out")
 								.withLongOpt("csvOutputFile")
                                 .create("o");
 		options.addOption(outputFile);
@@ -166,7 +277,7 @@ public class Main {
 		Option defaultLangColumn   = OptionBuilder.withArgName( "columnNumber" )
                                 .hasArg()
                                 .withDescription("0 based number of column in which the default language can be found\n" +
-												"REQUIRED when option a == in")
+												"REQUIRED when option a==in or a==check")
 								.withLongOpt("defaultLangColumn")
                                 .create("d");
 		options.addOption(defaultLangColumn);
@@ -174,10 +285,20 @@ public class Main {
 		Option translateLangColumn   = OptionBuilder.withArgName( "columnNumber" )
                                 .hasArg()
                                 .withDescription("0 based number of column in which the translated language can be found.\n" +
-												"REQUIRED when option a == in")
+												"REQUIRED when option a==in or a==check")
 								.withLongOpt("transLangColumn")
                                 .create("t");
 		options.addOption(translateLangColumn);
+
+		Option charset   = OptionBuilder.withArgName( "Charset" )
+                                .hasArg()
+                                .withDescription("Charset of the csv file that is read (a==in), written (a==out) or checked (a==check). " +
+										"If not defined UTF-8 will be used.\nAllowed values are those that are supported by " +
+										"java.nio.charset.Charset.availableCharsets().\nMost common are " +
+										"ISO-8859-1, UTF-8")
+								.withLongOpt("charset")
+                                .create("c");
+		options.addOption(charset);
 
 		return options;
 	}

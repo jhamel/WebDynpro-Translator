@@ -1,6 +1,7 @@
 package de.jhamel.csv;
 
 import com.Ostermiller.util.CSVParser;
+import de.jhamel.constants.AppConstants;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
@@ -26,6 +27,10 @@ public class CsvReader {
     public CsvReader(CsvLineProcessor csvLineProcessor) {
         this.csvLineProcessor = csvLineProcessor;
     }
+
+     public void readFile(String filename) throws Exception {
+                        readFile(filename, AppConstants.DEFAULT_CSV_CHARSET);
+     }
 
 	/**
 	 * This method parses the csv file and submits each line to the CsvLineProcessor that was given to the

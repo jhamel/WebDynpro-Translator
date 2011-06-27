@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
 import com.Ostermiller.util.CSVParser;
 import com.sun.tools.javac.util.Log;
->>>>>>> a5113337c194b85d7eb1b5dbd4f288d9862c4af0
 import de.jhamel.Translator;
+import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvWriter;
 import de.jhamel.file.TraverseDirectory;
 import de.jhamel.file.filters.ContainsFilenameFilter;

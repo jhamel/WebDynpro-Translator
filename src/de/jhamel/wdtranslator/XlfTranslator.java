@@ -1,5 +1,6 @@
 package de.jhamel.wdtranslator;
 
+import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvLineProcessor;
 import de.jhamel.csv.CsvReader;
 import de.jhamel.wdtranslator.xlf.Word;
@@ -46,7 +47,9 @@ public class XlfTranslator {
         }
 		log.trace("exiting readCsvData");
     }
-
+          public void translate(String csvFile, Locale language, int csvColumnDefaultLanguage, int csvColumnTranslationLanguage) {
+                    translate(csvFile,language,csvColumnDefaultLanguage,csvColumnTranslationLanguage, AppConstants.DEFAULT_CSV_CHARSET);
+          }
 	/**
 	 * Überträgt die Übersetzungen einer CSV-Datei in XLF-Dateien des Web Dynpro Projektes.
 	 * @param csvFile die CSV-Datei mit den Übersetzungen

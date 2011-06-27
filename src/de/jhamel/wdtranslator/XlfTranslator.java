@@ -24,8 +24,10 @@ public class XlfTranslator {
 	/**
 	 * reads a csv file and save each line that is a String[] in the List csvLines
 	 * @param csvFile name of the csv file to read
+	 * @param charset Charset to use for reading the csv file
 	 */
-    private void readCsvData(String csvFile) {
+    private void readCsvData(String csvFile, String charset) {
+		log.trace("entering readCsvData");
         CsvReader csvReader = new CsvReader(new CsvLineProcessor() {
 			/**
 			 * processes a single line of the csv file. This method is called by the CsvReader
@@ -38,11 +40,11 @@ public class XlfTranslator {
         });
         try {
 			// Read the csv file. The readFile method call the processLine method 3 lines above this
-            csvReader.readFile(csvFile);
+            csvReader.readFile(csvFile, charset);
         } catch (Exception e) {
             throw new TechnicalException("Could not read CSV file '" + csvFile + "'", e);
         }
-
+		log.trace("exiting readCsvData");
     }
 
 	/**
@@ -51,13 +53,19 @@ public class XlfTranslator {
 	 * @param language Locale, deren XLF-Dateien angelegt werden sollen
 	 * @param csvColumnDefaultLanguage Spalte in der CSV-Datei, in der das Wort der Standardsprache steht, 0-basiert
 	 * @param csvColumnTranslationLanguage Spalte der CSV-Datei, in der das übersetzte Wort steht, 0-basiert
+	 * @param charset Charset to use when reading the csv file
 	 */
-    public void translate(String csvFile, Locale language, int csvColumnDefaultLanguage, int csvColumnTranslationLanguage) {
+    public void translate(String csvFile, Locale language, int csvColumnDefaultLanguage, int csvColumnTranslationLanguage, String charset) {
+		log.trace("entering translate");
 		// read the csv file into the list of String[]
-        readCsvData(csvFile);
+        readCsvData(csvFile, charset);
 		// traverse the lines of the List
         for (String[] line : csvLines) {
-            log.debug(" translating CSV line: " + line);
+			StringBuilder builder = new StringBuilder();
+			for(String str: line) {
+				builder.append(str).append("; ");
+			}
+            log.debug("translating CSV line: " + builder.toString());
 
             List<Word> wordsByDefaultLanguage = xlfFileCollector.wordsByDefaultText(line[csvColumnDefaultLanguage]);
 			// iterate through the list of defaultlanguage words
@@ -67,6 +75,7 @@ public class XlfTranslator {
                 word.store();
             }
         }
+		log.trace("exiting translate");
 
     }
 }

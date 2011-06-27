@@ -133,7 +133,6 @@ public class WordTest {
 
 
     private Word sampleWord() {
-        System.out.print("./testdata/WebDynproProject".replace("/", File.separator));
         File sampleFile = new File(FixtureConstants.SAMPLE_FILE);
         assertThat(sampleFile.exists(), equalTo(true));
 

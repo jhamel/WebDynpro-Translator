@@ -3,7 +3,10 @@ package de.jhamel.csv;
 import com.Ostermiller.util.CSVParser;
 import org.apache.log4j.Logger;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 
 /**
  * A class that reads a csv file and submits the result to a CsvLineProcessor.
@@ -28,10 +31,12 @@ public class CsvReader {
 	 * This method parses the csv file and submits each line to the CsvLineProcessor that was given to the
 	 * constructor of this class.
 	 * @param filename name of the csv file
+	 * @param charset Charset for reading the csv file
 	 * @throws Exception
 	 */
-    public void readFile(String filename) throws Exception {
-        String[][] lines = CSVParser.parse(new FileReader(filename), CSV_ENTRY_SEPERATOR);
+    public void readFile(String filename, String charset) throws Exception {
+//		String[][] lines = CSVParser.parse(new FileReader(filename), CSV_ENTRY_SEPERATOR);
+		String[][] lines = CSVParser.parse(new InputStreamReader(new FileInputStream(filename), Charset.forName(charset)), CSV_ENTRY_SEPERATOR);
         for (String[] line : lines) {
             log.trace("Reading line '"+logString(line)+"' of'"+filename+"'.");
 			// call the csvLineProcessors processLine method so that it can do something with the data of the line

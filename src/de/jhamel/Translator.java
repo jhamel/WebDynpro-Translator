@@ -9,12 +9,25 @@ import java.util.Locale;
 public class Translator {
 
 
-    public void doMagic(String csvInputFile, Locale locale, String wdProjectDir, int defaultLangColumn, int translateLangColumn) throws Exception {
+	/**
+	 *
+	 * @param csvInputFile
+	 * @param locale
+	 * @param wdProjectDir
+	 * @param defaultLangColumn
+	 * @param translateLangColumn
+	 * @param charset
+	 * @throws Exception
+	 */
+    public void doMagic(String csvInputFile, Locale locale, String wdProjectDir, int defaultLangColumn, int translateLangColumn,
+						String charset) throws Exception {
 		XlfTranslator xlfTranslator = new XlfTranslator(wdProjectDir);
-		xlfTranslator.translate(csvInputFile, locale, defaultLangColumn, translateLangColumn);
+		xlfTranslator.translate(csvInputFile, locale, defaultLangColumn, translateLangColumn, charset);
     }
 
     public static void main(String[] args) throws Exception {
-        new Translator().doMagic(AppConstants.CSV_INPUT, AppConstants.CURRENT_LOCALE, AppConstants.WDDIR, AppConstants.DEFAULT_LANG_COLUMN, AppConstants.TRANSLATE_LANG_COLUMN);
+        new Translator().doMagic(AppConstants.CSV_INPUT, AppConstants.CURRENT_LOCALE, AppConstants.WDDIR, AppConstants.DEFAULT_LANG_COLUMN, AppConstants.TRANSLATE_LANG_COLUMN,
+				AppConstants.DEFAULT_CSV_CHARSET
+				);
     }
 }

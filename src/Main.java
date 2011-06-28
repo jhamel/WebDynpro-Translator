@@ -1,5 +1,5 @@
 import com.Ostermiller.util.CSVParser;
-import com.sun.tools.javac.util.Log;
+
 import de.jhamel.Translator;
 import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvWriter;

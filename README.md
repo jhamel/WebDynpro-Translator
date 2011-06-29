@@ -1,4 +1,4 @@
-#Web Dynpro Translator
+# Web Dynpro Translator
 
 This application enables you to exchange the content of the resource files of a SAP Web Dynpro project with a
 translation office, get the translated file back and import it into the resource files of the Web Dynpro project.

@@ -134,39 +134,40 @@ public class Main {
      * @throws Exception
      */
     private static void importCSV(CommandLine cmd) throws Exception {
-        try {
-            log.info("starting import of csv file");
-            String csvInputFile = cmd.getOptionValue("i");
-            String language = cmd.getOptionValue("l");
-            String baseDirWebDynpro = cmd.getOptionValue("w");
-            int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
-            int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
-            String charset = cmd.getOptionValue("c");
-            if (charset == null) {
-                charset = AppConstants.DEFAULT_CSV_CHARSET;
-            }
+		try {
+			log.info("starting import of csv file");
+			String csvInputFile = cmd.getOptionValue("i");
+			String language = cmd.getOptionValue("l");
+			String baseDirWebDynpro = cmd.getOptionValue("w");
+			int defaultLangColumn = Integer.parseInt(cmd.getOptionValue("d"));
+			int translateLangColumn = Integer.parseInt(cmd.getOptionValue("t"));
+			String charset = cmd.getOptionValue("c");
+			if(charset == null) {
+				charset = AppConstants.DEFAULT_CSV_CHARSET;
+			}
 
-            StringBuilder builder = new StringBuilder();
-            builder.append("Parameters: \n");
-            builder.append("csvInputFile: ").append(csvInputFile).append("\n");
-            builder.append("language: ").append(language).append("\n");
-            builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
-            builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
-            builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
-            builder.append("charset: ").append(charset).append("\n");
-            log.info(builder.toString());
+			StringBuilder builder = new StringBuilder();
+			builder.append("Parameters: \n");
+			builder.append("csvInputFile: ").append(csvInputFile).append("\n");
+			builder.append("language: ").append(language).append("\n");
+			builder.append("baseDirWebDynpro: ").append(baseDirWebDynpro).append("\n");
+			builder.append("defaultLangColumn: ").append(defaultLangColumn).append("\n");
+			builder.append("translateLangColumn: ").append(translateLangColumn).append("\n");
+			builder.append("charset: ").append(charset).append("\n");
+			log.info(builder.toString());
 
-            if (csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
-                Locale locale = new Locale(language);
-                // Here we do the main work
-                new Translator().translate(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
-                log.info("import of csv file finished");
-            } else {
-                Main.showHelp();
-            }
-        } catch (Exception ex) {
-            Main.showHelp();
-        }
+			if( csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
+				Locale locale = new Locale(language);
+				// Here we do the main work
+				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
+				log.info("import of csv file finished");
+			} else {
+				Main.showHelp();
+			}
+		} catch (Exception ex) {
+			log.error("The following error occurred:", ex);
+			Main.showHelp();
+		}
     }
 
     /**

@@ -21,6 +21,10 @@ You then use the program to
 * update all xlf files in the Web Dynpro project (if the xlf files for the language haven´t been created yet the program
 creates them.)
 
+### Prerequisites
+You must have checked out all .xlf files of your Web Dynpro projects from your DTR/NWDI. The best way to assure this is
+to checkout the subtree of the src/packages folder(s). 
+
 ## Usage:
 You can use the program by executing the Main class with a java runtime. For your convenience there are a few shell
 script in the root folder of the project that you can use as a template.
@@ -81,4 +85,11 @@ It compares two columns of the csv file. Usually the column of the projects defa
 and one translated language.
 If it finds equal values in those columns it protocols those
 A protocol entry is also written if the value of the translation language is empty.
+
+## Troubleshooting
+If you get any error messages please have a detailed look at the message.  
+Some of the most common errors are listed below:
+
+* Often you forgot to check the xlf file out of your DTR/NWDI. You then get an error message that contains the phrase "Permission denied"
+* While importing a csv file you might get an error like this "Expected one element  xpath '//trans-unit[@id='...". You then should delete the mentioned file and try importing again
 

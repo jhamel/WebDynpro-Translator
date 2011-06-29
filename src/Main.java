@@ -168,6 +168,7 @@ public class Main {
 				Main.showHelp();
 			}
 		} catch (Exception ex) {
+			log.error("The following error occurred:", ex);
 			Main.showHelp();
 		}
     }

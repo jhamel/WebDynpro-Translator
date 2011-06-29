@@ -159,7 +159,7 @@ public class Main {
 			if( csvInputFile != null && language != null && baseDirWebDynpro != null && defaultLangColumn != translateLangColumn) {
 				Locale locale = new Locale(language);
 				// Here we do the main work
-				new Translator().doMagic(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
+				new Translator().translate(csvInputFile, locale, baseDirWebDynpro, defaultLangColumn, translateLangColumn, charset);
 				log.info("import of csv file finished");
 			} else {
 				Main.showHelp();

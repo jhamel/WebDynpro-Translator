@@ -12,7 +12,4 @@ public class Translator {
         xlfTranslator.translate(csvInputFile, locale, defaultLangColumn, translateLangColumn, charset);
     }
 
-    public static void main(String[] args) throws Exception {
-        new Translator().translate(AppConstants.CSV_INPUT, AppConstants.CURRENT_LOCALE, AppConstants.WDDIR, AppConstants.DEFAULT_LANG_COLUMN, AppConstants.TRANSLATE_LANG_COLUMN, AppConstants.DEFAULT_CSV_CHARSET);
-    }
 }

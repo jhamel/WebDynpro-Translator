@@ -2,6 +2,7 @@ package de.jhamel.wdtranslator.xlf;
 
 import de.jhamel.wdtranslator.TechnicalException;
 import org.apache.commons.io.FileUtils;
+import org.apache.xalan.transformer.TransformSnapshot;
 
 import java.io.File;
 import java.io.IOException;
@@ -132,7 +133,13 @@ public class Word {
     private void createFileBasedOnDefaultFile() {
         if (isNonExistingTranslationFile()) {
             copyParentFileToThisFile();
+            deleteCopiedWords();
         }
+    }
+
+    private void deleteCopiedWords() {
+        TransUnitToWordConverter transUnitToWordConverter = new TransUnitToWordConverter(getFile());
+        transUnitToWordConverter.deleteWords();
     }
 
     private void copyParentFileToThisFile() {

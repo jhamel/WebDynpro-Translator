@@ -54,4 +54,10 @@ public class TransUnitToWordConverter {
         return word;
     }
 
+    public void deleteWords() {
+        List<Element> transUnitNodes = xlfXmlHelper.findTransUnitElements();
+        for (Element element : transUnitNodes) {
+            xlfXmlHelper.replaceValueOfSourceElement("id", "");
+        }
+    }
 }

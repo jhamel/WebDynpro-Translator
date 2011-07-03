@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file source-language="en"
+          product-name="@@33dd02c8fa3241a82555c50c15d8ad61View:SampleComponentView[org.example] of Component:SampleComponent[org.example]"
+          datatype="javaPropertyResourceBundle">
+        <header>
+        </header>
+        <body>
+            <group restype="informationMessage">
+
+                <trans-unit id="484e46d9db7042cc340cb64a7349bad0"
+                            resname="RootUIElementContainer/Child:TransparentContainer/Child:TextView@text"
+                            maxwidth="16384" translate="yes">
+                    <source>&quot;Sample&quot;</source>
+                </trans-unit>
+            </group>
+
+        </body>
+    </file>
+</xliff>

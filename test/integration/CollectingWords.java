@@ -19,4 +19,13 @@ public class CollectingWords {
         assertEquals(3, words.size());
     }
 
+    @Test
+    public void handleQuotes() {
+        TransUnitToWordConverter converter = new TransUnitToWordConverter(new File(FixtureConstants.XLF_FILE_WITH_QUOTES));
+        List<Word> words = converter.convertTransUnitsToWords();
+        assertEquals("&quot;Sample&quot;",words.get(0).getText());
+    }
+
+
+
 }

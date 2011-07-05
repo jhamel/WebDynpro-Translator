@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 
 /** A class that reads a csv file and submits the result to a CsvLineProcessor. */
 public class CsvReader {
@@ -42,8 +44,19 @@ public class CsvReader {
         String[][] lines = CSVParser.parse(new InputStreamReader(new FileInputStream(filename), Charset.forName(charset)), CSV_ENTRY_SEPERATOR);
         for (String[] line : lines) {
             log.trace("Reading line '" + logString(line) + "' of'" + filename + "'.");
+            warnInCaseOfDuplicateEntries(line);
             // call the csvLineProcessors processLine method so that it can do something with the data of the line
             csvLineProcessor.processLine(line);
+        }
+    }
+
+    private void warnInCaseOfDuplicateEntries(String[] line) {
+        List<String> entries = new ArrayList<String>();
+        for(String entry : line){
+            if(entries.contains(entry.trim())){
+                log.warn("Line '"+line+"' has a duplicate entry '"+entry+"'.");
+            }
+            entries.add(entry.trim());
         }
     }
 

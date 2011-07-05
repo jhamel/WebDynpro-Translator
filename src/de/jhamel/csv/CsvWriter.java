@@ -19,6 +19,7 @@ public class CsvWriter {
             out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(filename), Charset.forName(charset)));
             for (Word word : words) {
                 log.trace("Writing line '" + word.toCsv() + "' to '" + filename + "'.");
+                CsvLogger.warnInCaseOfDuplicateEntries(word);
                 out.write(word.toCsv());
                 out.newLine();
             }

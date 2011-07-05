@@ -5,11 +5,8 @@ import de.jhamel.constants.AppConstants;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 /** A class that reads a csv file and submits the result to a CsvLineProcessor. */
 public class CsvReader {
@@ -18,6 +15,7 @@ public class CsvReader {
     private static final char CSV_ENTRY_SEPERATOR = ';';
 
     private CsvLineProcessor csvLineProcessor;
+    private final CsvLogger csvLogger = new CsvLogger();
 
     /**
      * Constructor of the class. A CsvLineProcessor has to be given to this constructor. This
@@ -44,21 +42,12 @@ public class CsvReader {
         String[][] lines = CSVParser.parse(new InputStreamReader(new FileInputStream(filename), Charset.forName(charset)), CSV_ENTRY_SEPERATOR);
         for (String[] line : lines) {
             log.trace("Reading line '" + logString(line) + "' of'" + filename + "'.");
-            warnInCaseOfDuplicateEntries(line);
+            CsvLogger.warnInCaseOfDuplicateEntries(line);
             // call the csvLineProcessors processLine method so that it can do something with the data of the line
             csvLineProcessor.processLine(line);
         }
     }
 
-    private void warnInCaseOfDuplicateEntries(String[] line) {
-        List<String> entries = new ArrayList<String>();
-        for(String entry : line){
-            if(entries.contains(entry.trim())){
-                log.warn("Line '"+line+"' has a duplicate entry '"+entry+"'.");
-            }
-            entries.add(entry.trim());
-        }
-    }
 
     /**
      * Creates a log-Statement for the given line

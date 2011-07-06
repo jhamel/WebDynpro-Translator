@@ -15,15 +15,16 @@ public class CsvReader {
     private static final char CSV_ENTRY_SEPERATOR = ';';
 
     private CsvLineProcessor csvLineProcessor;
-    private final CsvLogger csvLogger = new CsvLogger();
+    private CsvLogger csvLogger;
 
     /**
      * Constructor of the class. A CsvLineProcessor has to be given to this constructor. This
      * CsvLineProcessor is used in the readFile method.
      * @param csvLineProcessor a Processor for a line of the csv file. It has to have a processLine method.
      */
-    public CsvReader(CsvLineProcessor csvLineProcessor) {
+    public CsvReader(CsvLineProcessor csvLineProcessor, CsvLogger csvLogger) {
         this.csvLineProcessor = csvLineProcessor;
+        this.csvLogger = csvLogger;
     }
 
     public void readFile(String filename) throws Exception {
@@ -42,12 +43,11 @@ public class CsvReader {
         String[][] lines = CSVParser.parse(new InputStreamReader(new FileInputStream(filename), Charset.forName(charset)), CSV_ENTRY_SEPERATOR);
         for (String[] line : lines) {
             log.trace("Reading line '" + logString(line) + "' of'" + filename + "'.");
-            CsvLogger.warnInCaseOfDuplicateEntries(line);
+            csvLogger.warnInCaseOfDuplicateEntries(line);
             // call the csvLineProcessors processLine method so that it can do something with the data of the line
             csvLineProcessor.processLine(line);
         }
     }
-
 
     /**
      * Creates a log-Statement for the given line

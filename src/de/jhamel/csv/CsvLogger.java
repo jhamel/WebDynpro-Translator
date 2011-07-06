@@ -9,7 +9,7 @@ import java.util.List;
 public class CsvLogger {
     private static Logger log = Logger.getLogger(CsvLogger.class);
 
-    public static void warnInCaseOfDuplicateEntries(String[] line) {
+    public  void warnInCaseOfDuplicateEntries(String[] line) {
         List<String> entries = new ArrayList<String>();
         for (String entry : line) {
             if (entries.contains(entry.trim())) {
@@ -19,7 +19,7 @@ public class CsvLogger {
         }
     }
 
-    public static void warnInCaseOfDuplicateEntries(Word word) {
+    public  void warnInCaseOfDuplicateEntries(Word word) {
         warnInCaseOfDuplicateEntries(word.toCsv().split(";"));
     }
 }

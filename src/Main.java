@@ -1,6 +1,7 @@
 import com.Ostermiller.util.CSVParser;
 import de.jhamel.Translator;
 import de.jhamel.constants.AppConstants;
+import de.jhamel.csv.CsvLogger;
 import de.jhamel.csv.CsvWriter;
 import de.jhamel.file.TraverseDirectory;
 import de.jhamel.file.filters.ContainsFilenameFilter;
@@ -198,7 +199,7 @@ public class Main {
 
             XlfFileCollector xlfFileCollector = scanFilesForWords(baseDirWebDynpro);
 
-            CsvWriter.writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale, charset);
+            new  CsvWriter(new CsvLogger()).writeToCsvFile(csvOutputFile, xlfFileCollector.wordsWithoutDuplicates(), locale, charset);
             log.info("export of csv file finished");
         } else {
             Main.showHelp();

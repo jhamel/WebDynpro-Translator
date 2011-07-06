@@ -2,6 +2,7 @@ package de.jhamel.wdtranslator;
 
 import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvLineProcessor;
+import de.jhamel.csv.CsvLogger;
 import de.jhamel.csv.CsvReader;
 import de.jhamel.wdtranslator.xlf.Word;
 import de.jhamel.wdtranslator.xlf.XlfDirectoryTraverser;
@@ -38,7 +39,7 @@ public class XlfTranslator {
 				// add the line of the csv file to the List of lines
                 csvLines.add(line);
             }
-        });
+        },new CsvLogger());
         try {
 			// Read the csv file. The readFile method call the processLine method 3 lines above this
             csvReader.readFile(csvFile, charset);

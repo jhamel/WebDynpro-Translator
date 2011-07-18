@@ -57,7 +57,7 @@ public class TransUnitToWordConverter {
     public void deleteWords() {
         List<Element> transUnitNodes = xlfXmlHelper.findTransUnitElements();
         for (Element element : transUnitNodes) {
-            xlfXmlHelper.replaceValueOfSourceElement("id", "");
+            xlfXmlHelper.replaceValueOfSourceElement(element.getAttributeValue("id"), "");
         }
     }
 }

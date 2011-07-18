@@ -1,6 +1,7 @@
 package integration;
 
 import de.jhamel.csv.CsvLineProcessor;
+import de.jhamel.csv.CsvLogger;
 import de.jhamel.csv.CsvReader;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class ReadCsvFileWithGermanUmlaute {
             public void processLine(String[] line) {
                 assertThat(line[0], equalTo("äbc"));
             }
-        });
+        }, new CsvLogger());
         csvReader.readFile(FixtureConstants.CSV_FILE_WITH_GERMAN_UMLAUTE);
     }
 }

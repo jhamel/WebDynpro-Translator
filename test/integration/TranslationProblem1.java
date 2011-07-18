@@ -2,6 +2,7 @@ package integration;
 
 import de.jhamel.constants.AppConstants;
 import de.jhamel.csv.CsvLineProcessor;
+import de.jhamel.csv.CsvLogger;
 import de.jhamel.csv.CsvReader;
 import de.jhamel.wdtranslator.XlfTranslator;
 import org.junit.Test;
@@ -24,7 +25,7 @@ public class TranslationProblem1 {
                 assertThat(line[2], equalTo("Description (texte) de l'élément du compte d'affectation"));
                 assertThat(line[3], equalTo("Beschrijving (tekst) van het element rubricering"));
             }
-        });
+        }, new CsvLogger());
         csvReader.readFile(FixtureConstants.CSV_FILE_TRANSLATION_PROBLEM1);
     }
 

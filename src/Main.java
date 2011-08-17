@@ -18,7 +18,6 @@ import java.util.Locale;
 
 public class Main {
     private static Logger log = Logger.getLogger(Main.class);
-/* test checkin via web */
     private static Options options = null;
 
     //    private static final String BASEDIR_WD = "/private/tmp/22116/C/Dokumente und Einstellungen/helmut/.dtc/52/DCs/";

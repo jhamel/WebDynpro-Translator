@@ -2,3 +2,7 @@
 out/**/*
 /out
 .idea/
+
+resources/checktranslation_*.txt
+
+resources/ExSP_Frontend_*.csv

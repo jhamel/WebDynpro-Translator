@@ -17,7 +17,6 @@ public class XlfFileCollector implements FileProcessor {
     private HashMap<String, Word> wordByUniqueIdentifier = new HashMap<String, Word>();
     private HashMap<String, List<Word>> wordsByDefaultText = new HashMap<String, List<Word>>();
 
-
     public void processFile(File file) {
         log.trace("Processing file '" + file.getName() + "'");
         addByFile(file);  // must be first add, because others depend on it
@@ -45,6 +44,11 @@ public class XlfFileCollector implements FileProcessor {
         return result == null? new ArrayList<Word>():result;
     }
 
+	/**
+	 * Creates a list with all phrases in all xlf files. Each word object hereby contains
+	 * the phrase of the original language as well as the phrases from all translated languages
+	 * @return
+	 */
     public List<Word> words() {
         if (words.size() > 0) return words;
 
@@ -55,6 +59,7 @@ public class XlfFileCollector implements FileProcessor {
         for (Locale locale : translationLanguages()) {
             for (Word word : words) {
                 Word translatedWord = wordByUniqueIdentifier.get(Word.generateUniqueIdentifier(locale, word.getKey()));
+				if(translatedWord == null) translatedWord = new Word();
                 if (translatedWord != null) word.addTranslation(translatedWord);
             }
         }
@@ -72,6 +77,11 @@ public class XlfFileCollector implements FileProcessor {
         }
     }
 
+	/**
+	 * Liefert eine Liste aller Textphrasen. Die Liste ist allerdings bereinigt, so dass jede
+	 * Phrase nur einmal vorkommt.
+	 * @return
+	 */
     public Collection<Word> wordsWithoutDuplicates() {
         HashMap<String, Word> wordsWithoutDuplication = new HashMap<String, Word>();
         for (Word word : words()) {

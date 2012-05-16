@@ -124,9 +124,6 @@ public class Word {
     }
 
     private void translateWordInFile() {
-        if(getText().equals("W�hrung") && getFile().getAbsolutePath().startsWith("AufmasseMe")){
-                                          int a = 0;
-        }
         new XlfXmlHelper(getFile()).replaceValueOfSourceElement(getKey(), getText());
     }
 
